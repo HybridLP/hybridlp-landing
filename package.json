@@ -12,6 +12,7 @@
   "dependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.44.2",
     "@tailwindcss/vite": "^4.1.11",
+    "lightningcss-linux-x64-gnu": "^1.30.1",
     "lucide-react": "^0.525.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
