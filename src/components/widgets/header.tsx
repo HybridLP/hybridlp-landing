@@ -64,7 +64,7 @@ const Header = () => {
               ))}
               <Link
                 className="bg-gradient-to-r from-[#FEFC6D] via-[#DA9932] to-[#BD762A] hover:opacity-90 shadow-2xl shadow-[#DA9932] text-white "
-                to="#"
+                to="https://hybridlp.com/login"
               >
                 Sign up/ Log in
               </Link>
