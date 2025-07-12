@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import briefs from "../../../assets_/brief-submission.jpg";
 import collaborate from "../../../assets_/collaborate.jpg";
 import shareBriefs from "../../../assets_/sticky-note.jpg";
