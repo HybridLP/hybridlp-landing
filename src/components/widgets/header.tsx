@@ -7,14 +7,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "About Us", href: "#About Us" },
+    { name: "About Us", href: "#about-us" },
     { name: "Briefs", href: "#briefs" },
     { name: "Features", href: "#features" },
     { name: "Testimonials", href: "#contact" },
   ];
 
   return (
-    <header className="    flex items-center justify-center fixed z-[9999] w-full ">
+    <header className="flex items-center justify-center fixed z-[9999] w-full ">
       <nav className="rounded-full  md:w-[70%] w-full bg-black/50 backdrop-blur-sm   text-white lato-regular flex items-center my-8 justify-between p-2 ">
         
               <img src={logo} alt="Hybridlp" className="w-[10rem]" />

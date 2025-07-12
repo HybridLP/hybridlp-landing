@@ -5,25 +5,7 @@ export default () => {
         <h6 className="text-black mx-auto h-10 bg-gray-100 w-[40%] flex items-center lg:w-[10%] justify-center rounded-md  text-center text-[16px] font-bold lato-regular">
           Testimonials
         </h6>
-        {/* <div
-          className="bg-gradient-to-b from-[#1D1D1D] to-[#303030] text-white border-l-4  border-[#DED08A] rounded-md flex flex-col w-full p-6"
-           style={{ boxShadow: "inset 0 2px 8px 3px #00000040, inset 0 0 10px #FFFFFF40" }}
-        >
-          <p className="text-[24px] lato-regular font-normal">
-            Hybrid LP completely changed the way we handle legal matters. We
-            submitted a brief, got connected to a commercial law expert within
-            minutes, and had our contracts reviewed faster than ever — all
-            without stepping into an office!
-          </p>
-          <div className="flex items-center gap-4 my-4">
-            <img
-              src={img}
-              alt=""
-              className="size-12 rounded-full object-center object-cover"
-            />
-            <h3 className="text-white font-medium inter-font">Client</h3>
-          </div>
-        </div> */}
+        
         <Carousel slides={testimonialData} autoPlayInterval={2000} />
         <p className="text-white italic font-normal my-8 " style={{}}>
           Join thousands of individuals and companies who are using Hybrid Law
