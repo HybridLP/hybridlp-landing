@@ -1,7 +1,7 @@
 import { useState } from "react";
-import briefs from "../../../assets_/brief-submission.jpg";
+import briefs from "../../../assets_/briefs.jpg";
 import collaborate from "../../../assets_/collaborate.jpg";
-import shareBriefs from "../../../assets_/sticky-note.jpg";
+import shareBriefs from "../../../assets_/sharing briefs.png";
 import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
 const items = [
