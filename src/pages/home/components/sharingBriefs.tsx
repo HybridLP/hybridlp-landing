@@ -1,4 +1,5 @@
-import bg from "../../../assets_/brief-submission.jpg";
+import bg from "../../../assets_/submit-bg.png"
+import workspace from "../../../assets_/workspace.jpg"
 import alarm from "../../../assets_/alarm-clock.png";
 import arrowUpRight from "../../../assets_/maki_arrow.png";
 import arrowright from "../../../assets_/guidance_.png";
@@ -84,7 +85,7 @@ export default () => {
           <div
             className="w-full h-64 flex flex-col justify-end rounded-xl overflow-hidden relative bg-gradient-to-b from-[rgba(255,255,255,0.3)] to-[#000] bg-blend-darken"
             style={{
-              backgroundImage: `url(${bg})`,
+              backgroundImage: `url(${workspace})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
