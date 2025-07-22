@@ -12,23 +12,24 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
   return (
     <div
       ref={ref}
-      className={`flex gap-6 transition-all duration-700 ease-out ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-10'
-      }`}
-      style={{
-        transitionDelay: `${idx * 150}ms` // Stagger animation for each item
-      }}
+      className="flex gap-4 md:gap-6 flex-col md:flex-row items-center md:items-start"
     >
-      <div className="rounded-lg flex items-center justify-center bg-[#333333] p-8 min-w-[35%] h-52">
+      {/* Card - Fade in from left on mobile, normal on desktop */}
+      <div
+        className={`rounded-lg flex items-center justify-center bg-[#333333] p-4 md:p-8 w-full md:min-w-[35%] h-48 md:h-52 transition-all duration-700 ease-out ${isVisible
+            ? 'opacity-100 md:translate-y-0 translate-x-0'
+            : 'opacity-0 md:translate-y-10 -translate-x-10 md:translate-x-0'
+          }`}
+        style={{
+          transitionDelay: `${idx * 150}ms`
+        }}
+      >
         {idx === 0 || idx === 2 ? (
           <div
-            className={`rounded-lg flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
-              idx === 2
+            className={`rounded-lg flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${idx === 2
                 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] shadow-[#C8C8C840] shadow-inner inset-x-1 inset-y-1 drop-shadow-none"
-                : " drop-shadow-[#00000040] drop-shadow-lg shadow-[rgba(65,62,62,0.5)] shadow-sm "
-            }`}
+                : " drop-shadow-[#00000040] drop-shadow-lg  shadow-sm "
+              }`}
           >
             <img src={item.image} className="size-16" alt="" />
             <h3 className="text-white text-[20px] font-semibold">
@@ -67,11 +68,21 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           </div>
         )}
       </div>
-      <div className="flex flex-col gap-4 justify-center">
-        <h3 className="text-md font-semibold inter-font text-white">
+
+      {/* Text Content - Fade in from right on mobile, normal on desktop */}
+      <div
+        className={`flex flex-col gap-3 md:gap-4 justify-center px-4 md:px-0 text-center md:text-left transition-all duration-700 ease-out ${isVisible
+            ? 'opacity-100 md:translate-y-0 translate-x-0'
+            : 'opacity-0 md:translate-y-10 translate-x-10 md:translate-x-0'
+          }`}
+        style={{
+          transitionDelay: `${idx * 150 + 100}ms` // Slight delay after card animation
+        }}
+      >
+        <h3 className="text-lg md:text-xl font-semibold inter-font text-white leading-tight">
           {item.title}
         </h3>
-        <p className="text-[18px] lato-regular font-normal text-white">
+        <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed text-justify" >
           {item.description}
         </p>
       </div>
@@ -82,26 +93,33 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
 export default () => {
   return (
     <div
-      className="flex flex-col gap-6 text-white pt-[5%] md:px-32"
+      className="flex flex-col gap-6 md:gap-8 text-white pt-8 md:pt-[5%] px-4 md:px-8 lg:px-32 pb-12 md:pb-16"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <h6 className="text-black mx-auto h-10 bg-gray-100 w-fit p-4 flex items-center lg:w-[10%] justify-center rounded-md text-center text-[16px] font-bold lg:text-[18px] lato-regular">
+      {/* Features Badge */}
+      <h6 className="text-black mx-auto h-10 bg-gray-100 w-fit px-6 py-2 flex items-center justify-center rounded-md text-center text-sm md:text-[16px] lg:text-[18px] font-bold lato-regular">
         Features
       </h6>
-      <h2 className="font-medium text-sm mx-auto text-center lg:text-[40px] inter-font">
+
+      {/* Main Heading */}
+      <h2 className="font-medium text-2xl md:text-3xl lg:text-[40px] mx-auto text-center inter-font leading-tight">
         Do More With <br />
         Hybrid Law Practice
       </h2>
 
-      <p className="text-[20px] text-center mx-auto leading-[30px]">
+      {/* Description */}
+      <p className="text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4">
         Customize the way you streamline your legal work-flow with integrations,{" "}
-        <br /> automations and features, anytime, anywhere.
+        <span className="hidden md:inline"><br /></span>
+        automations and features, anytime, anywhere.
       </p>
-      <div className="flex flex-col gap-6">
+
+      {/* Highlights Grid */}
+      <div className="flex flex-col gap-8 md:gap-12 mt-4 md:mt-8">
         {highlights.map((item, idx) => (
           <HighlightItem key={idx} item={item} idx={idx} />
         ))}

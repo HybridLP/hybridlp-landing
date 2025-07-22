@@ -4,7 +4,7 @@ import bg from "../../../assets_/bg.jpg";
 export default () => {
   return (
     <section
-      className={`flex h-[40%] lg:px-30 py-[5%] mt-[10%]  items-center  bg-blend-darken bg-cover`}
+      className={`flex h-[40%] px-[5%] lg:px-30 py-[5%] mt-[10%]  items-center  bg-blend-darken bg-cover`}
       style={{
         backgroundImage: `url(${bg})`,
         backgroundPosition: "center",
@@ -13,21 +13,21 @@ export default () => {
       }}
     >
       <div className="flex flex-col gap-4 mt-0 lg:w-[70%]">
-        <h2 className="text-white text-3xl md:text-[52px] inter-font  font-bold">
+        <h2 className="text-white text-center md:text-start text-3xl md:text-[52px] inter-font  font-bold  mt-4 md:mt-0">
           Open, Collaborate and Work On Briefs From Anywhere
         </h2>
-        <p className="text-white font-normal text-[14px] lg:text-lg  lator-regular">
+        <p className="text-white text-center md:text-start font-normal text-[14px] lg:text-lg  lator-regular">
           Collaborate With Clients And Colleagues, Manage Cases, Conduct
           Interviews And Sort Paper-works From The Comfort Of Your Home.
           Leverage On The Power Of An Electronic Law Office.
         </p>
         <Link
-          className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-[30%] text-[16px] rounded-full text-center p-4"
+          className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-full md:w-[30%] text-[16px] rounded-md  md:rounded-full text-center p-4"
           to="#"
         ><span className="text-white lato-regular">
 
-          Join Our Lawyers
-        </span>
+            Join Our Lawyers
+          </span>
         </Link>
       </div>
     </section>

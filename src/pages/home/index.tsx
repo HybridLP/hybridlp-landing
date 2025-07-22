@@ -9,7 +9,7 @@ import Testimonials from "./components/testimonials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-black ">
+    <div className="flex flex-col bg-black w-screen overflow-x-hidden">
       <Header />
       <Hero />
       <main className="flex flex-col py-0 lg:px-32- bg-inherit text-white">
