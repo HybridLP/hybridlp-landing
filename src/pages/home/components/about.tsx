@@ -1,5 +1,5 @@
 import { useState } from "react";
-import briefs from "../../../assets_/briefs.jpg";
+import briefs from "../../../assets_/briefs.png";
 import collaborate from "../../../assets_/collaborate.jpg";
 import shareBriefs from "../../../assets_/sharing briefs.png";
 import AnimatedSection from "../../../components/widgets/animated-section";
