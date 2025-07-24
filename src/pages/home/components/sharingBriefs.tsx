@@ -1,4 +1,4 @@
-import bg from "../../../assets_/submit-bg.png"
+import bg from "../../../assets_/brief-submission.jpg"
 import workspace from "../../../assets_/workspace.jpg"
 import alarm from "../../../assets_/alarm-clock.png";
 import arrowUpRight from "../../../assets_/maki_arrow.png";
@@ -123,7 +123,7 @@ export default () => {
           {/* Submit Your Brief */}
           <AnimatedSection delay={0}>
             <div className="flex gap-4 h-full">
-              <div className="flex flex-col justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 min-h-[260px] w-1/2 h-full">
+              <div className="flex flex-col justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
                   Submit
                   <br />
@@ -136,17 +136,19 @@ export default () => {
                 </p>
               </div>
               <div
-                className="flex flex-col gap-4 w-1/2 rounded-xl h-[100%]"
+                className="bg-cover  w-1/2 h-full rounded-xl px-6 flex flex-col justify-end pb-8  bg-center bg-no-repeat "
                 style={{
                   backgroundImage: `url(${bg})`,
-                  backgroundSize: "cover",
+                  backgroundSize: "100%",
                   backgroundPosition: "center",
+                  WebkitBackgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
               >
+
                 <Link
                   to="#"
-                  className="mt-auto m-4 px-4 py-2 rounded-md flex items-center justify-between gap-2 bg-white/30 backdrop-blur-sm font-semibold"
+                  className="px-4 py-2 rounded-md flex items-center justify-between gap-2 bg-white/30 backdrop-blur-sm font-semibold"
                 >
                   <span className="text-white inter-font font-semibold text-2xl lg:text-[32px]">
                     Submit
