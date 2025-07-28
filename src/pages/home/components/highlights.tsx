@@ -28,7 +28,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           <div
             className={`rounded-lg flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${idx === 2
                 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] shadow-[#C8C8C840] shadow-inner inset-x-1 inset-y-1 drop-shadow-none"
-                : " drop-shadow-[#00000040] drop-shadow-lg  shadow-sm "
+                : " drop-shadow-[#00000040] drop-shadow-xl  shadow-sm "
               }`}
           >
             <img src={item.image} className="size-16" alt="" />
