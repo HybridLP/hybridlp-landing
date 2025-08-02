@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex items-center justify-center fixed z-[9999] w-screen ">
+    <header className="flex items-center justify-center fixed z-[100] w-screen ">
       <nav className="md:rounded-full w-screen  md:w-[70%] bg-black/50 backdrop-blur-sm   text-white lato-regular flex items-center md:my-8 justify-between p-2 ">
 
         <img src={logo} alt="Hybridlp" className="w-[10rem]" />
