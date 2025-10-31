@@ -92,7 +92,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
 
 export default () => {
   return (
-    <div
+    <div id="features"
       className="flex flex-col gap-6 md:gap-8 text-white pt-8 md:pt-[5%] px-4 md:px-8 lg:px-32 pb-12 md:pb-16"
       style={{
         backgroundImage: `url(${bg})`,

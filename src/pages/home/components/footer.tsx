@@ -1,6 +1,7 @@
 import React from "react";
 import { X, Languages, Facebook } from "lucide-react";
 import logo from "../../../assets_/logo/logo.png";
+import { NavLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {
   return (
@@ -119,6 +120,9 @@ export const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm lato-regular max-w-[180px]">
               Need anything? Get in touch so we can help.
             </p>
+            <NavLink to="probono" className="text-gray-300 text-sm lato-regular max-w-[180px]">
+             Apply for pro bono services.
+            </NavLink>
           </div>
         </div>
       </div>

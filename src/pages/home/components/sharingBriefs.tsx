@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "../../../components/widgets/animated-section";
 export default () => {
   return (
-    <div className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-16 xl:px-30">
+    <div id="briefs" className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-16 xl:px-30">
       <h6 className="text-black font-bold mx-auto h-10 bg-gray-100 w-fit px-4 py-2 flex items-center justify-center rounded-md text-center text-sm md:text-base lg:text-[18px] lato-regular">
         Sharing briefs
       </h6>
