@@ -40,6 +40,11 @@
   font-weight: 400;
   font-style: normal;
 }
+.lato-semibold {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .lato-bold {
   font-family: "Lato", sans-serif;
