@@ -74,7 +74,6 @@ export default () => {
           </div>
         ))}
       </div>
-
       {/* Load More Button */}
       {visibleCases < filteredCases.length && (
         <div className="flex justify-center">

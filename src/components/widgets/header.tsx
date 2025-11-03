@@ -33,12 +33,13 @@ const Header = () => {
             ))}
           </div>
           <div className="hidden md:flex">
-            <a
+            <Link
               className="rounded-lg px-4 py-2 text-md  bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] hover:opacity-90 shadow-[2px] shadow-[#DA9932] text-white "
-              href="https://app.hybridlp.com/login"
+              // to="https://app.hybridlp.com/login"
+              to="/signup-login"
             >
               <span className="text-white">Sign up/ Log in</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="md:hidden">
@@ -113,7 +114,8 @@ const Header = () => {
               >
                 <Link
                   className="block w-full text-center rounded-lg px-6 py-4 text-lg font-medium bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] hover:opacity-90 shadow-lg shadow-[#DA9932]/30 text-white transition-all duration-300 transform hover:scale-105 lato-regular"
-                  to="https://hybridlp.com/login"
+                  // to="https://hybridlp.com/login"
+                  to="/signup-login"
                   onClick={() => setIsOpen(false)}
                 >
                   Sign up / Log in
