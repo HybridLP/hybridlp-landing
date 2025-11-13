@@ -39,7 +39,7 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path:"/signup-login",
+    path:"/auth",
  Component: SignupLogin
   },
   {

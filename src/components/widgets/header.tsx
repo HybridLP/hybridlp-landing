@@ -36,7 +36,7 @@ const Header = () => {
             <Link
               className="rounded-lg px-4 py-2 text-md  bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] hover:opacity-90 shadow-[2px] shadow-[#DA9932] text-white "
               // to="https://app.hybridlp.com/login"
-              to="/signup-login"
+              to="/auth"
             >
               <span className="text-white">Sign up/ Log in</span>
             </Link>
@@ -115,7 +115,7 @@ const Header = () => {
                 <Link
                   className="block w-full text-center rounded-lg px-6 py-4 text-lg font-medium bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] hover:opacity-90 shadow-lg shadow-[#DA9932]/30 text-white transition-all duration-300 transform hover:scale-105 lato-regular"
                   // to="https://hybridlp.com/login"
-                  to="/signup-login"
+                  to="/auth"
                   onClick={() => setIsOpen(false)}
                 >
                   Sign up / Log in

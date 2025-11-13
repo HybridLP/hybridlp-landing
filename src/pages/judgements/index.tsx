@@ -17,58 +17,58 @@ export default () => {
   );
 
   return (
-    <div className=" min-h-screen px-[7%] py-16 pt-[10%]">
+    <div className="min-h-screen px-4 sm:px-6 md:px-[7%] py-8 sm:py-12 md:py-16 pt-24 sm:pt-28 md:pt-[10%]">
       {/* Header Section */}
-      <div className="mb-12  flex justify-between items-end">
-        <div>
-          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">
+      <div className="mb-8 sm:mb-10 md:mb-12 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6">
+        <div className="flex-1">
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Hybrid LP Handled Cases
           </h1>
-          <p className="text-white/80 text-lg">
+          <p className="text-white/80 text-base sm:text-lg">
             See the full judgements of all cases handled by Hybrid law practice
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="relative max-w-md ml-auto">
+        <div className="relative w-full lg:max-w-md lg:ml-auto">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-gray-400" />
+            <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
           </div>
           <input
             type="text"
             placeholder="Search by 'name of the party'"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-transparent border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 bg-transparent border border-gray-500 rounded-lg text-white text-sm sm:text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
       </div>
 
       {/* Cases Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-14 mb-8 sm:mb-10 md:mb-12">
         {filteredCases.slice(0, visibleCases).map((case_, index) => (
           <div
             key={index}
-            className="border-l-2 border-t-2 rounded-tl-lg border-[#8A8A8A] p-5 hover:border-white transition-colors"
+            className="border-l-2 border-t-2 rounded-tl-lg border-[#8A8A8A] p-4 sm:p-5 hover:border-white transition-colors"
           >
             {/* Case Header */}
-            <div className="mb-4">
-              <h3 className="text-[#E8E8E8] text-[32px]  font-medium mb-2 lato-semibold">
+            <div className="mb-3 sm:mb-4">
+              <h3 className="text-[#E8E8E8] text-xl sm:text-2xl md:text-[28px] lg:text-[32px] font-medium mb-2 lato-semibold break-words">
                 {case_.title}
                 {case_.citation}
               </h3>
-              <div className="w-12 h-0.5 bg-gray-500 mt-3"></div>
+              <div className="w-10 sm:w-12 h-0.5 bg-gray-500 mt-2 sm:mt-3"></div>
             </div>
 
             {/* Case Principle */}
-            <div className="mb-4">
-              <h4 className="text-[#E8E8E8] font-semibold text-[24px] mb-2 lato-regular">
+            <div className="mb-3 sm:mb-4">
+              <h4 className="text-[#E8E8E8] font-semibold text-lg sm:text-xl md:text-[22px] lg:text-[24px] mb-2 lato-regular break-words">
                 Principle of law - "{case_.principle}"
               </h4>
             </div>
 
             {/* Case Description */}
-            <p className="text-[#E8E8E8] text-[16px] text-justify leading-relaxed lato-regular ">
+            <p className="text-[#E8E8E8] text-sm sm:text-base md:text-[16px] text-justify leading-relaxed lato-regular">
               {case_.description}
             </p>
           </div>
@@ -79,7 +79,7 @@ export default () => {
         <div className="flex justify-center">
           <button
             onClick={handleLoadMore}
-            className="flex items-center px-6 py-3 bg-white text-black rounded-full  hover:bg-gray-100 transition-colors inter-font font-semibold"
+            className="flex items-center px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-black rounded-full hover:bg-gray-100 transition-colors inter-font font-semibold text-sm sm:text-base"
           >
             <svg
               className="mr-2 w-4 h-4"
@@ -101,8 +101,8 @@ export default () => {
 
       {/* No Results */}
       {filteredCases.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-white/60 text-lg">
+        <div className="text-center py-8 sm:py-12">
+          <p className="text-white/60 text-base sm:text-lg">
             No cases found matching your search.
           </p>
         </div>
