@@ -1,5 +1,4 @@
 import About from "../home/components/about"
-import HassleFreeCTA from "../home/components/hasslefcta"
 import Hero from "../home/components/hero"
 import Highlights from "../home/components/highlights"
 import SharingBriefs from "../home/components/sharingBriefs"
