@@ -18,7 +18,7 @@ export default () => {
           </h4>
           <NavLink
             className="bg-white shadow-sm text-black w-2/3 flex items-center justify-center py-2 rounded-md"
-            to="https://app.hybridlp.com"
+            to="https://app.hybridlp.com/login"
           target="_blank"
           >
             A Client
@@ -30,7 +30,7 @@ export default () => {
           </h4>
           <NavLink
             className="bg-[#333333] text-white shadow-sm  w-2/3 flex items-center justify-center py-2 rounded-md"
-            to="https://lawyer.hybridlp.com"
+            to="https://lawyer.hybridlp.com/login"
             target="_blank"
           >
             A Lawyer
