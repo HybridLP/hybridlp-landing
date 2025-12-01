@@ -18,14 +18,15 @@ const Header = () => {
   return (
     <header className="flex items-center justify-center fixed z-[100] w-screen ">
       <nav className="md:rounded-full w-screen  md:w-[70%] bg-black/50 backdrop-blur-sm   text-white lato-regular flex items-center md:my-8 justify-between p-2 ">
-        <img src={logo} alt="Hybridlp" className="w-[10rem]" />
-
+        <NavLink to="/">
+          <img src={logo} alt="Hybridlp" className="w-[10rem]" />
+        </NavLink>
         <div className="hidden md:flex items-center gap-4 mr-4 lato-regular">
           <div className="flex items-baseline space-x-8">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
-                to={item.href}
+                to={item.href.startsWith("#") ? `/${item.href}` : item.href}
                 className="text-white hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 lato-regular"
               >
                 <span className="text-white">{item.name}</span>
@@ -35,7 +36,6 @@ const Header = () => {
           <div className="hidden md:flex">
             <Link
               className="rounded-lg px-4 py-2 text-md  bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] hover:opacity-90 shadow-[2px] shadow-[#DA9932] text-white "
-              // to="https://app.hybridlp.com/login"
               to="/auth"
             >
               <span className="text-white">Sign up/ Log in</span>
@@ -71,38 +71,20 @@ const Header = () => {
 
             {/* Mobile Navigation Items */}
             <div className="flex-1 flex flex-col justify-center px-6 space-y-8">
-              {navItems.map((item, index) => {
-                if (item.name === "Blogs") {
-                  return (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="text-white hover:text-[#DA9932] text-2xl font-medium transition-all duration-300 transform hover:translate-x-2 lato-regular opacity-0 animate-slide-in"
-                      onClick={() => setIsOpen(false)}
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                        animationFillMode: "forwards",
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-                  );
-                }
-                return (
-                  <NavLink
-                    key={item.name}
-                    to={item.href}
-                    className="text-white hover:text-[#DA9932] text-2xl font-medium transition-all duration-300 transform hover:translate-x-2 lato-regular opacity-0 animate-slide-in"
-                    onClick={() => setIsOpen(false)}
-                    style={{
-                      animationDelay: `${index * 100}ms`,
-                      animationFillMode: "forwards",
-                    }}
-                  >
-                    {item.name}
-                  </NavLink>
-                );
-              })}
+              {navItems.map((item, index) => (
+                <NavLink
+                  key={item.name}
+                  to={item.href.startsWith("#") ? `/${item.href}` : item.href}
+                  className="text-white hover:text-[#DA9932] text-2xl font-medium transition-all duration-300 transform hover:translate-x-2 lato-regular opacity-0 animate-slide-in"
+                  onClick={() => setIsOpen(false)}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animationFillMode: "forwards",
+                  }}
+                >
+                  {item.name}
+                </NavLink>
+              ))}
 
               {/* Mobile CTA Button */}
               <div

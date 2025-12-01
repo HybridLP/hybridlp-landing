@@ -86,7 +86,7 @@ export default () => {
 
               <div className="space-y-6">
                 {recentPosts.map((post, index) => (
-                  <NavLink to={`${post.id}`} key={index} className="group cursor-pointer">
+                  <NavLink to={`/blogs/${post.id}`} key={index} className="group cursor-pointer">
                     <div className="flex space-x-4">
                       {/* Post Image */}
                       <div className="flex-shrink-0">

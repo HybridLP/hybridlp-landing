@@ -4,7 +4,7 @@ import bg from "../../../assets_/bg.jpg";
 export default () => {
   return (
     <section
-      className={`flex h-[40%] px-[5%] lg:px-30 py-[5%] mt-[10%]  items-center  bg-blend-darken bg-cover`}
+      className={`flex h-[40%]  px-[5%] lg:px-30 py-[5%] mt-0 pt-[10%]  items-center  bg-blend-darken bg-cover`}
       style={{
         backgroundImage: `url(${bg})`,
         backgroundPosition: "center",
