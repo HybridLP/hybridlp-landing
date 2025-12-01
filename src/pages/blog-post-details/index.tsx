@@ -1,5 +1,6 @@
 import Hero from "../home/components/hero";
 import bg from "../../assets_/landing-bg.jpg";
+import { NavLink } from "react-router-dom";
 
 export default () => {
   return (
@@ -85,7 +86,7 @@ export default () => {
 
               <div className="space-y-6">
                 {recentPosts.map((post, index) => (
-                  <div key={index} className="group cursor-pointer">
+                  <NavLink to={`${post.id}`} key={index} className="group cursor-pointer">
                     <div className="flex space-x-4">
                       {/* Post Image */}
                       <div className="flex-shrink-0">
@@ -113,7 +114,7 @@ export default () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </NavLink>
                 ))}
               </div>
             </div>
