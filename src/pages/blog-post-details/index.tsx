@@ -78,7 +78,7 @@ export default () => {
 
           {/* Recent Blog Posts - Right Sidebar */}
           <div className="lg:col-span-1">
-            <div className=" p-6  sticky top-8">
+            <div className=" py-6  sticky top-8">
               <h2 className="text-xl font-semibold text-white mb-6">
                 Recent blog posts
               </h2>

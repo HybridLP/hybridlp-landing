@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets_/logo/logo.png";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,13 +23,13 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-4 mr-4 lato-regular">
           <div className="flex items-baseline space-x-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-white hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 lato-regular"
               >
                 <span className="text-white">{item.name}</span>
-              </a>
+              </NavLink>
             ))}
           </div>
           <div className="hidden md:flex">
@@ -89,9 +89,9 @@ const Header = () => {
                   );
                 }
                 return (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className="text-white hover:text-[#DA9932] text-2xl font-medium transition-all duration-300 transform hover:translate-x-2 lato-regular opacity-0 animate-slide-in"
                     onClick={() => setIsOpen(false)}
                     style={{
@@ -100,7 +100,7 @@ const Header = () => {
                     }}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 );
               })}
 

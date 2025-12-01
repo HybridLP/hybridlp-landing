@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 export default () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col space-y-8 max-w-7xl   py-12">
+    <div className="flex flex-col space-y-6 sm:space-y-8 max-w-7xl py-8 sm:py-12">
       {/* blogs header */}
-      <div className="flex flex-wrap border-b border-gray-200">
+      <div className="flex flex-nowrap overflow-x-auto border-b border-gray-200 scrollbar-hide pb-2">
         {headerItems.map((item, idx) => {
           return (
             <div
               key={idx}
-              className={`px-4 py-2 cursor-pointer text-sm font-medium transition-colors hover:text-gray-500 hover:bg-white hover:mb-2 hover:rounded-lg ${
+              className={`px-3 sm:px-4 py-2 cursor-pointer text-xs sm:text-sm font-medium transition-colors hover:text-gray-500 hover:bg-white hover:mb-2 hover:rounded-lg whitespace-nowrap ${
                 idx === 0
                   ? "text-white border-b-2 border-[#B89900]"
                   : "text-[#B0B0B0]"
@@ -24,7 +24,7 @@ export default () => {
       </div>
 
       {/* blogs grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {blogPosts.map((post, idx) => (
           <div
             key={idx}
@@ -36,13 +36,13 @@ export default () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
 
               {/* Hover Overlay with Author Info */}
               <div className="absolute bottom-0 left-0 right-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-                <div className="bg-white/10 backdrop-blur-md   px-4 py-4">
-                  <div className="flex items-center justify-between text-white text-sm">
+                <div className="bg-white/10 backdrop-blur-md px-4 py-4">
+                  <div className="flex items-center justify-between text-white text-xs sm:text-sm">
                     <div className="flex flex-col space-x-2">
                       <span className="font-medium drop-shadow-sm">
                         {post.author.name}
@@ -60,18 +60,18 @@ export default () => {
             </div>
 
             {/* Blog Content */}
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white group-hover:underline  transition-colors">
+            <div className="space-y-2 sm:space-y-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:underline transition-colors line-clamp-2">
                 {post.title}
               </h3>
 
-              <p className="text-white text-sm leading-relaxed">
+              <p className="text-white/90 text-xs sm:text-sm leading-relaxed line-clamp-3">
                 {post.description}
               </p>
 
-              <div className="flex items-center  font-medium text-sm ">
+              <div className="flex items-center font-medium text-xs sm:text-sm text-white/80 group-hover:text-white transition-colors">
                 <span>Read post</span>
-                <ArrowUpRight size={18} />
+                <ArrowUpRight size={16} className="sm:w-[18px] sm:h-[18px]" />
               </div>
             </div>
           </div>
@@ -79,8 +79,8 @@ export default () => {
       </div>
 
       {/* Load More Button */}
-      <div className="flex justify-center mt-12">
-        <button className="flex items-center px-6 py-3 bg-white border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+      <div className="flex justify-center mt-8 sm:mt-12">
+        <button className="flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-white border border-gray-300 rounded-full text-gray-700 font-medium text-sm sm:text-base hover:bg-gray-50 transition-colors">
           <svg
             className="mr-2 w-4 h-4"
             fill="none"

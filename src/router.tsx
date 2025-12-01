@@ -5,7 +5,7 @@ import NotFound from "./pages/NotFound";
 import Blogs from "./pages/blogs";
 import blogPostDetails from "./pages/blog-post-details";
 import proBono from "./pages/pro-bono";
-import SignupLogin from "./pages/signup-login"
+import SignupLogin from "./pages/signup-login";
 import judgements from "./pages/judgements";
 const routes = createBrowserRouter([
   {
@@ -39,8 +39,8 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path:"/auth",
- Component: SignupLogin
+    path: "/auth",
+    Component: SignupLogin,
   },
   {
     path: "*",
