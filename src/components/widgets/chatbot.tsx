@@ -41,7 +41,7 @@ export default function LegalChatbot() {
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    const currentInput = inputMessage;
+    // const currentInput = inputMessage;
     setInputMessage("");
 
     // Add typing indicator
