@@ -8,17 +8,17 @@ const items = [
   {
     title: "Briefs",
     content:
-      "When you’ve got a dispute, just open Hybrid LP and brief the most capable lawyers in the field.",
+      "Briefs-  Hybrid LP provides limitless legal services in diverse areas of practice, with expert specialized in specific fields",
   },
   {
     title: "Collaborate",
     content:
-      "Which-ever area of law your brief falls, you get merged with the best lawyers in the field to address your brief.",
+      "Collaborate - engage and merged with the competent lawyers in the field to address your brief, or for mentorship.",
   },
   {
     title: "Share Briefs",
     content:
-      "Lawyers share personal briefs with colleague lawyers to collaborate and fast track productivity.",
+      "Lawyers share personal briefs with colleague lawyers to collaborate and fast track productivity",
   },
 ];
 export default () => {

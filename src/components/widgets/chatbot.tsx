@@ -45,75 +45,6 @@ export default function LegalChatbot() {
     setInputMessage("");
 
     // Add typing indicator
-    const typingMessage: Message = {
-      id: messages.length + 2,
-      text: "Typing...",
-      sender: "ai",
-      timestamp: new Date(),
-    };
-    setMessages((prev) => [...prev, typingMessage]);
-
-    try {
-      // Call backend API
-      const apiUrl = window.location.hostname === 'localhost'
-        ? 'http://localhost:3000/api/chatbot/message'
-        : 'https://api.hybridlp.com/api/chatbot/message';
-
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: currentInput,
-          conversationHistory: messages
-            .filter(m => m.text !== "Typing...")
-            .map(m => ({
-              role: m.sender === "user" ? "user" : "assistant",
-              content: m.text,
-            }))
-            .slice(-6), // Keep last 6 messages for context
-        }),
-      });
-
-      const data = await response.json();
-
-      // Remove typing indicator
-      setMessages((prev) => prev.filter((m) => m.text !== "Typing..."));
-
-      if (data.success && data.message) {
-        const aiResponse: Message = {
-          id: messages.length + 3,
-          text: data.message,
-          sender: "ai",
-          timestamp: new Date(),
-        };
-        setMessages((prev) => [...prev, aiResponse]);
-      } else {
-        // Error from API
-        const errorMessage: Message = {
-          id: messages.length + 3,
-          text: data.error || "I apologize, but I'm having trouble responding right now. Please try again in a moment.",
-          sender: "ai",
-          timestamp: new Date(),
-        };
-        setMessages((prev) => [...prev, errorMessage]);
-      }
-    } catch (error) {
-      console.error("Chat API Error:", error);
-      
-      // Remove typing indicator
-      setMessages((prev) => prev.filter((m) => m.text !== "Typing..."));
-
-      // Show error message
-      const errorMessage: Message = {
-        id: messages.length + 3,
-        text: "I'm sorry, I'm having trouble connecting right now. Please check your internet connection and try again.",
-        sender: "ai",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, errorMessage]);
-    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -226,7 +157,8 @@ export default function LegalChatbot() {
                 </button>
               </div>
               <p className="text-gray-500 text-xs mt-2 text-center lato-regular">
-                For specific legal advice, please connect with our verified lawyers
+                For specific legal advice, please connect with our verified
+                lawyers
               </p>
             </div>
           </div>
