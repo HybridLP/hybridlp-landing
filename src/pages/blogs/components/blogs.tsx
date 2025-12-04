@@ -6,12 +6,12 @@ export default () => {
   return (
     <div className="flex flex-col space-y-6 sm:space-y-8 max-w-7xl py-8 sm:py-12">
       {/* blogs header */}
-      <div className="flex flex-nowrap overflow-x-auto border-b border-gray-200 scrollbar-hide pb-2">
+      <div className="flex flex-nowrap overflow-x-auto border-b border-[#E9DFB0] scrollbar-hide pb-0 relative">
         {headerItems.map((item, idx) => {
           return (
             <div
               key={idx}
-              className={`px-3 sm:px-4 py-2 cursor-pointer text-xs sm:text-sm font-medium transition-colors hover:text-gray-500 hover:bg-white hover:mb-2 hover:rounded-lg whitespace-nowrap ${
+              className={`px-3 sm:px-4 py-2 cursor-pointer text-xs sm:text-sm font-medium transition-colors hover:text-gray-500 hover:bg-white hover:mb-2 hover:rounded-lg whitespace-nowrap  ${
                 idx === 0
                   ? "text-white border-b-2 border-[#B89900]"
                   : "text-[#B0B0B0]"
@@ -41,7 +41,7 @@ export default () => {
 
               {/* Hover Overlay with Author Info */}
               <div className="absolute bottom-0 left-0 right-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-                <div className="bg-white/10 backdrop-blur-md px-4 py-4">
+                <div className="bg-[#706F6F4D]  px-4 py-4">
                   <div className="flex items-center justify-between text-white text-xs sm:text-sm">
                     <div className="flex flex-col space-x-2">
                       <span className="font-medium drop-shadow-sm">

@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className="w-full md:w-1/2 lg:w-[30%] flex flex-col space-y-3 sm:space-y-4 mt-6 sm:mt-8">
+    <div className="w-full md:w-1/2 lg:w-[30%] flex flex-col space-y-3 sm:space-y-4 mt-6 sm:mt-8 lg:mt-[10%]">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-[10%]">
         Blog Posts
       </h1>

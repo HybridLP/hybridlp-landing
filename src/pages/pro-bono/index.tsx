@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/hero";
 
 export default () => {
@@ -23,16 +23,22 @@ export default () => {
     console.log("Form submitted:", formData);
     // Handle form submission here
   };
-
+window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant' // Optional: for a smooth scrolling animation
+    });
   return (
     <div className=" min-h-screen">
       <Hero/>
-      <div className="flex flex-col items-center justify-center py-20 bg-[#323232] ">
+      <div className="h-screen flex flex-col">
+
+      <div className="flex flex-col flex-1 items-center justify-center py-20  bg-[#323232] ">
         <h1 className="text-7xl inter-font font-bold">100+</h1>
         <p className="text-[20px] lato-refular">Legal Practitoners</p>
       </div>
       {/* Lawyer Sign Up Form Section */}
-      <section className="px-[7%] py-16 pt-24 text-center">
+      <section className="px-[7%] py-16 flex-1 pt-24 text-center">
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 inter-font">
           Lawyer Sign Up Form
         </h2>
@@ -46,17 +52,18 @@ export default () => {
           Sign Up
         </button>
       </section>
+      </div>
 
       {/* About Section */}
-      <section className="px-[7%] py-8 bg-[#3232324D]">
-        <div className="flex flex-col lg:flex-row items-center gap-8  p-8 ">
+      <section className="px-[7%] lg-[128px] py-8 bg-[#3232324D]">
+        <div className="flex flex-col lg:flex-row items-center gap-8  p-8 md:h-[70%] ">
           <div className="flex-1">
-            <h3 className="text-white text-xl font-semibold mb-4 inter-font">
+            <h3 className="text-white md:text-[32px] font-semibold mb-4 inter-font">
               Hybrid law practice pro bono services is an additional service
               that works with private legal profession to provide pro bono legal
               services to the poor.
             </h3>
-            <p className="text-white/80 leading-relaxed lato-regular" >
+            <p className="text-white/80 leading-relaxed lato-regular text-[18px]" >
               We harness the enormous skill, might and strength of the Nigerian
               private legal profession to cases and clients that we identify.
               The existence of this service is a response to the lack of access
@@ -76,20 +83,20 @@ export default () => {
               it.
             </p>
           </div>
-          <div className="lg:w-1/3 p-8 bg-[#323232]">
+          <div className="lg:w-1/3 p-8 bg-[#323232] lg:h-full">
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
               alt="Legal consultation"
-              className="w-full h-64 object-cover"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </div>
       </section>
 
       {/* What We Do Section */}
-      <section className="px-[7%] py-16">
+      <section className="px-[7%] lg:px-[165px] py-16">
         <div className="   p-8">
-          <h2 className="text-white text-2xl font-bold mb-4   pb-6 inter-font">
+          <h2 className="text-white text-2xl lg:text-[48px] font-bold mb-4   pb-6 inter-font">
             What We Do
           </h2>
           <div className="w-10 border-b-2 border-solid  border-white mb-2" />
@@ -98,7 +105,7 @@ export default () => {
             {/* Services to clients */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
 
-              <h3 className="inter-font text-white font-semibold mb-4   pb-2">
+              <h3 className="inter-font text-white font-semibold mb-4   pb-2  md:text-[24px]">
                 Services to clients
               </h3>
               <ul className="text-white/80 lato-regular text-sm space-y-2">
@@ -112,7 +119,7 @@ export default () => {
             {/* Services to lawyers */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
 
-              <h3 className="inter-font text-white font-semibold mb-4   pb-2">
+              <h3 className="inter-font text-white font-semibold mb-4   pb-2 md:text-[24px]">
                 Services to lawyers
               </h3>
               <ul className="text-white/80 lato-regular text-sm space-y-2">
@@ -130,7 +137,7 @@ export default () => {
             {/* General services */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
 
-              <h3 className="inter-font text-white font-semibold mb-4   pb-2">
+              <h3 className="inter-font text-white font-semibold mb-4   pb-2 md:text-[24px]">
                 General services
               </h3>
               <ul className="text-white/80 lato-regular text-sm space-y-2">
@@ -143,7 +150,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className=" w-[90%] mx-auto text-gray-800 bg-white rounded-t-4xl rounded-b-lg p-8">
+        <div className=" w-[86%] mx-auto text-gray-800 bg-white rounded-t-4xl rounded-b-lg p-8">
           <h2 className="text-gray-800 text-2xl font-bold text-center mb-8 inter-font">
             Get In Touch
           </h2>

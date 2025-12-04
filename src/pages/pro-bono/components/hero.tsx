@@ -4,7 +4,7 @@ import bg from "../../../assets_/probono-bg.jpg";
 export default () => {
   return (
     <section
-      className={`flex h-[50%] px-[5%]  py-[5%] pt-[10%] justify-center  items-center  bg-blend-darken bg-cover`}
+      className={`flex h-screen px-[5%]  py-[5%] pt-[10%] justify-center  items-center  bg-blend-darken bg-cover`}
       style={{
         backgroundImage: `url(${bg})`,
         backgroundPosition: "center",

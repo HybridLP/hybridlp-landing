@@ -12,11 +12,11 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
   return (
     <div
       ref={ref}
-      className="flex gap-4 md:gap-6 flex-col md:flex-row items-center md:items-start"
+      className="flex gap-4 md:gap-6 flex-col md:flex-row items-center md:items-start "
     >
       {/* Card - Fade in from left on mobile, normal on desktop */}
       <div
-        className={`rounded-lg flex items-center justify-center bg-[#333333] p-4 md:p-8 w-full md:min-w-[35%] h-48 md:h-52 transition-all duration-700 ease-out ${isVisible
+        className={`rounded-lg flex items-center justify-center bg-[#333333] p-4 md:p-8 w-full md:min-w-[35%] md:max-w-[35%] h-48 md:h-52 transition-all duration-700 ease-out ${isVisible
             ? 'opacity-100 md:translate-y-0 translate-x-0'
             : 'opacity-0 md:translate-y-10 -translate-x-10 md:translate-x-0'
           }`}
@@ -93,7 +93,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
 export default () => {
   return (
     <div id="features"
-      className="flex flex-col gap-6 md:gap-8 text-white pt-8 md:pt-[5%] px-4 md:px-8 lg:px-32 pb-12 md:pb-16"
+      className="flex flex-col gap-6 md:gap-8 text-white pt-8 md:pt-[5%] px-4 md:px-8 lg:px-[244px] pb-12 md:pb-16"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",

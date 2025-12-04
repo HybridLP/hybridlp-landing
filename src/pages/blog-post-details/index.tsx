@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default () => {
   return (
     <div
-      className="bg-cover bg-center px-[7%] py-10"
+      className="bg-cover bg-center py-10"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -13,7 +13,7 @@ export default () => {
       }}
     >
       <Hero />
-      <main className="pt-16">
+      <main className="pt-16 md:px-32">
         {/* blog details and other blogs */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
           {/* Main Blog Content - Left Side */}
@@ -86,8 +86,8 @@ export default () => {
 
               <div className="space-y-6">
                 {recentPosts.map((post, index) => (
-                  <NavLink to={`/blogs/${post.id}`} key={index} className="group cursor-pointer">
-                    <div className="flex space-x-4">
+                  <NavLink to={`/blogs/${post.id}`} key={index} className="group cursor-pointer ">
+                    <div className="flex space-x-4 mb-4">
                       {/* Post Image */}
                       <div className="flex-shrink-0">
                         <img

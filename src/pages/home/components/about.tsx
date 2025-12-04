@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <>
-      <div className="flex py-8 md:py-16 lg:py-20 flex-col gap-6 md:gap-8 lg:gap-10 bg-black text-white px-4 md:px-8 lg:px-16 xl:px-30">
+      <div className="flex py-8 md:py-16 lg:py-20 flex-col gap-6 md:gap-8 lg:gap-10 bg-black text-white px-4 md:px-8 lg:px-16 xl:px-30 h-screen">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0">
           <div className=" flex flex-col space-y-4  ">
             <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">
@@ -36,7 +36,7 @@ export default () => {
               Your Legal Powerhouse
             </h1>
           </div>
-          <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[59%] leading-relaxed">
+          <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed">
             Hybrid Law Practice is your legal powerhouse designed for your
             seamless legal offering/service experience. Every brief,
             collaboration, interview find it’s place, keeping you at the top of
@@ -104,8 +104,8 @@ export default () => {
         </div>
 
         {/* Desktop Layout - Side by Side */}
-        <div className="hidden lg:flex justify-between mt-8">
-          <AnimatedSection className="flex flex-col space-y-4 w-[42%]">
+        <div className="hidden lg:flex justify-between mt-8 lg:gap-[128px]">
+          <AnimatedSection className="flex flex-col space-y-4 w-[40%]">
             {items.map((item, idx) => {
               return (
                 <div
@@ -130,7 +130,7 @@ export default () => {
 
           <SlideInSection
             trigger={clicked}
-            className="w-[53%] h-inherit rounded-lg relative"
+            className="flex-1 h-inherit rounded-lg relative"
             style={{
               backgroundImage: `url(${clicked === 0
                   ? briefs
