@@ -14,16 +14,16 @@ export default () => {
     >
       <div className="flex flex-col gap-4 mt-0 lg:w-[70%]">
         <h2 className="text-white text-center md:text-start text-3xl md:text-[52px] inter-font  font-bold  mt-4 md:mt-0">
-        Access legal services, Collaborate and Work On Briefs From Anywhere</h2>
+       Access to Expert Legal Services
+      </h2> 
         <p className="text-white text-center md:text-start font-normal text-[14px] lg:text-lg  lator-regular">
-          Access limitless legal services and consultations, Collaborate  with Colleagues, Manage Cases, Conduct Interviews And Sort Paper-works From The Comfort Of Your Home, leveraging On The Power Of An Electronic Law Office
-        </p>
+         Introducing a fully integrated Electronic law Office Management designed to deliver a wide range of legal services and consultations, enable real-time collaborations through an enhanced process from a secured digital workspace </p>
         <Link
           className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-full md:w-[30%] text-[16px] rounded-md  md:rounded-full text-center p-4"
           to="#"
         ><span className="text-white lato-regular">
 
-            Join Our Lawyers
+           Get a lawyer
           </span>
         </Link>
       </div>
