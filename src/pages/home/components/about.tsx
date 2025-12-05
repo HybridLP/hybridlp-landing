@@ -6,19 +6,29 @@ import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
 const items = [
   {
-    title: "Briefs",
+    title: "Self-service",
     content:
-      "Briefs-  Hybrid LP provides limitless legal services in diverse areas of practice, with expert specialized in specific fields",
+      "A dedicated client dashboard for seamless interaction with case file, track work progress and get timely updates from the assigned legal team. Clients can independently review documents, schedule appointments, initiate query against legal team  and manage key aspects of their legal matters.",
   },
   {
-    title: "Collaborate",
+    title: "Introducing regulatory mechanisms",
     content:
-      "Collaborate - engage and merged with the competent lawyers in the field to address your brief, or for mentorship.",
+      "to enhance transparency, professionalism, accountability and consistent service quality by effectively supervising the activities of the team of lawyers assigned to each task.",
   },
   {
-    title: "Share Briefs",
+    title: "Pro Bono Legal Services",
     content:
-      "Lawyers share personal briefs with colleague lawyers to collaborate and fast track productivity",
+      "Accepts applications from individuals and organisations seeking free legal assistance.",
+  },
+  {
+    title: "Mentorship, Pupillage, and Career Guidance",
+    content:
+      "Provides structured mentorship, pupillage opportunities, and professional career advice for aspiring lawyers.",
+  },
+  {
+    title: "Licensed Bondsman Services",
+    content:
+      "Operates as a certified surety, facilitating bail and related legal undertakings in compliance with Nigerian law.",
   },
 ];
 export default () => {
@@ -85,7 +95,7 @@ export default () => {
                   key={idx}
                   onClick={() => setClicked(idx)}
                   className={`rounded-md ${clicked === idx ? "border-l-8" : "border-l-4"
-                    } border-[#DED08A] cursor-pointer flex flex-col w-full min-h-[100px] p-4 bg-[#1D1D1D] transition-all duration-300 ${clicked === idx && "shadow-lg"
+                    } border-[#DED08A] h-fit cursor-pointer flex flex-col w-full  p-4 bg-[#1D1D1D] transition-all duration-300 ${clicked === idx && "shadow-lg"
                     }`}
                   style={{
                     boxShadow: clicked === idx
@@ -93,7 +103,7 @@ export default () => {
                       : "none",
                   }}
                 >
-                  <h3 className="text-xl md:text-2xl inter-font mb-2">{item.title}</h3>
+                  <h3 className="text-lg md:text-2xl inter-font mb-2">{item.title}</h3>
                   <p className="text-white font-normal text-sm md:text-base lato-regular leading-relaxed">
                     {item.content}
                   </p>
