@@ -23,35 +23,36 @@ export default () => {
     console.log("Form submitted:", formData);
     // Handle form submission here
   };
-window.scrollTo({
+  useEffect(() => {
+    window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'instant' // Optional: for a smooth scrolling animation
+      behavior: "instant", // Optional: for a smooth scrolling animation
     });
+  }, []);
   return (
     <div className=" min-h-screen">
-      <Hero/>
+      <Hero />
       <div className="h-screen flex flex-col">
-
-      <div className="flex flex-col flex-1 items-center justify-center py-20  bg-[#323232] ">
-        <h1 className="text-7xl inter-font font-bold">100+</h1>
-        <p className="text-[20px] lato-refular">Legal Practitoners</p>
-      </div>
-      {/* Lawyer Sign Up Form Section */}
-      <section className="px-[7%] py-16 flex-1 pt-24 text-center">
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 inter-font">
-          Lawyer Sign Up Form
-        </h2>
-        <p className="text-white/80 text-lg mb-2 lato-regular">
-          Lawyers can now sign up to take on pro bono cases.
-        </p>
-        <p className="text-white/60 text-sm mb-8 lato-regular">
-          100+ practitioners providing immense worth of pro bono work.
-        </p>
-        <button className="inline-block px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors">
-          Sign Up
-        </button>
-      </section>
+        <div className="flex flex-col flex-1 items-center justify-center py-20  bg-[#323232] ">
+          <h1 className="text-7xl inter-font font-bold">100+</h1>
+          <p className="text-[20px] lato-refular">Legal Practitoners</p>
+        </div>
+        {/* Lawyer Sign Up Form Section */}
+        <section className="px-[7%] py-16 flex-1 pt-24 text-center">
+          <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 inter-font">
+            Lawyer Sign Up Form
+          </h2>
+          <p className="text-white/80 text-lg mb-2 lato-regular">
+            Lawyers can now sign up to take on pro bono cases.
+          </p>
+          <p className="text-white/60 text-sm mb-8 lato-regular">
+            100+ practitioners providing immense worth of pro bono work.
+          </p>
+          <button className="inline-block px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors">
+            Sign Up
+          </button>
+        </section>
       </div>
 
       {/* About Section */}
@@ -63,7 +64,7 @@ window.scrollTo({
               that works with private legal profession to provide pro bono legal
               services to the poor.
             </h3>
-            <p className="text-white/80 leading-relaxed lato-regular text-[18px]" >
+            <p className="text-white/80 leading-relaxed lato-regular text-[18px]">
               We harness the enormous skill, might and strength of the Nigerian
               private legal profession to cases and clients that we identify.
               The existence of this service is a response to the lack of access
@@ -104,7 +105,6 @@ window.scrollTo({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             {/* Services to clients */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
-
               <h3 className="inter-font text-white font-semibold mb-4   pb-2  md:text-[24px]">
                 Services to clients
               </h3>
@@ -118,7 +118,6 @@ window.scrollTo({
 
             {/* Services to lawyers */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
-
               <h3 className="inter-font text-white font-semibold mb-4   pb-2 md:text-[24px]">
                 Services to lawyers
               </h3>
@@ -136,7 +135,6 @@ window.scrollTo({
 
             {/* General services */}
             <div className="border-l-2 border-t-2 rounded-tl-lg border-white pt-5 pl-5 h-fit ">
-
               <h3 className="inter-font text-white font-semibold mb-4   pb-2 md:text-[24px]">
                 General services
               </h3>
