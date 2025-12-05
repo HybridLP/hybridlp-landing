@@ -139,7 +139,7 @@ const highlights = [
   {
     title: "Log meetings, interviews, or any sessions on the go.",
     description:
-      "Capture voice notes during meetings, consultations, or any related proceedings anytime, anywhere. Each recording can be tagged, transcribed, and attached to relevant case files for smarter, on-the-go documentation.",
+      "Capture voice notes during meetings, consultations, or any related proceedings. Each recording can be tagged, transcribed, and attached to relevant case files for smarter, on-the-go documentation.",
     image: meetingIcon,
     extraTitle: "Voice Notes",
     extraDesc: "And other recordings",
@@ -147,13 +147,13 @@ const highlights = [
   {
     title: "Nigerian laws, templates, judgments, and more.",
     description:
-      "Instantly access a rich library of Nigerian statutes, case law, precedent templates, and Continuing Professional Development (CPD) resources. Stay informed and empowered with curated legal content at your fingertips.",
+      "Instant access a rich library of Nigerian statutes, case law, precedent templates, and Continuing Professional Development (CPD) resources. Stay informed and empowered with curated legal content at your fingertips.",
     image: accessIcon,
     extraTitle: "Exclusive Access To",
     extraDesc: "Major Nigerian legal resources",
   },
   {
-    title: "Never miss a court date or client appointment again..",
+    title: "Never miss a court date or client appointment.",
     description:
       "Keep track of court sittings, deadlines, and consultations with an integrated calendar tailored for legal workflows. Get automatic reminders and sync important dates across devices and team members.",
     image: calendarIcon,
