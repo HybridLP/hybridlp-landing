@@ -1,16 +1,20 @@
-import bg from "../../../assets_/brief-submission.jpg"
-import workspace from "../../../assets_/workspace.jpg"
+import bg from "../../../assets_/brief-submission.jpg";
+import workspace from "../../../assets_/workspace.jpg";
 import alarm from "../../../assets_/alarm-clock.png";
 import arrowUpRight from "../../../assets_/maki_arrow.png";
 import arrowright from "../../../assets_/guidance_.png";
 import arrowDown from "../../../assets_/down-arrow.png";
 import expertAss from "../../../assets_/expert_assignment.png";
+import lineImg from "../../../assets_/line.png";
 import { Link } from "react-router-dom";
 
 import AnimatedSection from "../../../components/widgets/animated-section";
 export default () => {
   return (
-    <div id="briefs" className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30  pt-[15%]">
+    <div
+      id="briefs"
+      className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30  pt-[15%]"
+    >
       <h6 className="text-black font-bold mx-auto h-10 bg-gray-100 w-fit px-4 py-2 flex items-center justify-center rounded-md text-center text-sm md:text-base lg:text-[18px] lato-regular">
         Sharing briefs
       </h6>
@@ -35,10 +39,10 @@ export default () => {
             </h3>
             <p className="text-sm text-black font-normal lato-regular leading-relaxed">
               Provide the full details of your legal matter i.e. documents,
-              voice notes, timelines. Everything your lawyer needs to hit
-              the ground running.
+              voice notes, timelines. Everything your lawyer needs to hit the
+              ground running.
             </p>
-            <img src="" alt="" className="absolute top-[10%] -right-[50%]"/>
+            <img src="" alt="" className="absolute top-[10%] -right-[50%]" />
           </div>
         </AnimatedSection>
 
@@ -70,14 +74,14 @@ export default () => {
           <div className="bg-gradient-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl p-6 relative">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-2xl font-semibold inter-font flex-1">
-                We Assign The Right Experts
+               We assign to you the most experienced team
               </h3>
               <img src={expertAss} alt="icon" className="size-16 ml-4" />
             </div>
             <p className="text-sm text-black lato-regular leading-relaxed">
-              Our system intelligently matches your case with seasoned,
-              verified lawyers who specialize in your type of matter, so
-              you're never left guessing.
+              Our system intelligently matches your case with seasoned, verified
+              lawyers who specialize in your type of matter, so you're never
+              left guessing.
             </p>
           </div>
         </AnimatedSection>
@@ -107,9 +111,7 @@ export default () => {
             to="#"
             className="relative px-6 py-4 text-white flex items-center justify-between bg-gradient-to-b from-[#DED08A] to-[#FFFFFF70] backdrop-blur-[15px] w-full shadow-lg rounded-2xl"
           >
-            <div className="text-white text-xl inter-font">
-              Get to Work
-            </div>
+            <div className="text-white text-xl inter-font">Get to Work</div>
             <div className="flex items-center gap-2">
               <img src={alarm} alt="" className="size-8" />
               <img src={arrowright} alt="" className="size-6" />
@@ -123,9 +125,9 @@ export default () => {
         {/* Left Column (Submit Brief + We Assign) */}
         <div className="flex flex-col gap-4 py-0 w-[60%] h-[80vh]">
           {/* Submit Your Brief */}
-          <AnimatedSection className="h-[50%] " delay={0} >
+          <AnimatedSection className="h-[50%] " delay={0}>
             <div className="flex gap-4 h-full">
-              <div className="flex flex-col justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
+              <div className="flex flex-col relative justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
                   Submit
                   <br />
@@ -136,6 +138,11 @@ export default () => {
                   voice notes, timelines. Everything your lawyer needs to hit
                   the ground running.
                 </p>
+                 <img
+                  src={lineImg}
+                  alt=""
+                  className="absolute top-[30%] right-0 w-[56px] h-[96px]"
+                />
               </div>
               <div
                 className="bg-cover relative  w-1/2 h-full rounded-xl px-6 flex flex-col justify-end pb-8  bg-center bg-no-repeat "
@@ -147,8 +154,11 @@ export default () => {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-            <img src={arrowright} alt="" className="absolute top-[30%] left-0 w-[56px] h-[96px]" />
-
+                <img
+                  src={arrowright}
+                  alt=""
+                  className="absolute top-[30%] left-0 w-[56px] h-[96px]"
+                />
 
                 <Link
                   to="#"
@@ -159,18 +169,23 @@ export default () => {
                   </span>
                   <img src={arrowUpRight} className="size-8" alt="arrow" />
                 </Link>
+                 <img
+                  src={lineImg}
+                  alt=""
+                  className="absolute rotate-90 right-[0%] -bottom-11 w-[56px] h-[96px]"
+                />
               </div>
             </div>
           </AnimatedSection>
 
-          {/* We Assign The Right Experts */}
+          {/*We assign to you the most experienced team */}
           <AnimatedSection delay={150} className="h-[50%] ">
             <div className="flex relative flex-col bg-gradient-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl  h-full p-8 lg:p-12">
               <div className="flex justify-between items-center">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
-                  We Assign
-                  <br />
-                  The Right Experts
+                We assign
+                  
+                  to <br />you the most experienced team
                 </h3>
                 <img src={expertAss} alt="icon" className="size-20" />
               </div>
@@ -184,6 +199,11 @@ export default () => {
                 className="absolute top-0 size-16 right-[0%] bottom-[20%]"
                 alt="arrow"
               />
+              <img
+                  src={lineImg}
+                  alt=""
+                  className="absolute  right-[0%] bottom-[8%] w-[56px] h-[56px]"
+                />
             </div>
           </AnimatedSection>
         </div>
@@ -220,7 +240,7 @@ export default () => {
             />
             <img
               src={arrowright}
-              className="absolute left-0 size-8 top-[30%] bottom-[20%]"
+              className="absolute left-0 size-8 top-[20%] h-[56px] bottom-[20%]"
               alt="arrow"
             />
           </Link>
@@ -229,4 +249,3 @@ export default () => {
     </div>
   );
 };
-

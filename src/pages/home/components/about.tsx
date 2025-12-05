@@ -6,29 +6,19 @@ import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
 const items = [
   {
-    title: "Self-service",
+    title: "Briefs",
     content:
-      "A dedicated client dashboard for seamless interaction with case file, track work progress and get timely updates from the assigned legal team. Clients can independently review documents, schedule appointments, initiate query against legal team  and manage key aspects of their legal matters.",
+      "When you’ve got a dispute, just open Hybrid LP and brief the most capable lawyers in the field.",
   },
   {
-    title: "Introducing regulatory mechanisms",
+    title: "Collaborate",
     content:
-      "to enhance transparency, professionalism, accountability and consistent service quality by effectively supervising the activities of the team of lawyers assigned to each task.",
+      "Which-ever area of law your brief falls, you get merged with the best lawyers in the field to address your brief.",
   },
   {
-    title: "Pro Bono Legal Services",
+    title: "Share Briefs",
     content:
-      "Accepts applications from individuals and organisations seeking free legal assistance.",
-  },
-  {
-    title: "Mentorship, Pupillage, and Career Guidance",
-    content:
-      "Provides structured mentorship, pupillage opportunities, and professional career advice for aspiring lawyers.",
-  },
-  {
-    title: "Licensed Bondsman Services",
-    content:
-      "Operates as a certified surety, facilitating bail and related legal undertakings in compliance with Nigerian law.",
+      "Lawyers share personal briefs with colleague lawyers to collaborate and fast track productivity.",
   },
 ];
 export default () => {
@@ -36,7 +26,7 @@ export default () => {
 
   return (
     <>
-      <div className="flex py-8 md:py-16 lg:py-20 flex-col gap-6 md:gap-8 lg:gap-10 bg-black text-white px-4 md:px-8 lg:px-16 xl:px-30 h-screen">
+      <div className="flex py-8 md:py-12 lg:pt-16 flex-col gap-6 md:gap-8 lg:gap-10 bg-black text-white px-4 md:px-8 lg:px-32 xl:px-32 lg:h-screen">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0">
           <div className=" flex flex-col space-y-4  ">
             <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">
@@ -61,12 +51,13 @@ export default () => {
               trigger={clicked}
               className="w-full h-64 md:h-80 rounded-lg relative overflow-hidden"
               style={{
-                backgroundImage: `url(${clicked === 0
+                backgroundImage: `url(${
+                  clicked === 0
                     ? briefs
                     : clicked === 1
-                      ? collaborate
-                      : shareBriefs
-                  })`,
+                    ? collaborate
+                    : shareBriefs
+                })`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -77,10 +68,9 @@ export default () => {
                 {[0, 1, 2].map((index) => (
                   <div
                     key={index}
-                    className={`rounded-full h-3 transition-all duration-300 ${clicked === index
-                        ? "bg-white w-8"
-                        : "bg-gray-300 w-3"
-                      }`}
+                    className={`rounded-full h-3 transition-all duration-300 ${
+                      clicked === index ? "bg-white w-8" : "bg-gray-300 w-3"
+                    }`}
                   />
                 ))}
               </div>
@@ -94,16 +84,21 @@ export default () => {
                 <div
                   key={idx}
                   onClick={() => setClicked(idx)}
-                  className={`rounded-md ${clicked === idx ? "border-l-8" : "border-l-4"
-                    } border-[#DED08A] h-fit cursor-pointer flex flex-col w-full  p-4 bg-[#1D1D1D] transition-all duration-300 ${clicked === idx && "shadow-lg"
-                    }`}
+                  className={`rounded-md ${
+                    clicked === idx ? "border-l-8" : "border-l-4"
+                  } border-[#DED08A] h-fit cursor-pointer flex flex-col w-full  p-4 bg-[#1D1D1D] transition-all duration-300 ${
+                    clicked === idx && "shadow-lg"
+                  }`}
                   style={{
-                    boxShadow: clicked === idx
-                      ? "0px 4px 10px 0px #FFFFFF33 inset, 0px -1px 10px 0px #FFFFFF40 inset"
-                      : "none",
+                    boxShadow:
+                      clicked === idx
+                        ? "0px 4px 10px 0px #FFFFFF33 inset, 0px -1px 10px 0px #FFFFFF40 inset"
+                        : "none",
                   }}
                 >
-                  <h3 className="text-lg md:text-2xl inter-font mb-2">{item.title}</h3>
+                  <h3 className="text-lg md:text-2xl inter-font mb-2">
+                    {item.title}
+                  </h3>
                   <p className="text-white font-normal text-sm md:text-base lato-regular leading-relaxed">
                     {item.content}
                   </p>
@@ -114,23 +109,27 @@ export default () => {
         </div>
 
         {/* Desktop Layout - Side by Side */}
-        <div className="hidden lg:flex justify-between mt-8 lg:gap-[128px]">
-          <AnimatedSection className="flex flex-col space-y-4 w-[40%]">
+        <div className="hidden lg:flex justify-between mt-8 lg:gap-[128px] lg:h-[60%]">
+          <AnimatedSection className="flex flex-col space-y-4 w-[40%] h-full ">
             {items.map((item, idx) => {
               return (
                 <div
                   key={idx}
                   onClick={() => setClicked(idx)}
-                  className={`rounded-md ${clicked === idx ? "border-l-10" : "border-l-2"
-                    } border-[#DED08A] cursor-pointer flex flex-col w-full h-28 shadow-xs p-2 bg-[#1D1D1D] transition-all duration-300 ${clicked === idx && "shadowed"
-                    }`}
+                  className={`rounded-md ${
+                    clicked === idx
+                      ? "border-l-10 shadow-xs shadowed"
+                      : "border-l-2"
+                  } border-[#DED08A] cursor-pointer flex flex-col gap-[12px] w-full h-fit pt-3 pb-2 px-2 bg-[#1D1D1D] transition-all duration-300 `}
                   style={{
                     boxShadow:
-                      "0px 4px 10px 0px #FFFFFF33 inset, 0px -1px 10px 0px #FFFFFF40 inset",
+                      clicked === idx
+                        ? "0px 4px 10px 0px #FFFFFF33 inset, 0px -1px 10px 0px #FFFFFF40 inset"
+                        : undefined,
                   }}
                 >
                   <h3 className="text-[24px] inter-font">{item.title}</h3>
-                  <p className="text-white font-normal text-[14px] md:text-lg lato-regular">
+                  <p className="text-white font-normal text-[14px] md:text-[18px] lato-regular">
                     {item.content}
                   </p>
                 </div>
@@ -142,12 +141,13 @@ export default () => {
             trigger={clicked}
             className="flex-1 h-inherit rounded-lg relative"
             style={{
-              backgroundImage: `url(${clicked === 0
+              backgroundImage: `url(${
+                clicked === 0
                   ? briefs
                   : clicked === 1
-                    ? collaborate
-                    : shareBriefs
-                })`,
+                  ? collaborate
+                  : shareBriefs
+              })`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -157,8 +157,9 @@ export default () => {
               {[0, 1, 2].map((index) => (
                 <div
                   key={index}
-                  className={`rounded-full w-4 h-4 bg-gray-300 transition-all duration-300 ${clicked === index && "bg-[#fff] w-10"
-                    }`}
+                  className={`rounded-full w-4 h-4 bg-gray-300 transition-all duration-300 ${
+                    clicked === index && "bg-[#fff] w-10"
+                  }`}
                 />
               ))}
             </div>
