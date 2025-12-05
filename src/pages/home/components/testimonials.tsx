@@ -1,7 +1,7 @@
 export default () => {
   return (
     <>
-      <div id="testimonials" className="flex flex-col items-center gap-6 mt-6">
+      <div id="tTestimonialCardestimonials" className="flex flex-col items-center gap-6 mt-6">
         <h6 className="text-black mx-auto h-10 bg-gray-100 w-[40%] flex items-center lg:w-[10%] justify-center rounded-md  text-center text-[16px] font-bold lato-regular">
           Testimonials
         </h6>
@@ -89,7 +89,7 @@ const Carousel: React.FC<CarouselProps> = ({
   return (
     <div className="relative w-full max-w-[90%] md:max-w-4xl mx-auto overflow-hidden rounded-lg">
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex transition-transform duration-[1500ms] ease-initial"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (

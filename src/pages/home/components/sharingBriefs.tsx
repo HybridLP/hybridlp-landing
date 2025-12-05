@@ -6,10 +6,11 @@ import arrowright from "../../../assets_/guidance_.png";
 import arrowDown from "../../../assets_/down-arrow.png";
 import expertAss from "../../../assets_/expert_assignment.png";
 import { Link } from "react-router-dom";
+
 import AnimatedSection from "../../../components/widgets/animated-section";
 export default () => {
   return (
-    <div id="briefs" className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30 ">
+    <div id="briefs" className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30  pt-[15%]">
       <h6 className="text-black font-bold mx-auto h-10 bg-gray-100 w-fit px-4 py-2 flex items-center justify-center rounded-md text-center text-sm md:text-base lg:text-[18px] lato-regular">
         Sharing briefs
       </h6>
@@ -28,7 +29,7 @@ export default () => {
       <div className="block lg:hidden w-full space-y-6 mt-8">
         {/* Submit Your Brief - Mobile */}
         <AnimatedSection delay={0}>
-          <div className="bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-6 min-h-[200px]">
+          <div className="relative bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-6 min-h-[200px]">
             <h3 className="text-2xl font-semibold inter-font mb-4">
               Submit Your Brief
             </h3>
@@ -37,6 +38,7 @@ export default () => {
               voice notes, timelines. Everything your lawyer needs to hit
               the ground running.
             </p>
+            <img src="" alt="" className="absolute top-[10%] -right-[50%]"/>
           </div>
         </AnimatedSection>
 
@@ -121,7 +123,7 @@ export default () => {
         {/* Left Column (Submit Brief + We Assign) */}
         <div className="flex flex-col gap-4 py-0 w-[60%] h-[80vh]">
           {/* Submit Your Brief */}
-          <AnimatedSection className="h-[50%]" delay={0} >
+          <AnimatedSection className="h-[50%] " delay={0} >
             <div className="flex gap-4 h-full">
               <div className="flex flex-col justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
@@ -136,7 +138,7 @@ export default () => {
                 </p>
               </div>
               <div
-                className="bg-cover  w-1/2 h-full rounded-xl px-6 flex flex-col justify-end pb-8  bg-center bg-no-repeat "
+                className="bg-cover relative  w-1/2 h-full rounded-xl px-6 flex flex-col justify-end pb-8  bg-center bg-no-repeat "
                 style={{
                   backgroundImage: `url(${bg})`,
                   backgroundSize: "100%",
@@ -145,6 +147,8 @@ export default () => {
                   backgroundRepeat: "no-repeat",
                 }}
               >
+            <img src={arrowright} alt="" className="absolute top-[30%] left-0 w-[56px] h-[96px]" />
+
 
                 <Link
                   to="#"
