@@ -6,7 +6,7 @@ export default () => {
           Testimonials
         </h6>
         
-        <Carousel slides={testimonialData} autoPlayInterval={2000} />
+        <Carousel slides={testimonialData} autoPlayInterval={5000} />
         <p className="text-white italic mx-[5%] md:mx-0 text-center md:text-start font-normal my-8 " style={{}}>
           Join thousands of individuals and companies who are using Hybrid Law
           Practice to get their legal matters sorted! 

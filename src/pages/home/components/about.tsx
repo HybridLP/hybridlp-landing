@@ -6,19 +6,19 @@ import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
 const items = [
   {
-    title: "Briefs",
+    title: "Self-service",
     content:
-      "When you’ve got a dispute, just open Hybrid LP and brief the most capable lawyers in the field.",
+      "Manage your case files, track progress, schedule appointments, and submit queries from a secure client dashboard.",
   },
   {
     title: "Collaborate",
     content:
-      "Which-ever area of law your brief falls, you get merged with the best lawyers in the field to address your brief.",
+      "Work with expert lawyers in a secure digital workspace that enhances communication and streamlines workflows.",
   },
   {
-    title: "Share Briefs",
+    title: "Quality Service Regulation",
     content:
-      "Lawyers share personal briefs with colleague lawyers to collaborate and fast track productivity.",
+      "Comprehensive regulatory mechanisms to promote transparency, professionalism, accountability and consistent service quality.",
   },
 ];
 export default () => {
@@ -37,10 +37,16 @@ export default () => {
             </h1>
           </div>
           <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed">
-            Hybrid Law Practice is your legal powerhouse designed for your
-            seamless legal offering/service experience. Every brief,
-            collaboration, interview find it’s place, keeping you at the top of
-            your game.
+            Hybrid LP provides legal services in diverse areas, with experienced
+            lawyers in arbitration, litigation, Human right enforcement,
+            commercial disputes, labour/employment related matters, election
+            petition, immigration.{" "}
+            <span
+              onClick={() => (window.location.href = "/about")}
+              className="text-[#DED08A] cursor-pointer"
+            >
+              Read more
+            </span>
           </p>
         </div>
         {/* Mobile Layout - Stacked */}

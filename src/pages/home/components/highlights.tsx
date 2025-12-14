@@ -1,4 +1,3 @@
-
 import documentIcon from "../../../assets_/famicons_documents.png";
 import calendarIcon from "../../../assets_/calendar.png";
 import meetingIcon from "../../../assets_/microphone-icon.png";
@@ -16,20 +15,26 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
     >
       {/* Card - Fade in from left on mobile, normal on desktop */}
       <div
-        className={`rounded-lg flex items-center justify-center bg-[#333333] p-4 md:p-8 w-full md:min-w-[35%] md:max-w-[35%] h-48 md:h-52 transition-all duration-700 ease-out ${isVisible
-            ? 'opacity-100 md:translate-y-0 translate-x-0'
-            : 'opacity-0 md:translate-y-10 -translate-x-10 md:translate-x-0'
-          }`}
+        className={`md:rounded-3xl flex items-center justify-center bg-[#333333] p-8 md:p-12 w-full md:min-w-[40%] md:max-w-[40%] h-48 md:h-64 transition-all duration-700 ease-out ${
+          isVisible
+            ? "opacity-100 md:translate-y-0 translate-x-0"
+            : "opacity-0 md:translate-y-10 -translate-x-10 md:translate-x-0"
+        }`}
         style={{
-          transitionDelay: `${idx * 150}ms`
+          transitionDelay: `${idx * 150}ms`,
+          
         }}
       >
         {idx === 0 || idx === 2 ? (
+          // apply the drop shadow
           <div
-            className={`rounded-lg flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${idx === 2
-                ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] shadow-[#C8C8C840] shadow-inner inset-x-1 inset-y-1 drop-shadow-none"
-                : " drop-shadow-[#00000040] drop-shadow-xl  shadow-sm "
-              }`}
+            className={`rounded-2xl flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
+              idx === 2 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444]" : ""
+            }`}
+            style={{
+              boxShadow:
+                "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
+            }}
           >
             <img src={item.image} className="size-16" alt="" />
             <h3 className="text-white text-[20px] font-semibold">
@@ -40,7 +45,15 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
             )}
           </div>
         ) : idx === 3 ? (
-          <div className="flex gap-4 rounded-lg bg-gradient-to-b from-[#413F3F] to-[#373737] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden p-6 drop-shadow-lg drop-shadow-[#00000040] inset-1">
+          // apply the drop shadow
+
+          <div
+            className="flex gap-4 rounded-2xl bg-gradient-to-b from-[#413F3F] to-[#373737] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden p-6 inset-1"
+            style={{
+               boxShadow:
+                "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
+            }}
+          >
             <div className="flex flex-col gap-4 justify-center items-center">
               <h3 className="text-white text-[20px] font-semibold">
                 {item.extraTitle}
@@ -53,8 +66,19 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
             <img src={item.image} className="size-16" alt="" />
           </div>
         ) : (
-          <div className="flex gap-4 rounded-lg bg-gradient-to-b from-[#413F3F00] to-[#454444] shadow-[#C8C8C840] shadow-inner inset-x-1 inset-y-1 drop-shadow-none ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden drop-shadow-lg drop-shadow-[#00000040]">
-            <div className="flex items-center justify-center bg-gradient-to-bl from-[#8A8A8A] from-[12%] to-[#333333]">
+          // apply the drop shadow
+
+          <div
+            className="flex gap-4 rounded-2xl bg-gradient-to-b from-[#413F3F00] to-[#454444] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden"
+            style={{
+               boxShadow:
+                "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
+            }}
+          >
+            <div
+              className="flex items-center justify-center bg-gradient-to-bl from-[#8A8A8A] from-[12%] to-[#333333]"
+              
+            >
               <img src={item.image} className="size-16" alt="" />
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
@@ -71,18 +95,19 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
 
       {/* Text Content - Fade in from right on mobile, normal on desktop */}
       <div
-        className={`flex flex-col gap-3 md:gap-4 justify-center px-4 md:px-0 text-center md:text-left transition-all duration-700 ease-out ${isVisible
-            ? 'opacity-100 md:translate-y-0 translate-x-0'
-            : 'opacity-0 md:translate-y-10 translate-x-10 md:translate-x-0'
-          }`}
+        className={`flex flex-col my-auto gap-3 md:gap-4 justify-center px-4 md:px-0 text-center md:text-left transition-all duration-700 ease-out ${
+          isVisible
+            ? "opacity-100 md:translate-y-0 translate-x-0"
+            : "opacity-0 md:translate-y-10 translate-x-10 md:translate-x-0"
+        }`}
         style={{
-          transitionDelay: `${idx * 150 + 100}ms` // Slight delay after card animation
+          transitionDelay: `${idx * 150 + 100}ms`, // Slight delay after card animation
         }}
       >
         <h3 className="text-lg md:text-xl font-semibold inter-font text-white leading-tight">
           {item.title}
         </h3>
-        <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed text-justify" >
+        <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed text-justify">
           {item.description}
         </p>
       </div>
@@ -92,7 +117,8 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
 
 export default () => {
   return (
-    <div id="features"
+    <div
+      id="features"
       className="flex flex-col gap-6 md:gap-8 text-white pt-8 md:pt-[5%] px-4 md:px-8 lg:px-[244px] pb-12 md:pb-16"
       style={{
         backgroundImage: `url(${bg})`,
@@ -114,7 +140,9 @@ export default () => {
       {/* Description */}
       <p className="text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4">
         Customize the way you streamline your legal work-flow with integrations,{" "}
-        <span className="hidden md:inline"><br /></span>
+        <span className="hidden md:inline">
+          <br />
+        </span>
         automations and features, anytime, anywhere.
       </p>
 

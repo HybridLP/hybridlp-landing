@@ -18,14 +18,14 @@ export default function HassleFreeCTA() {
         {/* Content Container */}
         <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-black font-medium text-2xl md:text-3xl lg:text-4xl xl:text-[40px] leading-tight mb-6 md:mb-8 inter-font">
-            Step Into The Legal Hassle Free World
+            Explore Smart and Secured Legal Service Delivery
           </h2>
 
           <p className="text-black/90 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-3xl mx-auto text-center lato-regular">
-            Access expert legal support without delays, manage & monitor your case
-            progress, collaborate with seasoned professionals, all in one secure,
-            intelligent digital law office. Whether you're a client or a legal
-            practitioner, you're just a click away.
+            Gain access to legal services, manage and monitor case progress
+            remotely, collaborate with seasoned professionals leveraging
+            technology for efficient service delivery, access probono services
+            and book sessions with seasoned lawyers and career experts.
           </p>
 
           {/* CTA Button */}
