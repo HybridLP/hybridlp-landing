@@ -7,13 +7,14 @@ export default () => {
         className="flex flex-col py-0 relative text-white gradiented"
         
       >
-        <div className="hidden lg:block absolute top-[10%] left-[8rem]">
+        {/* it should still bw visible for the sake of  */}
+        <div className=" lg:block absolute top-[5%] lg:top-[10%] left-[0.5rem] md:left-[8rem]">
           <img src={bgProp} alt="bg-property" />
         </div>
-        <div className="hidden lg:block absolute top-[20%] right-[8rem] rotate-x-180">
+        <div className=" lg:block absolute top-[20%] right-[0.5rem] lg:right-[8rem] rotate-x-180">
           <img src={bgProp} alt="bg-property" />
         </div>
-        <div className="mt-[10%] mx-4 sm:mx-8 md:mx-16 lg:mx-[273px]">
+        <div className="mt-[20%] lg:mt-[10%] mx-4 sm:mx-8 md:mx-16 lg:mx-[273px]">
           <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-8">About Us</h1>
           <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-center mb-8 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
             Hybrid LP provides legal services in diverse areas, with experienced
