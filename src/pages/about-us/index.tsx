@@ -4,18 +4,18 @@ export default () => {
   return (
     <>
       <main
-        className="flex flex-col py-0 lg:px-32- relative text-white gradiented"
+        className="flex flex-col py-0 relative text-white gradiented"
         
       >
-        <div className="absolute top-[10%] left-[8rem]">
+        <div className="hidden lg:block absolute top-[10%] left-[8rem]">
           <img src={bgProp} alt="bg-property" />
         </div>
-        <div className="absolute top-[20%] right-[8rem] rotate-x-180">
+        <div className="hidden lg:block absolute top-[20%] right-[8rem] rotate-x-180">
           <img src={bgProp} alt="bg-property" />
         </div>
-        <div className="mt-[10%] mx-[273px]">
-          <h1 className="inter-font text-center text-[40px] mb-8 ">About Us</h1>
-          <p className="text-[18px] lato-regular text-center mb-8 lg:leading-[32px]">
+        <div className="mt-[10%] mx-4 sm:mx-8 md:mx-16 lg:mx-[273px]">
+          <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-8">About Us</h1>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-center mb-8 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
             Hybrid LP provides legal services in diverse areas, with experienced
             lawyers in arbitration, litigation, Human right enforcement,
             commercial disputes, labour/employment related matters, election
@@ -29,18 +29,18 @@ export default () => {
           <img
             src={aboutUs}
             alt=""
-            className="rounded-lg w-full lg:h-[419px]"
+            className="rounded-lg w-full h-auto lg:h-[419px] object-cover"
           />
-          <p className="text-[18px] lato-regular mt-[32px] text-center">
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular mt-6 sm:mt-8 text-center">
             We prioritize efficient service delivery through an integrated and
             interactive processes, such as;
           </p>
           {contents.map((item, idx) => (
-            <div className={`flex flex-col gap-6 ${idx===0 ? "mt-16": "mt-8"}`} key={idx}>
-              <h3 className="text-white text-[24px] font-semibold lg:w-[623px] lato-regular border-b border-b-white  px-[10px] py-[16px]">
+            <div className={`flex flex-col gap-4 sm:gap-6 ${idx===0 ? "mt-12 sm:mt-16": "mt-6 sm:mt-8"}`} key={idx}>
+              <h3 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-semibold w-full lg:w-[623px] lato-regular border-b border-b-white px-[10px] py-[12px] sm:py-[16px]">
                 {item.title}
               </h3>
-              <p className="lato-regular text-[18px] px-[10px] leading-8">
+              <p className="lato-regular text-[14px] sm:text-[16px] lg:text-[18px] px-[10px] leading-6 sm:leading-7 lg:leading-8">
                 {item.content}
               </p>
             </div>
