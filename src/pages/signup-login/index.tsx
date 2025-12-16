@@ -6,7 +6,7 @@ import authBg2 from "../../assets_/auth-bg2.png";
 export default () => {
   return (
     // background
-    <div className="relative w-screen h-screen overflow-hidden bg-no-repeat">
+    <div className="relative w-screen h-screen overflow-hidden bg-no-repeat bg-white">
       <img
         src={authBg2}
         alt=""
@@ -31,11 +31,11 @@ export default () => {
             style={{ boxShadow: "-4px 10px 20px 0px #00000040" }}
             className="bg-[#333333] w-full max-w-md lg:w-[470px] h-[200px] lg:h-[320px] rounded-2xl flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 hover:transform hover:scale-[1.02] transition-all duration-300"
           >
-            <h4 className="text-white text-lg lg:text-xl font-medium text-center">
-              Signup/Login as
+            <h4 className="text-white text-md lg:text-xl font-medium text-center">
+              Sign Up / Sign in as
             </h4>
             <NavLink
-              className="bg-white cursor-pointer text-black w-48 lg:w-64 py-3 rounded-lg text-base lg:text-lg font-medium hover:bg-gray-100 transition-colors text-center shadow-lg"
+              className="bg-white cursor-pointer text-black w-48 lg:w-64 py-3 rounded-lg text-base lg:text-lg font-medium hover:bg-gray-100 transition-colors text-center"
               to="https://app.hybridlp.com/login"
               target="_blank"
             >
@@ -47,11 +47,13 @@ export default () => {
             style={{ boxShadow: "-4px 10px 20px 0px #00000040" }}
             className="bg-[#E6E6E6] w-full max-w-md lg:w-[470px] h-[200px] lg:h-[320px] rounded-2xl flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 hover:transform hover:scale-[1.02] transition-all duration-300"
           >
-            <h4 className="text-[#333] text-lg lg:text-xl font-medium text-center">
-              Signup/Login as
+            <h4 className="text-[#333] text-md lg:text-xl font-medium text-center">
+                                        Sign Up / Sign in as
+
+
             </h4>
             <NavLink
-              className="bg-[#333333] cursor-pointer text-white w-48 lg:w-64 py-3 rounded-lg text-base lg:text-lg font-medium hover:bg-[#222222] transition-colors text-center shadow-lg"
+              className="bg-[#333333] cursor-pointer text-white w-48 lg:w-64 py-3 rounded-lg text-base lg:text-lg font-medium hover:bg-[#222222] transition-colors text-center "
               to="https://lawyer.hybridlp.com/login"
               target="_blank"
             >
