@@ -1,9 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import bg from "../../../assets_/testifooter-bg.jpg";
+import { useLocation } from "react-router-dom";
 
 export default function HassleFreeCTA() {
+  const location = useLocation();
   return (
-    <section className="px-4 md:px-8 lg:px-16 xl:px-32 overflow-hidden py-4 md:py-8">
+    <section
+      className={`px-4 md:px-8 lg:px-16 xl:px-32 overflow-hidden py-4 md:py-8 ${
+        location.pathname === "/about" ? "xl:mt-[60px] xl:px-[263px]" : ""
+      }`}
+    >
       <div
         className="text-center py-12 md:py-16 lg:py-20 mx-auto flex items-center justify-center flex-col px-6 md:px-8 lg:px-12 rounded-2xl relative"
         style={{

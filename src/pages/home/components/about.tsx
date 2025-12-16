@@ -92,7 +92,7 @@ export default () => {
                   onClick={() => setClicked(idx)}
                   className={`rounded-md ${
                     clicked === idx ? "border-l-8" : "border-l-4"
-                  } border-[#DED08A] h-fit cursor-pointer flex flex-col w-full  p-4 bg-[#1D1D1D] transition-all duration-300 ${
+                  } border-[#DED08A] h-fit cursor-pointer flex flex-col w-full   p-4 bg-[#1D1D1D] transition-all duration-300 ${
                     clicked === idx && "shadow-lg"
                   }`}
                   style={{
@@ -115,8 +115,8 @@ export default () => {
         </div>
 
         {/* Desktop Layout - Side by Side */}
-        <div className="hidden lg:flex justify-between mt-8 lg:gap-[128px] lg:h-[60%]">
-          <AnimatedSection className="flex flex-col space-y-4 w-[40%] h-full ">
+        <div className="hidden lg:flex justify-between mt-8 lg:gap-[128px]">
+          <AnimatedSection className="flex flex-col space-y-4 w-[40%]">
             {items.map((item, idx) => {
               return (
                 <div
@@ -124,8 +124,8 @@ export default () => {
                   onClick={() => setClicked(idx)}
                   className={`rounded-md ${
                     clicked === idx
-                      ? "border-l-10 shadow-xs shadowed"
-                      : "border-l-2"
+                      ? "border-l-10 shadow-xs shadowed pl-4"
+                      : "border-l-2 pl-6"
                   } border-[#DED08A] cursor-pointer flex flex-col gap-[12px] w-full h-fit pt-3 pb-2 px-2 bg-[#1D1D1D] transition-all duration-300 `}
                   style={{
                     boxShadow:
@@ -145,7 +145,7 @@ export default () => {
 
           <SlideInSection
             trigger={clicked}
-            className="flex-1 h-inherit rounded-lg relative"
+            className="flex-1 h-auto min-h-full rounded-lg relative"
             style={{
               backgroundImage: `url(${
                 clicked === 0

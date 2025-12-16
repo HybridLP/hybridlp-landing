@@ -15,78 +15,87 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
     >
       {/* Card - Fade in from left on mobile, normal on desktop */}
       <div
-        className={`md:rounded-3xl flex items-center justify-center bg-[#333333] p-8 md:p-12 w-full md:min-w-[40%] md:max-w-[40%] h-48 md:h-64 transition-all duration-700 ease-out ${
+        className={`rounded-xl md:rounded-3xl flex items-center justify-center bg-[#333333] p-8 md:px-10 md:py-[60px] w-full md:min-w-[460px] md:max-w-[460px] h-48 md:h-80 transition-all duration-700 ease-out ${
           isVisible
             ? "opacity-100 md:translate-y-0 translate-x-0"
             : "opacity-0 md:translate-y-10 -translate-x-10 md:translate-x-0"
         }`}
         style={{
           transitionDelay: `${idx * 150}ms`,
-          
         }}
       >
         {idx === 0 || idx === 2 ? (
-          // apply the drop shadow
           <div
-            className={`rounded-2xl flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
-              idx === 2 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444]" : ""
+            className={` gradiented2 rounded-2xl flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
+              idx === 2
+                ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] items-start md:py-6 py-4 md:px-[28px] px-4"
+                : ""
             }`}
             style={{
               boxShadow:
-                "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
+                idx === 2
+                  ? "box-shadow: 0px 1px 2px 0px #C8C8C840 inset;"
+                  : "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
             }}
           >
             <img src={item.image} className="size-16" alt="" />
-            <h3 className="text-white text-[20px] font-semibold">
+            <h3
+              className={"text-white text-[18px] md:text-[24px] font-semibold "}
+            >
               {item.extraTitle}
             </h3>
             {item.extraDesc && (
-              <p className="text-white text-[16px]">{item.extraDesc}</p>
+              <p className="text-white text-[14px] md:text-[16px]">
+                {item.extraDesc}
+              </p>
             )}
           </div>
         ) : idx === 3 ? (
           // apply the drop shadow
 
           <div
-            className="flex gap-4 rounded-2xl bg-gradient-to-b from-[#413F3F] to-[#373737] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden p-6 inset-1"
+            className="flex items-center justify-center rounded-2xl bg-gradient-to-b from-[#413F3F]  w-full h-full overflow-hidden pl-12 md:py-[30px] py-[20px] "
             style={{
-               boxShadow:
-                "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
+              boxShadow:
+                "0px 4px 2px 0px #00000040, 0px 1px 2px 0px #C8C8C840 inset",
             }}
           >
-            <div className="flex flex-col gap-4 justify-center items-center">
-              <h3 className="text-white text-[20px] font-semibold">
+            <div className="flex flex-col justify-center items-center ">
+              <h3 className="text-[#E6E6E6] text-[18px] md:text-[24px] font-semibold md:w-fit w-[120px]">
                 {item.extraTitle}
               </h3>
               {item.extraDesc && (
-                <p className="text-white text-[16px]">{item.extraDesc}</p>
+                <p className="text-white text-[14px] md:text-[16px]">
+                  {item.extraDesc}
+                </p>
               )}
             </div>
-            <div className="h-[100%] bg-[#8A8A8A] w-[1px]" />
-            <img src={item.image} className="size-16" alt="" />
+            <div className="h-[100%] bg-[#8A8A8A] w-[2px]" />
+            <img
+              src={item.image}
+              className="w-[120px] h-[100px] md:w-[173px] md:h-[139px]"
+              alt=""
+            />
           </div>
         ) : (
-          // apply the drop shadow
-
           <div
             className="flex gap-4 rounded-2xl bg-gradient-to-b from-[#413F3F00] to-[#454444] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden"
             style={{
-               boxShadow:
+              boxShadow:
                 "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
             }}
           >
-            <div
-              className="flex items-center justify-center bg-gradient-to-bl from-[#8A8A8A] from-[12%] to-[#333333]"
-              
-            >
-              <img src={item.image} className="size-16" alt="" />
+            <div className="flex items-center justify-center bg-gradient-to-bl from-[#8A8A8A] from-[12%] to-[#333333] w-[100px] md:w-[128px]">
+              <img src={item.image} className="w-[60px] md:w-[91px]" alt="" />
             </div>
-            <div className="flex flex-col gap-4 justify-center items-center">
-              <h3 className="text-white text-[20px] font-semibold">
+            <div className="flex flex-col  gap-2 md:gap-11 justify-center md:justify-end md:py-4 text-left ">
+              <h3 className="text-white text-[18px] md:text-[24px] w-fit font-semibold">
                 {item.extraTitle}
               </h3>
               {item.extraDesc && (
-                <p className="text-white text-[16px]">{item.extraDesc}</p>
+                <p className="text-white text-[14px] md:text-[16px] w-fit">
+                  {item.extraDesc}
+                </p>
               )}
             </div>
           </div>
