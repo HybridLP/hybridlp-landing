@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bg from "../../../assets_/bg.jpg";
+import bg from "../../../assets_/hero-image.png";
 
 export default () => {
   return (
