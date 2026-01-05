@@ -62,7 +62,7 @@ export default function LegalChatbot() {
       // Using relative URL or localhost as fallback during development
       // The backend should be running on :5000 based on previous context
       const response = await axios.post(
-        "/api/chatbot/message",
+        "https://api.hybridlp.com/api/chatbot/message",
         {
           message: userText,
           conversationHistory: history,
