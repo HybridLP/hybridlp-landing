@@ -1,5 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Send, Bot } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import axios from "axios";
+import logo from "../../assets_/logo/favIcon.png";
 
 interface Message {
   id: number;
@@ -13,12 +17,13 @@ export default function LegalChatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm your Legal AI Assistant powered by DeepSeek AI. I can help you understand HybridLP's legal services platform and answer general legal questions. How may I assist you today?",
+      text: "Hello! I'm your **HybridLP AI Assistant**. I can help you understand our legal services platform, explain our practice areas, or answer general legal questions.\n\nHow can I help you today?",
       sender: "ai",
       timestamp: new Date(),
     },
   ]);
   const [inputMessage, setInputMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -30,21 +35,60 @@ export default function LegalChatbot() {
   }, [messages]);
 
   const handleSendMessage = async () => {
-    if (inputMessage.trim() === "") return;
+    if (inputMessage.trim() === "" || isLoading) return;
 
+    const userText = inputMessage;
     // Add user message
     const userMessage: Message = {
-      id: messages.length + 1,
-      text: inputMessage,
+      id: Date.now(),
+      text: userText,
       sender: "user",
       timestamp: new Date(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    // const currentInput = inputMessage;
     setInputMessage("");
+    setIsLoading(true);
 
-    // Add typing indicator
+    try {
+      // Prepare history for API
+      const history = messages
+        .filter((m) => m.text !== "Typing...")
+        .map((m) => ({
+          role: m.sender === "user" ? "user" : "assistant",
+          content: m.text,
+        }));
+
+      // Using relative URL or localhost as fallback during development
+      // The backend should be running on :5000 based on previous context
+      const response = await axios.post(
+        "/api/chatbot/message",
+        {
+          message: userText,
+          conversationHistory: history,
+        }
+      );
+
+      const aiMessage: Message = {
+        id: Date.now() + 1,
+        text: response.data.message,
+        sender: "ai",
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, aiMessage]);
+    } catch (error) {
+      console.error("Chatbot Error:", error);
+      const errorMessage: Message = {
+        id: Date.now() + 2,
+        text: "I'm having trouble connecting to the legal knowledge base right now. Please try again or [Contact Support](https://www.hybridlp.com/contact).",
+        sender: "ai",
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -75,14 +119,17 @@ export default function LegalChatbot() {
             <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-gradient-to-r from-[#C8A702]/20 to-[#824E00]/20">
               <div className="flex items-center gap-3">
                 <div className="bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] p-2 rounded-full">
-                  <Bot className="w-6 h-6 text-white" />
+                  <img
+                    src={logo}
+                    className="w-6 h-6 text-white object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold lato-semibold text-lg">
-                    Legal AI Assistant
+                    HybridLP Assistant
                   </h3>
-                  <p className="text-gray-400 text-xs lato-regular">
-                    Powered by DeepSeek AI • Online
+                  <p className="text-[#C8A702] text-xs lato-regular">
+                    Powered by GPT-4o • Active
                   </p>
                 </div>
               </div>
@@ -105,34 +152,85 @@ export default function LegalChatbot() {
                   } animate-fadeUp`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+                    className={`max-w-[85%] rounded-2xl px-4 py-3 ${
                       message.sender === "user"
                         ? "bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white"
-                        : message.text === "Typing..."
-                        ? "bg-gray-800 text-gray-100 border border-gray-700 animate-pulse"
-                        : "bg-gray-800 text-gray-100 border border-gray-700"
+                        : "bg-gray-800/80 text-gray-100 border border-gray-700/50 backdrop-blur-sm"
                     }`}
                   >
-                    <p className="text-sm lato-regular leading-relaxed">
-                      {message.text}
-                    </p>
-                    {message.text !== "Typing..." && (
-                      <p
-                        className={`text-xs mt-1 ${
-                          message.sender === "user"
-                            ? "text-white/70"
-                            : "text-gray-500"
-                        }`}
+                    <div className="text-sm lato-regular leading-relaxed chatbot-markdown">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({ children }) => (
+                            <p className="mb-2 last:mb-0">{children}</p>
+                          ),
+                          ul: ({ children }) => (
+                            <ul className="list-disc ml-4 mb-2">{children}</ul>
+                          ),
+                          ol: ({ children }) => (
+                            <ol className="list-decimal ml-4 mb-2">
+                              {children}
+                            </ol>
+                          ),
+                          li: ({ children }) => (
+                            <li className="mb-1">{children}</li>
+                          ),
+                          a: ({ href, children }) => (
+                            <a
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#C8A702] font-semibold underline hover:text-[#A97D00] transition-colors"
+                            >
+                              {children}
+                            </a>
+                          ),
+                          strong: ({ children }) => (
+                            <span className="font-bold text-[#C8A702]">
+                              {children}
+                            </span>
+                          ),
+                        }}
                       >
-                        {message.timestamp.toLocaleTimeString([], {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
-                      </p>
-                    )}
+                        {message.text}
+                      </ReactMarkdown>
+                    </div>
+                    <p
+                      className={`text-[10px] mt-2 ${
+                        message.sender === "user"
+                          ? "text-white/60 text-right"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      {message.timestamp.toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </p>
                   </div>
                 </div>
               ))}
+              {isLoading && (
+                <div className="flex justify-start animate-pulse">
+                  <div className="bg-gray-800/50 text-gray-400 rounded-2xl px-4 py-3 border border-gray-700/30">
+                    <div className="flex gap-1.5 items-center">
+                      <div
+                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                        style={{ animationDelay: "0ms" }}
+                      />
+                      <div
+                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                        style={{ animationDelay: "150ms" }}
+                      />
+                      <div
+                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                        style={{ animationDelay: "300ms" }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
               <div ref={messagesEndRef} />
             </div>
 
@@ -144,21 +242,27 @@ export default function LegalChatbot() {
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask me anything about legal services..."
-                  className="flex-1 bg-gray-800 text-white px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C8A702] lato-regular text-sm border border-gray-700"
+                  disabled={isLoading}
+                  placeholder="Ask me about our services or legal help..."
+                  className="flex-1 bg-gray-800/80 text-white px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C8A702] lato-regular text-sm border border-gray-700/50 placeholder:text-gray-500 disabled:opacity-50"
                 />
                 <button
                   onClick={handleSendMessage}
-                  disabled={inputMessage.trim() === ""}
-                  className="bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3 rounded-full hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                  disabled={inputMessage.trim() === "" || isLoading}
+                  className="bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3.5 rounded-full hover:shadow-[0_0_15px_rgba(200,167,2,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
                   aria-label="Send message"
                 >
                   <Send className="w-5 h-5" />
                 </button>
               </div>
-              <p className="text-gray-500 text-xs mt-2 text-center lato-regular">
-                For specific legal advice, please connect with our verified
-                lawyers
+              <p className="text-gray-500 text-[10px] mt-3 text-center lato-regular uppercase tracking-wider">
+                Submission of brief starts with
+                <a
+                  href="/briefspace/signup"
+                  className="text-[#C8A702] hover:underline ml-1"
+                >
+                  Signing Up
+                </a>
               </p>
             </div>
           </div>
