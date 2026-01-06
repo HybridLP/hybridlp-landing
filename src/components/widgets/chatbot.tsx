@@ -128,9 +128,7 @@ export default function LegalChatbot() {
                   <h3 className="text-white font-semibold lato-semibold text-lg">
                     HybridLP Assistant
                   </h3>
-                  <p className="text-[#C8A702] text-xs lato-regular">
-                    Powered by GPT-5.2 • Active
-                  </p>
+                 
                 </div>
               </div>
               <button
