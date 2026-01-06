@@ -1,8 +1,32 @@
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { articleService, BlogPost } from "../../../services/articleService";
 
 export default () => {
   const navigate = useNavigate();
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState("View All");
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      try {
+        const data = await articleService.getPublicArticles(
+          activeCategory === "View All" ? undefined : activeCategory
+        );
+        setPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, [activeCategory]);
+
   return (
     <div className="flex flex-col space-y-6 sm:space-y-8 max-w-7xl py-8 sm:py-12">
       {/* blogs header */}
@@ -11,8 +35,9 @@ export default () => {
           return (
             <div
               key={idx}
+              onClick={() => setActiveCategory(item.label)}
               className={`px-3 sm:px-4 py-2 cursor-pointer text-xs sm:text-sm font-medium transition-colors hover:text-gray-500 hover:bg-white hover:mb-2 hover:rounded-lg whitespace-nowrap  ${
-                idx === 0
+                activeCategory === item.label
                   ? "text-white border-b-2 border-[#B89900]"
                   : "text-[#B0B0B0]"
               }`}
@@ -25,57 +50,61 @@ export default () => {
 
       {/* blogs grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {blogPosts.map((post, idx) => (
-          <div
-            key={idx}
-            className="group cursor-pointer"
-            onClick={() => navigate(`/blogs/${post.id}`)}
-          >
-            {/* Blog Image */}
-            <div className="relative overflow-hidden rounded-lg mb-4">
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+        {loading ? (
+          <div className="col-span-full text-center text-white">Loading...</div>
+        ) : (
+          posts.map((post, idx) => (
+            <div
+              key={idx}
+              className="group cursor-pointer"
+              onClick={() => navigate(`/blogs/${post.slug}`)} // Using Slug
+            >
+              {/* Blog Image */}
+              <div className="relative overflow-hidden rounded-lg mb-4">
+                <img
+                  src={post.featuredImage || "/placeholder-image.jpg"}
+                  alt={post.title}
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
 
-              {/* Hover Overlay with Author Info */}
-              <div className="absolute bottom-0 left-0 right-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-                <div className="bg-[#706F6F4D]  px-4 py-4">
-                  <div className="flex items-center justify-between text-white text-xs sm:text-sm">
-                    <div className="flex flex-col space-x-2">
-                      <span className="font-medium drop-shadow-sm">
-                        {post.author.name}
-                      </span>
+                {/* Hover Overlay with Author (Publisher) Info */}
+                <div className="absolute bottom-0 left-0 right-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <div className="bg-[#706F6F4D]  px-4 py-4">
+                    <div className="flex items-center justify-between text-white text-xs sm:text-sm">
+                      <div className="flex flex-col space-x-2">
+                        <span className="font-medium drop-shadow-sm">
+                          {post.publisherName || "Unknown"}
+                        </span>
+                        <span className="text-xs opacity-90 drop-shadow-sm">
+                          {new Date(post.publishDate).toLocaleDateString()}
+                        </span>
+                      </div>
                       <span className="text-xs opacity-90 drop-shadow-sm">
-                        {post.date}
+                        {post.categories?.[0] || "Legal Insights"}
                       </span>
                     </div>
-                    <span className="text-xs opacity-90 drop-shadow-sm">
-                      Legal Insights
-                    </span>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Blog Content */}
-            <div className="space-y-2 sm:space-y-3">
-              <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:underline transition-colors line-clamp-2">
-                {post.title}
-              </h3>
+              {/* Blog Content */}
+              <div className="space-y-2 sm:space-y-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:underline transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
 
-              <p className="text-white/90 text-xs sm:text-sm leading-relaxed line-clamp-3">
-                {post.description}
-              </p>
+                <p className="text-white/90 text-xs sm:text-sm leading-relaxed line-clamp-3">
+                  {post.excerpt}
+                </p>
 
-              <div className="flex items-center font-medium text-xs sm:text-sm text-white/80 group-hover:text-white transition-colors">
-                <span>Read post</span>
-                <ArrowUpRight size={16} className="sm:w-[18px] sm:h-[18px]" />
+                <div className="flex items-center font-medium text-xs sm:text-sm text-white/80 group-hover:text-white transition-colors">
+                  <span>Read post</span>
+                  <ArrowUpRight size={16} className="sm:w-[18px] sm:h-[18px]" />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
 
       {/* Load More Button */}
@@ -122,68 +151,5 @@ const headerItems = [
   },
   {
     label: "HLP updates",
-  },
-];
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Steps to Register a Business Legally",
-    description:
-      "The necessary steps and everything you need to know to turn your business idea into a legally recognized enterprise in Nigeria.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop&crop=face",
-    category: "Legal Insights",
-    readTime: "5 min read",
-    date: "Dec 15, 2024",
-    author: {
-      name: "Sarah Johnson",
-      role: "Senior Legal Advisor",
-    },
-  },
-  {
-    id: 2,
-    title: "Steps to Register a Business Legally",
-    description:
-      "The necessary steps and everything you need to know to turn your business idea into a legally recognized enterprise in Nigeria.",
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=300&fit=crop",
-    category: "Legal Insights",
-    readTime: "7 min read",
-    date: "Dec 12, 2024",
-    author: {
-      name: "Michael Chen",
-      role: "Corporate Lawyer",
-    },
-  },
-  {
-    id: 3,
-    title: "Steps to Register a Business Legally",
-    description:
-      "The necessary steps and everything you need to know to turn your business idea into a legally recognized enterprise in Nigeria.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-    category: "Legal Tech & Innovation",
-    readTime: "6 min read",
-    date: "Dec 10, 2024",
-    author: {
-      name: "Emily Rodriguez",
-      role: "Legal Tech Specialist",
-    },
-  },
-  {
-    id: 4,
-    title: "Steps to Register a Business Legally",
-    description:
-      "The necessary steps and everything you need to know to turn your business idea into a legally recognized enterprise in Nigeria.",
-    image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&h=300&fit=crop",
-    category: "Client Guides",
-    readTime: "4 min read",
-    date: "Dec 8, 2024",
-    author: {
-      name: "David Thompson",
-      role: "Legal Consultant",
-    },
   },
 ];

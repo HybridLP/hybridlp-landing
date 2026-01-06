@@ -34,7 +34,7 @@ const routes = createBrowserRouter([
         Component: judgements,
       },
       {
-        path: "blogs/:details",
+        path: "blogs/:slug",
         Component: blogPostDetails,
       },
     ],

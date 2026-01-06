@@ -129,7 +129,7 @@ export default function LegalChatbot() {
                     HybridLP Assistant
                   </h3>
                   <p className="text-[#C8A702] text-xs lato-regular">
-                    Powered by GPT-4o • Active
+                    Powered by GPT-5.2 • Active
                   </p>
                 </div>
               </div>
