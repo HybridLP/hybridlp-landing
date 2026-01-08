@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <>
-      <div className="flex py-8 md:py-12 lg:pt-16 flex-col gap-6 md:gap-8 lg:gap-10 bg-black text-white px-4 md:px-8 lg:px-32 xl:px-32 lg:h-screen">
+      <div className="flex py-8 md:py-12 lg:pt-16 flex-col gap-6 md:gap-8 lg:gap-10  text-white px-4 md:px-8 lg:px-32 xl:px-32 lg:h-screen">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0">
           <div className=" flex flex-col space-y-4  ">
             <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">

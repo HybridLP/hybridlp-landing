@@ -21,7 +21,7 @@ export default function Home() {
   }, [location]);
 
   return (
-    <div className="flex flex-col bg-black w-screen overflow-x-hidden">
+    <div className="flex flex-col bg-[#000A1D] w-screen overflow-x-hidden">
       <Header />
       <Outlet />
       <HassleFreeCTA />
