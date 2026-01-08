@@ -41,7 +41,7 @@ export default () => {
             /> */}
             <img
               src={stat}
-              className="w-full h-auto rounded-lg object-contain" // object-contain prevents the cutoff
+              className="w-full h-[200px] md:h-[240px] lg:h-full rounded-lg object-contain" // object-contain prevents the cutoff
               alt="Statistics"
             />
             <div className="relative w-full h-[200px] md:h-[240px] lg:h-full rounded-lg overflow-hidden border border-gray-800">
