@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 import stat from "../../../assets_/stat.png";
 import profile from "../../../assets_/profile.png";
 import lawyer from "../../../assets_/lawyer.png";
-const mobilePerc = 70;
-const desktopPerc = 30;
+
 export default () => {
   return (
     <section
-      className={`flex min-h-screen  md:h-[120dvh] px-4 md:px-[5%] pt-[27%] md:pt-[15%] pb-8 md:pb-0 bg-[#0B1424] items-center  overflow-y-hidden`}
+      className={`flex min-h-screen  md:h-[120dvh]  pt-[27%] md:pt-[15%] pb-8 md:pb-0 bg-[#0B1424] items-center  overflow-y-hidden`}
     >
-      <div className="flex flex-col items-center text-center w-full mx-auto md:mx-4 lg:mx-[312px]">
+      <div className="flex flex-col items-center text-center w-full   ">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit">
           Hybrid Law Practice
         </h3>
@@ -31,15 +30,21 @@ export default () => {
         >
           <span className="text-white lato-regular">Get a lawyer</span>
         </Link>
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 relative w-full md:w-auto lg:h-[503px] mt-4 md:mt-8">
-          <div className="flex flex-col gap-3 md:gap-4 w-full md:w-auto lg:w-[488px]">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 relative  w-full lg:h-[503px]  mt-auto -mb-[10%] md:-mb- md:mt-8 px-4 lg:px-[312px]">
+          <div className="absolute inset-0 lg:h-[503px] bg-linear-to-b from-60% from-[#00102E]/20 to-[#00102E]" />
+          <div className="flex flex-col gap-3 md:gap-4 w-full md:w-auto lg:h-full lg:w-[488px]">
             <img
               src={stat}
-              className="w-full h-auto md:h-[240px] lg:h-full rounded-lg object-cover"
+              className="w-full h-full md:h-[240px] lg:h-full rounded-lg object-cover"
               alt="Statistics"
             />
-           
-            <div className="relative w-full h-[200px] md:h-[240px] lg:h-full rounded-lg overflow-hidden border border-gray-800">
+            <img
+              src={profile}
+              className="w-full h-full md:h-[240px] lg:h-full rounded-lg object-cover"
+              alt="Statistics"
+            />
+
+            {/* <div className="relative w-full h-full md:h-[240px] lg:h-full rounded-lg overflow-hidden border border-gray-800">
               <img
                 src={profile}
                 alt="Profile"
@@ -56,7 +61,7 @@ export default () => {
                 }
                 className="absolute inset-0 [--bg-perc:var(--mobile-perc)] md:[--bg-perc:var(--desktop-perc)]"
               />
-            </div>
+            </div> */}
           </div>
           <img
             className="h-auto md:h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
