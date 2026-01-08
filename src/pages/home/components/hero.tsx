@@ -7,7 +7,7 @@ const desktopPerc = 30;
 export default () => {
   return (
     <section
-      className={`flex h-screen  md:h-[120dvh] px-4 md:px-[5%] pt-8 md:pt-[10%] lg:pt-[15%] pb-8 md:pb-0 bg-[#0B1424] items-center bg-blend-darken bg-cover overflow-y-hidden`}
+      className={`flex min-h-screen  md:h-[120dvh] px-4 md:px-[5%] pt-[27%] md:pt-[15%] pb-8 md:pb-0 bg-[#0B1424] items-center bg-blend-darken bg-cover overflow-y-hidden`}
     >
       <div className="flex flex-col items-center text-center w-full mx-auto md:mx-4 lg:mx-[312px]">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit">
@@ -38,17 +38,25 @@ export default () => {
               className="w-full h-auto md:h-[240px] lg:h-full rounded-lg object-cover"
               alt="Statistics"
             />
-            {/* reflect gradient */}
-            <div
-              style={
-                {
-                  "--mobile-perc": `${mobilePerc}%`,
-                  "--desktop-perc": `${desktopPerc}%`,
-                  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2) var(--bg-perc, var(--mobile-perc)), #00102E), url(${profile})`,
-                } as React.CSSProperties
-              }
-              className="w-full h-[200px] md:h-[240px] lg:h-full rounded-lg bg-center bg-no-repeat bg-[100%_100%] [--bg-perc:var(--mobile-perc)] md:[--bg-perc:var(--desktop-perc)]"
-            />
+           
+            <div className="relative w-full h-[200px] md:h-[240px] lg:h-full rounded-lg overflow-hidden border border-gray-800">
+              <img
+                src={profile}
+                alt="Profile"
+                className="absolute inset-0 w-full h-full block   md:object-cover md:object-center"
+              />
+
+              <div
+                style={
+                  {
+                    "--mobile-perc": `${mobilePerc}%`,
+                    "--desktop-perc": `${desktopPerc}%`,
+                    background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2) var(--bg-perc, var(--mobile-perc)), #00102E)`,
+                  } as React.CSSProperties
+                }
+                className="absolute inset-0 [--bg-perc:var(--mobile-perc)] md:[--bg-perc:var(--desktop-perc)]"
+              />
+            </div>
           </div>
           <img
             className="h-auto md:h-[500px]  lg:h-full w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
