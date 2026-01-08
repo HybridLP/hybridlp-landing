@@ -1,36 +1,61 @@
 import { Link } from "react-router-dom";
-import bg from "../../../assets_/hero-image.png";
-
+import stat from "../../../assets_/stat.png";
+import profile from "../../../assets_/profile.png";
+import lawyer from "../../../assets_/lawyer.png";
+const mobilePerc = 70;
+const desktopPerc = 30;
 export default () => {
   return (
     <section
-      className={`flex h-screen  px-[5%] lg:px-30 py-[5%] mt-0 pt-[10%]  items-center  bg-blend-darken bg-cover`}
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      className={`flex h-screen  md:h-[120dvh] px-4 md:px-[5%] pt-8 md:pt-[10%] lg:pt-[15%] pb-8 md:pb-0 bg-[#0B1424] items-center bg-blend-darken bg-cover overflow-y-hidden`}
     >
-      <div className="flex flex-col gap-4 mt-0 lg:w-[70%]">
-        <h2 className="text-white text-center md:text-start text-2xl md:text-[52px] inter-font  font-bold  mt-4 md:mt-0">
-          Connect with Legal Experts
-        </h2>
-        <h2 className="text-white text-center md:text-start text-xl md:text-[20px] inter-font  font-bold  mt-4 md:mt-0">
-          Collaborate and manage case files electronically
-        </h2>
-        <p className="text-white text-center md:text-start font-normal text-[14px] lg:text-lg  lator-regular">
-          An integrated Electronic law Office Management designed to deliver a
-          wide range of legal services and consultations, enable real-time
-          collaborations through an enhanced process from a secured digital
-          workspace.
+      <div className="flex flex-col items-center text-center w-full mx-auto md:mx-4 lg:mx-[312px]">
+        <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit">
+          Hybrid Law Practice
+        </h3>
+        <div className="mt-2 md:mt-4">
+          <h1 className="text-white inter-font text-center text-3xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Connect with
+          </h1>
+          <h1 className="text-white inter-font text-center text-3xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Legal Experts
+          </h1>
+        </div>
+
+        <p className="text-white text-center font-regular text-[16px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
+          Providing Tailored Legal Counsel and Solutions
         </p>
         <Link
-          className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-full md:w-[30%] text-[16px] rounded-md  md:rounded-full text-center p-4"
-          to="#"
+          className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[16px] rounded-full text-center py-3 px-6 md:p-4 mb-6 md:mb-8"
+          to="https://app.hybridlp.com"
         >
           <span className="text-white lato-regular">Get a lawyer</span>
         </Link>
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 relative w-full md:w-auto lg:h-[503px] mt-4 md:mt-8">
+          <div className="flex flex-col gap-3 md:gap-4 w-full md:w-auto lg:w-[488px]">
+            <img
+              src={stat}
+              className="w-full h-auto md:h-[240px] lg:h-full rounded-lg object-cover"
+              alt="Statistics"
+            />
+            {/* reflect gradient */}
+            <div
+              style={
+                {
+                  "--mobile-perc": `${mobilePerc}%`,
+                  "--desktop-perc": `${desktopPerc}%`,
+                  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2) var(--bg-perc, var(--mobile-perc)), #00102E), url(${profile})`,
+                } as React.CSSProperties
+              }
+              className="w-full h-[200px] md:h-[240px] lg:h-full rounded-lg bg-center bg-no-repeat bg-[100%_100%] [--bg-perc:var(--mobile-perc)] md:[--bg-perc:var(--desktop-perc)]"
+            />
+          </div>
+          <img
+            className="h-auto md:h-[500px]  lg:h-full w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
+            src={lawyer}
+            alt="lawyer"
+          />
+        </div>
       </div>
     </section>
   );

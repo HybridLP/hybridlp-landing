@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:  "htttps://api.hybridlp.com/api",
+  baseURL: "https://api.hybridlp.com/api",
   headers: {
     "Content-Type": "application/json",
   },
