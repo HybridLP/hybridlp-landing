@@ -21,6 +21,7 @@ export default () => {
             Legal Experts
           </h1>
         </div>
+
         <p className="text-white text-center font-regular text-[16px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
           Providing Tailored Legal Counsel and Solutions
         </p>
@@ -30,20 +31,14 @@ export default () => {
         >
           <span className="text-white lato-regular">Get a lawyer</span>
         </Link>
-        {/* <div className="flex flex-col md:flex-row gap-3 md:gap-4 relative w-full md:w-auto lg:h-[503px] mt-4 md:mt-8"> */}
-        
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 lg:h-auto max-h-[600px] mt-4 md:mt-8">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 relative w-full md:w-auto lg:h-[503px] mt-4 md:mt-8">
           <div className="flex flex-col gap-3 md:gap-4 w-full md:w-auto lg:w-[488px]">
-            {/* <img
+            <img
               src={stat}
               className="w-full h-auto md:h-[240px] lg:h-full rounded-lg object-cover"
               alt="Statistics"
-            /> */}
-            <img
-              src={stat}
-              className="w-full h-[200px] md:h-[240px] lg:h-full rounded-lg object-contain" // object-contain prevents the cutoff
-              alt="Statistics"
             />
+           
             <div className="relative w-full h-[200px] md:h-[240px] lg:h-full rounded-lg overflow-hidden border border-gray-800">
               <img
                 src={profile}
@@ -64,7 +59,7 @@ export default () => {
             </div>
           </div>
           <img
-            className="h-auto md:h-[500px]  lg:h-full w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
+            className="h-auto md:h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
             src={lawyer}
             alt="lawyer"
           />
