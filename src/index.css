@@ -114,3 +114,11 @@
 .shadowed {
   box-shadow: 0px -1px 10px 0px #ffffff40 inset;
 }
+
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

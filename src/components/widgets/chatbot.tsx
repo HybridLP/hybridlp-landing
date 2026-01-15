@@ -77,11 +77,20 @@ export default function LegalChatbot() {
       };
 
       setMessages((prev) => [...prev, aiMessage]);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Chatbot Error:", error);
+
+      let errorText =
+        "I'm having trouble connecting to the legal knowledge base right now. Please try again or [Contact Support](https://www.hybridlp.com/contact).";
+
+      if (error.response?.status === 429) {
+        errorText =
+          "You've sent quite a few messages! Please wait a few minutes before we continue our conversation.";
+      }
+
       const errorMessage: Message = {
         id: Date.now() + 2,
-        text: "I'm having trouble connecting to the legal knowledge base right now. Please try again or [Contact Support](https://www.hybridlp.com/contact).",
+        text: errorText,
         sender: "ai",
         timestamp: new Date(),
       };
@@ -129,7 +138,7 @@ export default function LegalChatbot() {
                     HybridLP Assistant
                   </h3>
                   <p className="text-[#C8A702] text-xs lato-regular">
-                   • Active
+                    • Active
                   </p>
                 </div>
               </div>
