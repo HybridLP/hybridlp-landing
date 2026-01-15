@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import stat from "../../../assets_/stat.png";
 import profile from "../../../assets_/profile.png";
 import lawyer from "../../../assets_/lawyer.png";
 import AnimatedCard from "./animated-card";
