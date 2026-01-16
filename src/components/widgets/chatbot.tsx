@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { X, Send, Bot } from "lucide-react";
+import { X, Send} from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
 import logo from "../../assets_/logo/favIcon.png";
+import robot from "../../assets_/robot.png";
 
 interface Message {
   id: number;
@@ -110,13 +111,20 @@ export default function LegalChatbot() {
       {/* Floating Robot Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ${
+        className={`fixed bottom-8 right-8 z-[100] p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-110 transition-all duration-300 animate-bounce ${
           isOpen ? "hidden" : "flex"
-        } items-center justify-center group`}
+        } items-center justify-center group border-2 border-white/20`}
+        style={{
+          background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+        }}
         aria-label="Open Legal AI Chatbot"
       >
-        <Bot className="w-7 h-7 group-hover:animate-wiggle" />
-        <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+        <img
+          src={robot}
+          alt="AI Assistant"
+          className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+        />
+        <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
       </button>
 
       {/* Chatbot Modal */}
