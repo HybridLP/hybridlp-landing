@@ -32,7 +32,7 @@ export default function LegalChatbot() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isLoading]);
 
   const handleSendMessage = async () => {
     if (inputMessage.trim() === "" || isLoading) return;
@@ -59,18 +59,17 @@ export default function LegalChatbot() {
           content: m.text,
         }));
 
-      // Using relative URL or localhost as fallback during development
-      // The backend should be running on :5000 based on previous context
       const response = await axios.post(
         "https://api.hybridlp.com/api/chatbot/message",
         {
           message: userText,
           conversationHistory: history,
-        }
+        },
+        { timeout: 60000 }
       );
 
       const aiMessage: Message = {
-        id: Date.now() + 1,
+        id: Date.now() + Math.random(),
         text: response.data.message,
         sender: "ai",
         timestamp: new Date(),
@@ -172,31 +171,37 @@ export default function LegalChatbot() {
                         remarkPlugins={[remarkGfm]}
                         components={{
                           p: ({ children }) => (
-                            <p className="mb-2 last:mb-0">{children}</p>
+                            <p className="mb-3 last:mb-0 leading-relaxed">
+                              {children}
+                            </p>
                           ),
                           ul: ({ children }) => (
-                            <ul className="list-disc ml-4 mb-2">{children}</ul>
+                            <ul className="list-disc ml-5 mb-3 space-y-1">
+                              {children}
+                            </ul>
                           ),
                           ol: ({ children }) => (
-                            <ol className="list-decimal ml-4 mb-2">
+                            <ol className="list-decimal ml-5 mb-3 space-y-1">
                               {children}
                             </ol>
                           ),
                           li: ({ children }) => (
-                            <li className="mb-1">{children}</li>
+                            <li className="pl-1 italic text-gray-200">
+                              {children}
+                            </li>
                           ),
                           a: ({ href, children }) => (
                             <a
                               href={href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-[#C8A702] font-semibold underline hover:text-[#A97D00] transition-colors"
+                              className="text-[#C8A702] font-bold underline decoration-[#C8A702]/30 hover:decoration-[#C8A702] transition-all"
                             >
                               {children}
                             </a>
                           ),
                           strong: ({ children }) => (
-                            <span className="font-bold text-[#C8A702]">
+                            <span className="font-bold text-[#E5C100] drop-shadow-sm">
                               {children}
                             </span>
                           ),
