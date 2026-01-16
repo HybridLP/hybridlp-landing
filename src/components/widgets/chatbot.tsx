@@ -221,21 +221,26 @@ export default function LegalChatbot() {
                 </div>
               ))}
               {isLoading && (
-                <div className="flex justify-start animate-pulse">
+                <div className="flex justify-start animate-fadeUp">
                   <div className="bg-gray-800/50 text-gray-400 rounded-2xl px-4 py-3 border border-gray-700/30">
-                    <div className="flex gap-1.5 items-center">
-                      <div
-                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
-                        style={{ animationDelay: "0ms" }}
-                      />
-                      <div
-                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
-                        style={{ animationDelay: "150ms" }}
-                      />
-                      <div
-                        className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
-                        style={{ animationDelay: "300ms" }}
-                      />
+                    <div className="flex gap-3 items-center">
+                      <div className="flex gap-1.5">
+                        <div
+                          className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                          style={{ animationDelay: "0ms" }}
+                        />
+                        <div
+                          className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                          style={{ animationDelay: "150ms" }}
+                        />
+                        <div
+                          className="w-1.5 h-1.5 bg-[#C8A702] rounded-full animate-bounce"
+                          style={{ animationDelay: "300ms" }}
+                        />
+                      </div>
+                      <span className="text-xs text-[#C8A702]/80 italic lato-regular">
+                        AI is working on findings...
+                      </span>
                     </div>
                   </div>
                 </div>
