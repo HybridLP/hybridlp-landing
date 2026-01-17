@@ -2,7 +2,9 @@
 import lawyer from "../../../assets_/lawyer.png";
 import lawyerProfile2 from "../../../assets_/lawyer-profile.png";
 import lawyerImage2 from "../../../assets_/lawyer-profile2.png";
-
+import precious from "../../../assets_/precious.png";
+import chibugor from "../../../assets_/chibugor.png";
+import thomas from "../../../assets_/thomas.png";
 export interface LawyerData {
   name: string;
   image: string;
@@ -12,7 +14,7 @@ export interface LawyerData {
 
 export const stages: LawyerData[] = [
   {
-    name: "Barr. John Doe Esq.",
+    name: "P. John Doe Esq.",
     profileImage: lawyer, 
     image: lawyer, 
     expertise: "Property Law | Real Estate",
@@ -22,6 +24,24 @@ export const stages: LawyerData[] = [
     profileImage: lawyerProfile2,
     image: lawyerImage2,
     expertise: "Corporate | Property Law",
+  },
+  {
+    name: "M. precious Esq",
+    profileImage: precious,
+    image: precious,
+    expertise: "Corporate | Tax Law",
+  },
+  {
+    name: "K. Chibugor Esq",
+    profileImage: chibugor,
+    image: chibugor,
+    expertise: "Corporate | Tax Law",
+  },
+  {
+    name: "K. Thomas Esq",
+    profileImage: thomas,
+    image: thomas,
+    expertise: "Corporate | Tax Law",
   },
 ];
 
