@@ -1,12 +1,29 @@
 import { Link } from "react-router-dom";
-import profile from "../../../assets_/profile.png";
-import lawyer from "../../../assets_/lawyer.png";
 import AnimatedCard from "./animated-card";
+import DynamicLawyerCard, { stages } from "./dynamic-lawyer-card";
+import { useState, useEffect } from "react";
 
 export default () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % stages.length);
+        setIsVisible(true);
+      }, 500); // Wait for fade out before changing data
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentLawyer = stages[currentIndex];
+
   return (
     <section
-      className={`flex min-h-screen relative  md:h-[120dvh]  pt-[27%] md:pt-[15%] pb-8 md:pb-0  items-center  overflow-y-hidden`}
+      className={`flex min-h-screen relative  md:h-[120dvh]  pt-[27%] md:pt-[15%] pb-8 md:pb-0  items-center  overflow-hidden`}
     >
       <div
         className="absolute h-full top-0 left-0 right-0 inset-0 z-50 pointer-events-none"
@@ -38,24 +55,30 @@ export default () => {
         </Link>
         <div className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-4 relative  w-full lg:max-h-[600px]  mt-auto -mb-[10%] lg:-mb- md:pb-8 md:mb-4 md:mt-8 px-4 lg:px-[312px]">
           <div className="flex flex-col  gap-3 md:gap-4 w-full md:w-auto lg:h-full lg:w-[488px]">
-            {/* <img
-              src={stat}
-              className="w-full h-full md:h-[240px] lg:h-full rounded-lg object-cover"
-              alt="Statistics"
-            /> */}
-
             <AnimatedCard />
+            {/* lawyer profile card */}
+            <div
+              className={`transition-all duration-1000 transform ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-[50%]"
+              }`}
+            >
+              <DynamicLawyerCard data={currentLawyer} />
+            </div>
+          </div>
+          {/* lawyer dynamic image */}
+          <div className="h-auto md:h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] relative overflow-hidden">
             <img
-              src={profile}
-              className="w-full h-full md:h-[240px] lg:h-full rounded-lg object-cover"
-              alt="Statistics"
+              className={`h-full w-full rounded-lg object-cover transition-all duration-1000 transform ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-[50%]"
+              }`}
+              src={currentLawyer.image}
+              alt="lawyer"
             />
           </div>
-          <img
-            className="h-auto md:h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] rounded-lg object-cover"
-            src={lawyer}
-            alt="lawyer"
-          />
         </div>
       </div>
     </section>
