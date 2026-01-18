@@ -2,9 +2,9 @@
 FROM node:20-alpine as builder
 WORKDIR /app
 COPY package*.json ./
-RUN bun install
+RUN npm install
 COPY . .
-RUN bun run build
+RUN npm run build
 
 # Stage 2: Serve the static files with Nginx
 FROM nginx:alpine
