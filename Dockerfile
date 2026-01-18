@@ -19,9 +19,7 @@ FROM nginx:stable-alpine
 # Copy the build output from the first stage to Nginx's serving directory
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy custom nginx config to handle React Router (SPA)
-# Ensure you have an nginx.conf file in your root directory!
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 
 # Railway typically assigns a port via the PORT environment variable
 EXPOSE 80
