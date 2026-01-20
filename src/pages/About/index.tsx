@@ -1,3 +1,4 @@
+import WhySection from "../about-us/components/why-section"
 import About from "../home/components/about"
 import Hero from "../home/components/hero"
 import Highlights from "../home/components/highlights"
@@ -8,6 +9,7 @@ export default ()=>{
     return (<>
     <Hero />
       <main className="flex flex-col py-0 lg:px-32- bg-inherit text-white">
+        <WhySection/>
         <About />
         <SharingBriefs />
         <Highlights />

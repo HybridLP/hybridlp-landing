@@ -27,28 +27,7 @@ export default () => {
   return (
     <>
       <div className="flex py-8 md:py-12 lg:pt-16 flex-col gap-6 md:gap-8 lg:gap-10  text-white px-4 md:px-8 lg:px-32 xl:px-32 lg:h-screen">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0">
-          <div className=" flex flex-col space-y-4  ">
-            <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">
-              About HybridLP
-            </h6>
-            <h1 className="text-2xl md:text-3xl lg:text-[40px] text-white font-bold inter leading-tight">
-              Your Legal Powerhouse
-            </h1>
-          </div>
-          <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed">
-            Hybrid LP provides legal services in diverse areas, with experienced
-            lawyers in arbitration, litigation, Human right enforcement,
-            commercial disputes, labour/employment related matters, election
-            petition, immigration.{" "}
-            <span
-              onClick={() => (window.location.href = "/about")}
-              className="text-[#DED08A] cursor-pointer"
-            >
-              Read more
-            </span>
-          </p>
-        </div>
+        <h1 className="inter-font text-white mb-4 md:mb-8 mt-4 md:mt-12 text-[24px] font-semibold text-center md:text-[40px]">How It Works</h1>
         {/* Mobile Layout - Stacked */}
         <div className="block lg:hidden mt-6">
           {/* Image Section - Mobile */}
@@ -170,6 +149,28 @@ export default () => {
               ))}
             </div>
           </SlideInSection>
+        </div>
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0 mt-6">
+          <div className=" flex flex-col space-y-4 items-center lg:items-start ">
+            <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">
+              About HybridLP
+            </h6>
+            <h1 className="text-2xl md:text-3xl lg:text-[40px] text-white font-bold inter leading-tight">
+              Your Legal Powerhouse
+            </h1>
+          </div>
+          <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
+            Hybrid LP provides legal services in diverse areas, with experienced
+            lawyers in arbitration, litigation, Human right enforcement,
+            commercial disputes, labour/employment related matters, election
+            petition, immigration.{" "}
+            <span
+              onClick={() => (window.location.href = "/about")}
+              className="text-[#DED08A] cursor-pointer"
+            >
+              Read more
+            </span>
+          </p>
         </div>
       </div>
     </>
