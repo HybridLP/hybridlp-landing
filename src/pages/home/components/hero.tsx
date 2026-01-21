@@ -68,7 +68,7 @@ export default () => {
             </div>
           </div>
           {/* lawyer dynamic image */}
-          <div className="h-auto md:h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] relative overflow-hidden">
+          <div className="h-[503px] lg:h-[503px]  w-full md:w-auto lg:w-[367px] relative overflow-hidden">
             <img
               className={`h-full w-full rounded-lg object-cover transition-all duration-1000 transform ${
                 isVisible

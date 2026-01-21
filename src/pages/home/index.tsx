@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     // Handle hash scrolling when navigating to home with #section
-    if (location.hash) {
+    if (location.hash.includes("#")) {
       setTimeout(() => {
         const element = document.querySelector(location.hash);
         if (element) {
