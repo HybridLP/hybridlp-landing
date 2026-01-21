@@ -45,9 +45,9 @@ const WhySection = () => {
           return (
             <div
               key={idx}
-              className="min-h-[316px] flex flex-col p-8 md:p-[58px] rounded-xl border border-[#A97D00]"
+              className=" h-[250px] md:h-[316px] flex flex-col p-6 md:p-[58px] rounded-xl border border-[#A97D00]"
             >
-              <div className="w-fit md:w-full px-8 py-5 rounded-lg bg-[#715E00] border border-[#825900] text-[#B89900]">
+              <div className="w-full px-4 text-6 md:text-8  md:px-8 py-3 md:py-5 rounded-lg bg-[#715E00] border border-[#825900] text-[#B89900]">
                 {item.icon}
               </div>
               <h3 className="text-white lato-regular font-extrabold text-xl md:text-[24px] mt-7 mb-4 md:mb-6">
