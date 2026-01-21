@@ -1,8 +1,8 @@
 
 import lawyer from "../../../assets_/lawyer.png";
 import lawyerProfile2 from "../../../assets_/lawyer-profile.png";
-import lawyerImage2 from "../../../assets_/lawyer-profile2.png";
-import precious from "../../../assets_/precious.png";
+import lawyerImage2 from "../../../assets_/lawyer-profile.png";
+import alhaja from "../../../assets_/alhaja.png";
 import chibugor from "../../../assets_/chibugor.png";
 import thomas from "../../../assets_/thomas.png";
 export interface LawyerData {
@@ -27,8 +27,8 @@ export const stages: LawyerData[] = [
   },
   {
     name: "M. precious Esq",
-    profileImage: precious,
-    image: precious,
+    profileImage: alhaja,
+    image: alhaja,
     expertise: "Corporate | Tax Law",
   },
   {
@@ -58,16 +58,14 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
       </h3>
 
       <div className="flex flex-col gap-1 md:gap-2">
-        <div className="flex items-start gap-2 md:gap-4 ">
+        <div className="flex items-center gap-2 md:gap-4 ">
           <img
             className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] mt-2 object-center object-cover rounded-full"
             src={data.profileImage}
             alt={data.name}
           />
           <div className="flex flex-col gap-1 ">
-            <h4 className="text-[16px] md:text-[28px] font-semibold">
-              {data.name}
-            </h4>
+           
             <div className="text-[14px] md:text-[16px] font-medium flex items-center gap-2">
               <span className="shrink-0">
                 <JusticeScale />
