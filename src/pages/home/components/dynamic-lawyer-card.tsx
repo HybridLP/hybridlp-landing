@@ -51,7 +51,7 @@ interface DynamicLawyerCardProps {
 
 const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
   return (
-    <div className="w-full manrope  h-[175px] md:h-[230px] text-start   rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-6 md:py-6 text-[#333333]">
+    <div className="w-full manrope  h-[175px] md:h-[175px] text-start   rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-6 md:py-6 text-[#333333]">
       <h3 className="text-md manrope md:text-lg font-semibold text-gray-800 mb-2 md:mb-6 pointer-events-none select-none flex items-center gap-2">
         <span className="bg-linear-to-b from-[#4C9C00] to-[#A6F55B] rounded-full w-3 h-3" />{" "}
         <span>Available for work</span>
