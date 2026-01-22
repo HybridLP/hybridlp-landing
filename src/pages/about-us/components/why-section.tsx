@@ -50,10 +50,10 @@ const WhySection = () => {
               <div className="w-full px-4 text-6 md:text-8  md:px-8 py-3 md:py-5 rounded-lg bg-[#715E00]/50 border border-[#825900] text-[#B89900] ">
                 {item.icon}
               </div>
-              <h3 className="text-white lato-regular font-extrabold text-xl md:text-[24px] mt-7 mb-4 md:mb-6">
+              <h3 className="text-white lato-regular font-extrabold text-lg md:text-[24px] mt-7 mb-4 md:mb-6">
                 {item.title}
               </h3>
-              <p className="lato-regular text-base md:text-[18px]">
+              <p className="lato-regular text-xs md:text-[18px]">
                 {item.content}
               </p>
             </div>
