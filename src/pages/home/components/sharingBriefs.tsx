@@ -13,7 +13,7 @@ export default () => {
   return (
     <div
       id="briefs"
-      className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30  md:mt-20"
+      className="text-black flex flex-col items-center w-full mb-4 px-4 md:px-8 lg:px-32 xl:px-30 mt-16 md:mt-24"
     >
       <h6 className="text-black font-bold mx-auto h-10 bg-gray-100 w-fit px-4 py-2 flex items-center justify-center rounded-md text-center text-sm md:text-base lg:text-[18px] lato-regular">
         Sharing briefs
