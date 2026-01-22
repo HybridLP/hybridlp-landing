@@ -36,13 +36,11 @@ export default () => {
 
   return (
     <section
-      className={`flex min-h-screen relative  md:h-[130dvh]  pt-[27%] md:pt-[15%] pb-8 md:pb-0  items-center  overflow-hidden-`}
+      className={`flex min-h-screen relative  md:h-[130dvh]  pt-[27%] md:pt-[20%] pb-8 md:pb-0  items-center   overflow-hidden-`}
     >
       <div
         className="absolute h-full top-0 left-0 right-0 inset-0 z-50 pointer-events-none"
-        // style={{
-        //   backgroundImage: `linear-gradient(179.41deg, rgba(0, 10, 29, 0) 74.58%, rgba(0, 10, 29, 0.99) 99.51%, #000A1D 110.35%)`,
-        // }}
+     
       />
       <div className="flex flex-col items-center text-center w-full   ">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit">

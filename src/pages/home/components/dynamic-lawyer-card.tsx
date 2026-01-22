@@ -50,7 +50,7 @@ interface DynamicLawyerCardProps {
 
 const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
   return (
-    <div className="w-full manrope  h-[130px] md:h-[175px] text-start  rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-4 md:py-6 text-[#333333]">
+    <div className="w-full manrope  h-[130px] md:h-[175px] text-start  rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-4 md:py-6 text-[#333333] mt-4">
       <h3 className="text-md manrope md:text-lg font-semibold text-gray-800 mb-2 md:mb-6 pointer-events-none select-none flex items-center gap-2">
         <span className="bg-linear-to-b from-[#4C9C00] to-[#A6F55B] rounded-full w-3 h-3" />{" "}
         <span>Available for work</span>
@@ -70,14 +70,16 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
               </span>
               <span className="truncate">{data.expertise}</span>
             </div>
-            <p className="flex items-center gap-2 mt-2 inter-font text-xs text-[12px] md:text-[14px] font-medium">
-              <span className="text-[#B89900] font-medium">10+ </span>
-              <span className="font-medium">
-                yrs of exp<span className="hidden md:flex">erience</span>{" "}
+            <p className="flex items-center gap-2 mt-1 md:mt-2 inter-font text-[12px] md:text-[14px] font-medium whitespace-nowrap text-[#8A8A8A]">
+              <span className="text-[#B89900]">10+ </span>
+              <span>
+                yrs of exp<span className="hidden md:inline">erience</span>
               </span>
               <RatingStars size={14} />
-              <span className=" hidden md:flex font-medium text-[#B89900]">(50{" "} </span>
-              <span className="hidden md:flex">reviews)</span>
+              <span className="hidden md:flex items-center gap-1 ml-2">
+                <span className="text-[#B89900]">(50</span>
+                <span>reviews)</span>
+              </span>
             </p>
           </div>
         </div>
