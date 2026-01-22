@@ -26,7 +26,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
       >
         {idx === 0 || idx === 2 ? (
           <div
-            className={` gradiented2 rounded-2xl flex flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
+            className={` gradiented2 rounded-2xl flex relative flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
               idx === 2
                 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] items-start md:py-6 py-4 md:px-[28px] px-4"
                 : ""
@@ -38,6 +38,13 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
                   : "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
             }}
           >
+            {idx === 0 && (
+              <div className="flex items-center absolute top-0 left-0 pt-2 md:pt-3 pl-2 md:pl-4 gap-1">
+                <div className="rounded-full w-3 h-3 bg-[#FF4C4C]" />
+                <div className="rounded-full w-3 h-3 bg-[#FFDA61]" />
+                <div className="rounded-full w-3 h-3 bg-[#C2FF61]" />
+              </div>
+            )}
             <img src={item.image} className="size-16" alt="" />
             <h3
               className={"text-white text-[18px] md:text-[24px] font-semibold "}
@@ -114,7 +121,14 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
         }}
       >
         <h3 className="text-lg md:text-xl font-semibold inter-font text-white leading-tight">
-          {item.title}
+          {item.title
+            .split(/<br\s*\/?>/)
+            .map((text: string, i: number, arr: string[]) => (
+              <span key={i}>
+                {text}
+                {i < arr.length - 1 && <br className="hidden lg:inline" />}
+              </span>
+            ))}
         </h3>
         <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed text-justify">
           {item.description}
@@ -167,14 +181,14 @@ export default () => {
 
 const highlights = [
   {
-    title: "Submit your legal matters securely from anywhere.",
+    title: "Submit your legal matters securely from <br/> anywhere.",
     description:
       "Submit detailed briefs securely from anywhere, using structured forms designed to capture all the necessary information about your legal matter. Whether civil, corporate, or criminal, your case gets the attention it deserves right from the start.",
     image: documentIcon,
     extraTitle: "Client Briefing & Case Filing",
   },
   {
-    title: "Log meetings, interviews, or any sessions on the go.",
+    title: "Log meetings, interviews, or any sessions on <br/> the go.",
     description:
       "Capture voice notes during meetings, consultations, or any related proceedings. Each recording can be tagged, transcribed, and attached to relevant case files for smarter, on-the-go documentation.",
     image: meetingIcon,
@@ -182,7 +196,7 @@ const highlights = [
     extraDesc: "And other recordings",
   },
   {
-    title: "Nigerian laws, templates, judgments, and more.",
+    title: "Nigerian laws, templates, judgments, and <br/> more.",
     description:
       "Instant access a rich library of Nigerian statutes, case law, precedent templates, and Continuing Professional Development (CPD) resources. Stay informed and empowered with curated legal content at your fingertips.",
     image: accessIcon,
@@ -190,7 +204,7 @@ const highlights = [
     extraDesc: "Major Nigerian legal resources",
   },
   {
-    title: "Never miss a court date or client appointment.",
+    title: "Never miss a court date or client appointment<br/> again.",
     description:
       "Keep track of court sittings, deadlines, and consultations with an integrated calendar tailored for legal workflows. Get automatic reminders and sync important dates across devices and team members.",
     image: calendarIcon,
