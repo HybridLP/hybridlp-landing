@@ -21,6 +21,7 @@ export default () => {
       <AnimatedSection>
         <h3 className="font-medium text-white text-2xl md:text-3xl mx-auto text-center lg:text-[40px] inter-font mt-4 mb-4">
           From Briefs To Action
+          
         </h3>
       </AnimatedSection>
       <AnimatedSection>
