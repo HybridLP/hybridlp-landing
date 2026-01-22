@@ -21,7 +21,6 @@ export default () => {
       <AnimatedSection>
         <h3 className="font-medium text-white text-2xl md:text-3xl mx-auto text-center lg:text-[40px] inter-font mt-4 mb-4">
           From Briefs To Action
-          
         </h3>
       </AnimatedSection>
       <AnimatedSection>
@@ -75,7 +74,7 @@ export default () => {
           <div className="bg-gradient-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl p-6 relative">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-2xl font-semibold inter-font flex-1">
-               We assign to you the most experienced team
+                We assign to you the most experienced team
               </h3>
               <img src={expertAss} alt="icon" className="size-16 ml-4" />
             </div>
@@ -139,7 +138,7 @@ export default () => {
                   voice notes, timelines. Everything your lawyer needs to hit
                   the ground running.
                 </p>
-                 <img
+                <img
                   src={lineImg}
                   alt=""
                   className="absolute top-[30%] right-0 w-[56px] h-[96px]"
@@ -170,7 +169,7 @@ export default () => {
                   </span>
                   <img src={arrowUpRight} className="size-8" alt="arrow" />
                 </Link>
-                 <img
+                <img
                   src={lineImg}
                   alt=""
                   className="absolute rotate-90 right-[0%] -bottom-11 w-[56px] h-[96px]"
@@ -185,7 +184,6 @@ export default () => {
               <div className="flex justify-between items-center">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
                 We assign
-                  
                   to <br />you the most experienced team
                 </h3>
                 <img src={expertAss} alt="icon" className="size-20" />
@@ -201,10 +199,10 @@ export default () => {
                 alt="arrow"
               />
               <img
-                  src={lineImg}
-                  alt=""
-                  className="absolute  right-[0%] bottom-[8%] w-[56px] h-[56px]"
-                />
+                src={lineImg}
+                alt=""
+                className="absolute  right-[0%] bottom-[8%] w-[56px] h-[56px]"
+              />
             </div>
           </AnimatedSection>
         </div>
