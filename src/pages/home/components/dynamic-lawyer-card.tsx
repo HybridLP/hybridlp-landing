@@ -1,4 +1,3 @@
-
 import lawyer from "../../../assets_/lawyer.png";
 import lawyerProfile2 from "../../../assets_/lawyer-profile.png";
 import lawyerImage2 from "../../../assets_/lawyer-profile.png";
@@ -15,8 +14,8 @@ export interface LawyerData {
 export const stages: LawyerData[] = [
   {
     name: "P. John Doe Esq.",
-    profileImage: lawyer, 
-    image: lawyer, 
+    profileImage: lawyer,
+    image: lawyer,
     expertise: "Property Law | Real Estate",
   },
   {
@@ -51,7 +50,7 @@ interface DynamicLawyerCardProps {
 
 const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
   return (
-    <div className="w-full manrope  h-[150px] md:h-[175px] text-start  rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-4 md:py-6 text-[#333333]">
+    <div className="w-full manrope  h-[130px] md:h-[175px] text-start  rounded-lg object-cover bg-[#E6E6E6] px-6 md:px-[47px] py-4 md:py-6 text-[#333333]">
       <h3 className="text-md manrope md:text-lg font-semibold text-gray-800 mb-2 md:mb-6 pointer-events-none select-none flex items-center gap-2">
         <span className="bg-linear-to-b from-[#4C9C00] to-[#A6F55B] rounded-full w-3 h-3" />{" "}
         <span>Available for work</span>
@@ -65,7 +64,6 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
             alt={data.name}
           />
           <div className="flex flex-col gap-1 ">
-           
             <div className="text-[14px] md:text-[16px] font-medium flex items-center gap-2">
               <span className="shrink-0">
                 <JusticeScale />
@@ -74,8 +72,12 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
             </div>
             <p className="flex items-center gap-2 mt-2 inter-font text-xs text-[12px] md:text-[14px] font-medium">
               <span className="text-[#B89900] font-medium">10+ </span>
-              <span className="font-medium">yrs of exp<span className="hidden md:flex">erience</span> </span>
+              <span className="font-medium">
+                yrs of exp<span className="hidden md:flex">erience</span>{" "}
+              </span>
               <RatingStars size={14} />
+              <span className=" hidden md:flex font-medium text-[#B89900]">(50{" "} </span>
+              <span className="hidden md:flex">reviews)</span>
             </p>
           </div>
         </div>

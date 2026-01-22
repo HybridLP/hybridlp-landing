@@ -16,26 +16,20 @@ export default () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
+      setIsCtaVisible(false);
+
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % stages.length);
         setIsVisible(true);
+        setCtaIndex((prev) => (prev + 1) % ctaStages.length);
+        setIsCtaVisible(true);
       }, 500);
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsCtaVisible(false);
-      setTimeout(() => {
-        setCtaIndex((prev) => (prev + 1) % ctaStages.length);
-        setIsCtaVisible(true);
-      }, 500);
-    }, 4000); // Decoupled timing (4s vs 5s)
 
-    return () => clearInterval(interval);
-  }, []);
 
   const currentLawyer = stages[currentIndex];
   const currentCta = ctaStages[ctaIndex];
