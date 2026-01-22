@@ -74,7 +74,7 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
             </div>
             <p className="flex items-center gap-2 mt-2 inter-font text-xs text-[12px] md:text-[14px] font-medium">
               <span className="text-[#B89900] font-medium">10+ </span>
-              <span className="font-medium">yrs of experience</span>{" "}
+              <span className="font-medium">yrs of exp<span className="hidden md:flex">erience</span> </span>
               <RatingStars size={14} />
             </p>
           </div>
