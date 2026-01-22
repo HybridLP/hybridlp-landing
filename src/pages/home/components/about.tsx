@@ -4,6 +4,7 @@ import collaborate from "../../../assets_/collaborate.jpg";
 import shareBriefs from "../../../assets_/sharing briefs.png";
 import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
+import { NavLink } from "react-router-dom";
 const items = [
   {
     title: "Self-service",
@@ -164,12 +165,12 @@ export default () => {
             lawyers in arbitration, litigation, Human right enforcement,
             commercial disputes, labour/employment related matters, election
             petition, immigration.{" "}
-            <span
-              onClick={() => (window.location.href = "/about")}
+            <NavLink
+              to="/about"
               className="text-[#DED08A] cursor-pointer"
             >
               Read more
-            </span>
+            </NavLink>
           </p>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { BookOpen, Scale, Shield } from "lucide-react";
 import UserRadianceIcon from "./user-radiance-icon";
+import TrackingIcon from "./tracking-icon";
+import AssuranceIcon from "./assurance-icon";
 
 const whySectionData = [
   {
@@ -25,6 +27,18 @@ const whySectionData = [
     title: "Legal Resources",
     content:
       "Free access to Nigerian statutes, case law, and professional development materials.",
+  },
+  {
+    icon: <TrackingIcon color="#B89900" />,
+    title: "Real-time tracking",
+    content:
+      "Monitor your case progress with live updates and milestone notifications",
+  },
+  {
+    icon: <AssuranceIcon color="#B89900" />,
+    title: "Quality Assurance",
+    content:
+      "Compare proposals from multiple lawyers with clear, upfront pricing and no hidden fees.",
   },
 ];
 
