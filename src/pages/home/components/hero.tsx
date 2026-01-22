@@ -36,7 +36,7 @@ export default () => {
 
   return (
     <section
-      className={`flex min-h-screen relative  md:h-[130dvh]  pt-[27%] md:pt-[20%] pb-8 md:pb-0  items-center   overflow-hidden-`}
+      className={`flex min-h-screen relative  md:h-[130dvh]  pt-[27%] md:pt-[27%] pb-8 md:pb-0  items-center   overflow-hidden-`}
     >
       <div
         className="absolute h-full top-0 left-0 right-0 inset-0 z-50 pointer-events-none"
