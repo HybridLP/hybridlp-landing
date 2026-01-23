@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { X, Send} from "lucide-react";
+import { X, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
@@ -61,12 +61,13 @@ export default function LegalChatbot() {
         }));
 
       const response = await axios.post(
-        "https://api.hybridlp.com/api/chatbot/message",
+        // "https://api.hybridlp.com/api/chatbot/message",
+        "/api/chatbot/message",
         {
           message: userText,
           conversationHistory: history,
         },
-        { timeout: 60000 }
+        { timeout: 60000 },
       );
 
       const aiMessage: Message = {
@@ -108,24 +109,39 @@ export default function LegalChatbot() {
 
   return (
     <>
-      {/* Floating Robot Button */}
-      <button
+      <div
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-8 right-8 z-[100] p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-110 transition-all duration-300 animate-bounce ${
+        className={`fixed bottom-8 right-8 z-[100] flex items-center gap-3 animate-bounce cursor-pointer group ${
           isOpen ? "hidden" : "flex"
-        } items-center justify-center group border-2 border-white/20`}
-        style={{
-          background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
-        }}
-        aria-label="Open Legal AI Chatbot"
+        }`}
       >
-        <img
-          src={robot}
-          alt="AI Assistant"
-          className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
-        />
-        <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
-      </button>
+        {/* Text Bubble */}
+        <div
+          className="px-6 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-2 border-white/20"
+          style={{
+            background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+          }}
+        >
+          <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
+            Ask HybridAI
+          </span>
+        </div>
+
+        {/* Robot Icon Bubble */}
+        <div
+          className="p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative"
+          style={{
+            background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+          }}
+        >
+          <img
+            src={robot}
+            alt="AI Assistant"
+            className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+          />
+          <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
+        </div>
+      </div>
 
       {/* Chatbot Modal */}
       {isOpen && (
@@ -252,7 +268,7 @@ export default function LegalChatbot() {
                         />
                       </div>
                       <span className="text-xs text-[#C8A702]/80 italic lato-regular">
-                        AI is working on findings...
+                        HybridAI is working on your findings
                       </span>
                     </div>
                   </div>

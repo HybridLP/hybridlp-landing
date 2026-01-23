@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const ctaStages = [
   { text: "Get a lawyer", to: "https://app.hybridlp.com" },
-  { text: "request our service", to: "https://app.hybridlp.com" },
+  { text: "request for Legal Advice", to: "https://app.hybridlp.com" },
   { text: "explore our services", to: "#briefs" },
 ];
 

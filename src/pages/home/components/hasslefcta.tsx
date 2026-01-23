@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import bg from "../../../assets_/testifooter-bg.jpg";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function HassleFreeCTA() {
   const location = useLocation();
@@ -36,8 +36,8 @@ export default function HassleFreeCTA() {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <a
-              href="https://app.hybridlp.com/signup"
+            <NavLink
+              to="https://hybridlp.com/auth"
               className="group flex items-center bg-black hover:bg-gray-800 transition-all duration-300 p-1 pl-6 md:pl-8 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span className="text-white inter-font text-sm md:text-base lg:text-lg pr-2 md:pr-4">
@@ -46,7 +46,7 @@ export default function HassleFreeCTA() {
               <div className="size-10 md:size-12 lg:size-14 bg-white rounded-full text-black flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
               </div>
-            </a>
+            </NavLink>
           </div>
         </div>
 
