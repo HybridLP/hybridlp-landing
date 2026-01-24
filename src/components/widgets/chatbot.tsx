@@ -61,8 +61,7 @@ export default function LegalChatbot() {
         }));
 
       const response = await axios.post(
-        // "https://api.hybridlp.com/api/chatbot/message",
-        "/api/chatbot/message",
+        "https://api.hybridlp.com/api/chatbot/message",
         {
           message: userText,
           conversationHistory: history,

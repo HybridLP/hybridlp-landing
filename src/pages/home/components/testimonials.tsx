@@ -1,7 +1,7 @@
 export default () => {
   return (
     <>
-      <div id="tTestimonialCardestimonials" className="flex flex-col items-center gap-6 mt-6">
+      <div id="testimonials" className="flex flex-col items-center gap-6 mt-6">
         <h6 className="text-black mx-auto h-10 bg-gray-100 w-[40%] flex items-center lg:w-[10%] justify-center rounded-md  text-center text-[16px] font-bold lato-regular">
           Testimonials
         </h6>

@@ -17,19 +17,29 @@ export const articleService = {
   getPublicArticles: async (
     category?: string,
     limit?: number,
-    offset?: number
+    offset?: number,
   ) => {
     const params: any = {};
     if (category) params.category = category;
     if (limit) params.limit = limit;
     if (offset) params.offset = offset;
 
-    const response = await api.get("/articles/public", { params });
-    // Handle both { count, rows } format if simple array is not returned
-    if (response.data && response.data.rows) {
-      return response.data.rows;
+    try {
+      const response = await api.get("/articles/public", { params });
+      // Handle { count, rows } format from Sequelize findAndCountAll
+      if (response.data && Array.isArray(response.data.rows)) {
+        return response.data.rows;
+      }
+      // Handle simple array response
+      if (Array.isArray(response.data)) {
+        return response.data;
+      }
+      // Return empty array for any other data format
+      return [];
+    } catch (error) {
+      console.error("articleService.getPublicArticles error:", error);
+      return [];
     }
-    return response.data;
   },
 
   getPublicArticleBySlug: async (slug: string) => {

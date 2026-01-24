@@ -109,43 +109,49 @@ export default () => {
               </h2>
 
               <div className="space-y-6">
-                {recentPosts.map((post, index) => (
-                  <NavLink
-                    to={`/blogs/${post.slug}`} // Using slug
-                    key={index}
-                    className="group cursor-pointer "
-                  >
-                    <div className="flex space-x-4 mb-4">
-                      {/* Post Image */}
-                      <div className="flex-shrink-0">
-                        <img
-                          src={post.featuredImage || "/placeholder-image.jpg"}
-                          alt={post.title}
-                          className="size-25 object-cover rounded-lg group-hover:opacity-80 transition-opacity"
-                        />
-                      </div>
-
-                      {/* Post Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center text-white/60 text-xs mb-2">
-                          <span>{post.publisherName}</span>
-                          <span className="mx-1">•</span>
-                          <span>
-                            {new Date(post.publishDate).toLocaleDateString()}
-                          </span>
+                {Array.isArray(recentPosts) && recentPosts.length > 0 ? (
+                  recentPosts.map((post, index) => (
+                    <NavLink
+                      to={`/blogs/${post.slug}`} // Using slug
+                      key={index}
+                      className="group cursor-pointer "
+                    >
+                      <div className="flex space-x-4 mb-4">
+                        {/* Post Image */}
+                        <div className="flex-shrink-0">
+                          <img
+                            src={post.featuredImage || "/placeholder-image.jpg"}
+                            alt={post.title}
+                            className="size-25 object-cover rounded-lg group-hover:opacity-80 transition-opacity"
+                          />
                         </div>
 
-                        <h3 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-[#B89900] transition-colors">
-                          {post.title}
-                        </h3>
+                        {/* Post Content */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center text-white/60 text-xs mb-2">
+                            <span>{post.publisherName}</span>
+                            <span className="mx-1">•</span>
+                            <span>
+                              {new Date(post.publishDate).toLocaleDateString()}
+                            </span>
+                          </div>
 
-                        <p className="text-white/70 text-xs leading-relaxed line-clamp-2">
-                          {post.excerpt}
-                        </p>
+                          <h3 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-[#B89900] transition-colors">
+                            {post.title}
+                          </h3>
+
+                          <p className="text-white/70 text-xs leading-relaxed line-clamp-2">
+                            {post.excerpt}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </NavLink>
-                ))}
+                    </NavLink>
+                  ))
+                ) : (
+                  <p className="text-white/40 text-sm italic">
+                    No recent posts available.
+                  </p>
+                )}
               </div>
             </div>
           </div>

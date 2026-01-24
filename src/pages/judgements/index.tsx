@@ -13,8 +13,8 @@ export default () => {
 
   const fetchJudgements = async () => {
     try {
-      const data = await getPublicJudgements(100, 0); 
-     console.log(data);
+      const data = await getPublicJudgements(100, 0);
+      console.log(data);
       setJudgements(data);
     } catch (error) {
       console.error("Failed to fetch judgements", error);
@@ -30,10 +30,10 @@ export default () => {
     setVisibleCases((prev) => prev + 6);
   };
 
-  const filteredCases = judgements.filter(
+  const filteredCases = (Array.isArray(judgements) ? judgements : []).filter(
     (case_) =>
-      case_.citation.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      case_.judgement.toLowerCase().includes(searchTerm.toLowerCase())
+      case_.citation?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      case_.judgement?.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   // Helper to strip HTML tags for description preview

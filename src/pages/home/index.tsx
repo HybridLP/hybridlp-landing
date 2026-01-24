@@ -17,6 +17,8 @@ export default function Home() {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 100); // Small delay to ensure DOM is ready
+    }else{
+      window.scrollTo(0, 0);
     }
   }, [location]);
 

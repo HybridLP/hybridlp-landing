@@ -14,7 +14,7 @@ export default () => {
       setLoading(true);
       try {
         const data = await articleService.getPublicArticles(
-          activeCategory === "View All" ? undefined : activeCategory
+          activeCategory === "View All" ? undefined : activeCategory,
         );
         setPosts(data);
       } catch (error) {
@@ -52,7 +52,7 @@ export default () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {loading ? (
           <div className="col-span-full text-center text-white">Loading...</div>
-        ) : (
+        ) : Array.isArray(posts) && posts.length > 0 ? (
           posts.map((post, idx) => (
             <div
               key={idx}
@@ -104,6 +104,10 @@ export default () => {
               </div>
             </div>
           ))
+        ) : (
+          <div className="col-span-full text-center text-white/60 py-12">
+            No articles found at the moment.
+          </div>
         )}
       </div>
 
