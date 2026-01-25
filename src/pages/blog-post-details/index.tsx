@@ -1,4 +1,4 @@
-import Hero from "../home/components/hero";
+
 import bg from "../../assets_/landing-bg.jpg";
 import { useParams, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
