@@ -36,7 +36,16 @@ export default function LegalChatbot() {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [hideAfter10s, setHideAfter10s] = useState(false);
 
+  useEffect(() => {
+    if (showTooltip && !isOpen) {
+      const timer = setTimeout(() => {
+        setShowTooltip(false);
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [showTooltip, isOpen]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -120,47 +129,31 @@ export default function LegalChatbot() {
     <>
       <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 animate-[bounce_3s_infinite]">
         {/* Dismissable Tooltip */}
-        {showTooltip && !isOpen && (
-          <div className="relative">
-            {/* External Dismiss Button */}
-            <button
-              onClick={dismissTooltip}
-              className="absolute -top-3 -left-3 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors z-[102]"
-              aria-label="Dismiss"
-            >
-              <X className="w-4 h-4 text-gray-500" />
-            </button>
-
-            {/* Speech Bubble: Have a question? */}
-            <div
-              className="px-5 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.1)] border-2 border-white/20"
-              style={{
-                borderRadius: "0.7rem 0.7rem 0rem 0.7rem",
-                background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
-              }}
-            >
-              <p className="text-white font-semibold text-sm whitespace-nowrap flex items-center gap-2">
-                Have a question? 👋
-              </p>
-            </div>
-          </div>
-        )}
 
         {!isOpen && (
           <>
-            {/* Text Bubble: Ask HybridAI */}
-            <div
-              onClick={() => setIsOpen(true)}
-              className="px-6 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-2 border-white/20 cursor-pointer"
-              style={{
-                borderRadius: "0.7rem 0.7rem 0rem 0.7rem",
-                background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
-              }}
-            >
-              <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
-                Ask HybridAI
-              </span>
-            </div>
+            {showTooltip && (
+              <div
+                onClick={() => setIsOpen(true)}
+                className="px-6 py-2 rounded-xl relative  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-1 border-white/20 cursor-pointer"
+                style={{
+                  borderRadius: "0.7rem 0.7rem 0rem 0.7rem",
+                  background:
+                    "linear-gradient(135deg, #C8A702 0%, #824E00 100%) ",
+                }}
+              >
+                <button
+                  onClick={dismissTooltip}
+                  className="absolute -top-3 -left-3 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors z-[102]"
+                  aria-label="Dismiss"
+                >
+                  <X className="w-4 h-4 text-gray-500" />
+                </button>
+                <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
+                  Ask HybridAI
+                </span>
+              </div>
+            )}
 
             {/* Robot Icon Bubble */}
             <div
