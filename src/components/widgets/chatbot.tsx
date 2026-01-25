@@ -15,6 +15,16 @@ interface Message {
 
 export default function LegalChatbot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(() => {
+    const dismissed = localStorage.getItem("chatbot-tooltip-dismissed");
+    return dismissed !== "true";
+  });
+
+  const dismissTooltip = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setShowTooltip(false);
+    localStorage.setItem("chatbot-tooltip-dismissed", "true");
+  };
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
@@ -108,38 +118,67 @@ export default function LegalChatbot() {
 
   return (
     <>
-      <div
-        onClick={() => setIsOpen(true)}
-        className={`fixed bottom-8 right-8 z-[100] flex items-center gap-3 animate-bounce cursor-pointer group ${
-          isOpen ? "hidden" : "flex"
-        }`}
-      >
-        {/* Text Bubble */}
-        <div
-          className="px-6 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-2 border-white/20"
-          style={{
-            background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
-          }}
-        >
-          <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
-            Ask HybridAI
-          </span>
-        </div>
+      <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 animate-[bounce_3s_infinite]">
+        {/* Dismissable Tooltip */}
+        {showTooltip && !isOpen && (
+          <div className="relative">
+            {/* External Dismiss Button */}
+            <button
+              onClick={dismissTooltip}
+              className="absolute -top-3 -left-3 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors z-[102]"
+              aria-label="Dismiss"
+            >
+              <X className="w-4 h-4 text-gray-500" />
+            </button>
 
-        {/* Robot Icon Bubble */}
-        <div
-          className="p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative"
-          style={{
-            background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
-          }}
-        >
-          <img
-            src={robot}
-            alt="AI Assistant"
-            className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
-          />
-          <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
-        </div>
+            {/* Speech Bubble: Have a question? */}
+            <div
+              className="px-5 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.1)] border-2 border-white/20"
+              style={{
+                borderRadius: "0.7rem 0.7rem 0rem 0.7rem",
+                background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+              }}
+            >
+              <p className="text-white font-semibold text-sm whitespace-nowrap flex items-center gap-2">
+                Have a question? 👋
+              </p>
+            </div>
+          </div>
+        )}
+
+        {!isOpen && (
+          <>
+            {/* Text Bubble: Ask HybridAI */}
+            <div
+              onClick={() => setIsOpen(true)}
+              className="px-6 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-2 border-white/20 cursor-pointer"
+              style={{
+                borderRadius: "0.7rem 0.7rem 0rem 0.7rem",
+                background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+              }}
+            >
+              <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
+                Ask HybridAI
+              </span>
+            </div>
+
+            {/* Robot Icon Bubble */}
+            <div
+              onClick={() => setIsOpen(true)}
+              className="p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative cursor-pointer"
+              style={{
+                background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
+              }}
+            >
+              <img
+                src={robot}
+                alt="AI Assistant"
+                className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+              />
+              <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Chatbot Modal */}
