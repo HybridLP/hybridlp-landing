@@ -9,6 +9,7 @@ export interface LawyerData {
   image: string;
   profileImage: string;
   expertise: string;
+  experience: string;
 }
 
 export const stages: LawyerData[] = [
@@ -17,30 +18,35 @@ export const stages: LawyerData[] = [
     profileImage: lawyer,
     image: lawyer,
     expertise: "Property Law | Real Estate",
+    experience: "15+",
   },
   {
     name: "A. Muhammed Esq",
     profileImage: lawyerProfile2,
     image: lawyerImage2,
     expertise: "Corporate | Property Law",
+    experience: "8+",
   },
   {
     name: "M. precious Esq",
     profileImage: alhaja,
     image: alhaja,
     expertise: "Corporate | Tax Law",
+    experience: "12+",
   },
   {
     name: "K. Chibugor Esq",
     profileImage: chibugor,
     image: chibugor,
     expertise: "Corporate | Tax Law",
+    experience: "6+",
   },
   {
     name: "K. Thomas Esq",
     profileImage: thomas,
     image: thomas,
     expertise: "Corporate | Tax Law",
+    experience: "10+",
   },
 ];
 
@@ -71,7 +77,7 @@ const DynamicLawyerCard = ({ data }: DynamicLawyerCardProps) => {
               <span className="truncate">{data.expertise}</span>
             </div>
             <p className="flex items-center gap-2 mt-1 md:mt-2 inter-font text-[12px] md:text-[14px] font-medium whitespace-nowrap text-[#8A8A8A]">
-              <span className="text-[#B89900]">10+ </span>
+              <span className="text-[#B89900]">{data.experience} </span>
               <span>
                 yrs of exp<span className="hidden md:inline">erience</span>
               </span>
