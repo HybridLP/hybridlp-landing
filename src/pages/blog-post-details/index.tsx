@@ -57,8 +57,7 @@ export default () => {
         backgroundPosition: "center",
       }}
     >
-      <Hero />
-      <main className="pt-16 md:px-32">
+      <main className="pt-16 px-4 md:px-32">
         {/* blog details and other blogs */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
           {/* Main Blog Content - Left Side */}
@@ -103,7 +102,7 @@ export default () => {
 
           {/* Recent Blog Posts - Right Sidebar */}
           <div className="lg:col-span-1">
-            <div className=" py-6  sticky top-8">
+            <div className=" py-6  sticky top-8 ">
               <h2 className="text-xl font-semibold text-white mb-6">
                 Recent blog posts
               </h2>
