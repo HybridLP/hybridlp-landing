@@ -13,6 +13,7 @@ interface Message {
   timestamp: Date;
 }
 
+
 export default function LegalChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(() => {
