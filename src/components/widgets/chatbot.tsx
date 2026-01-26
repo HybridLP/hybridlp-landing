@@ -37,16 +37,15 @@ export default function LegalChatbot() {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [hideAfter10s, setHideAfter10s] = useState(false);
+  const [isBouncing, setIsBouncing] = useState(false);
 
   useEffect(() => {
-    if (showTooltip && !isOpen) {
-      const timer = setTimeout(() => {
-        setShowTooltip(false);
-      }, 10000);
-      return () => clearTimeout(timer);
-    }
-  }, [showTooltip, isOpen]);
+  const timer = setTimeout(() => {
+    setIsBouncing(false);
+  }, 10000); // 10 seconds
+
+  return () => clearTimeout(timer);
+}, []);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -128,12 +127,12 @@ export default function LegalChatbot() {
 
   return (
     <>
-      <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 animate-[bounce_3s_infinite]">
+      <div className={`fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 ${isBouncing?"animate-[bounce_3s_infinite]":""}`}>
         {/* Dismissable Tooltip */}
 
         {!isOpen && (
           <>
-            {showTooltip && (
+            
               <div
                 onClick={() => setIsOpen(true)}
                 className="px-6 py-2 rounded-xl relative  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-1 border-white/20 cursor-pointer"
@@ -150,11 +149,15 @@ export default function LegalChatbot() {
                 >
                   <X className="w-4 h-4 text-gray-500" />
                 </button>
-                <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
+                {
+                  isBouncing&&
+                  <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
                   Ask HybridAI
                 </span>
+                }
+                
               </div>
-            )}
+            
 
             {/* Robot Icon Bubble */}
             <div
