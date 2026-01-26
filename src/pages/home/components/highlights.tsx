@@ -208,6 +208,6 @@ const highlights = [
     description:
       "Keep track of court sittings, deadlines, and consultations with an integrated calendar tailored for legal workflows. Get automatic reminders and sync important dates across devices and team members.",
     image: calendarIcon,
-    extraTitle: "Calendar & Reminders",
+    extraTitle: "Legal Diary & Reminders",
   },
 ];
