@@ -167,7 +167,7 @@ export default function LegalChatbot() {
             {/* Robot Icon Bubble */}
             <div
               onClick={() => setIsOpen(true)}
-              className="px-1 md:p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative cursor-pointer"
+              className="p-1 md:p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative cursor-pointer"
               style={{
                 background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
               }}
