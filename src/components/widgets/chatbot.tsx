@@ -132,7 +132,7 @@ export default function LegalChatbot() {
 
         {!isOpen && (
           <>
-            {showToolTip&&
+            {showTooltip&&
               <div
                 onClick={() => setIsOpen(true)}
                 className="px-6 py-2 rounded-xl relative  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-1 border-white/20 cursor-pointer"
