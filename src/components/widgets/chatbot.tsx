@@ -37,7 +37,7 @@ export default function LegalChatbot() {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [isBouncing, setIsBouncing] = useState(false);
+  const [isBouncing, setIsBouncing] = useState(true);
 
   useEffect(() => {
   const timer = setTimeout(() => {
