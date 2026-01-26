@@ -175,7 +175,7 @@ export default function LegalChatbot() {
               <img
                 src={robot}
                 alt="AI Assistant"
-                className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+                className="w-10 h-10 md:w-14 md:h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
               />
               <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
             </div>
