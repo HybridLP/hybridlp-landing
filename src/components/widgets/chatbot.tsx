@@ -167,7 +167,7 @@ export default function LegalChatbot() {
             {/* Robot Icon Bubble */}
             <div
               onClick={() => setIsOpen(true)}
-              className="p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative cursor-pointer"
+              className="px-1 md:p-1.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/20 relative cursor-pointer"
               style={{
                 background: "linear-gradient(135deg, #C8A702 0%, #824E00 100%)",
               }}
@@ -175,7 +175,7 @@ export default function LegalChatbot() {
               <img
                 src={robot}
                 alt="AI Assistant"
-                className="w-10 h-10 md:w-14 md:h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+                className="w-14 h-14 object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
               />
               <span className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse shadow-sm"></span>
             </div>
