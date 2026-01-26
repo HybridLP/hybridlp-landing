@@ -42,6 +42,7 @@ export default function LegalChatbot() {
   useEffect(() => {
   const timer = setTimeout(() => {
     setIsBouncing(false);
+    setShowTooltip(false)
   }, 10000); // 10 seconds
 
   return () => clearTimeout(timer);
