@@ -2,10 +2,12 @@ import documentIcon from "../../../assets_/famicons_documents.png";
 import calendarIcon from "../../../assets_/calendar.png";
 import meetingIcon from "../../../assets_/microphone-icon.png";
 import accessIcon from "../../../assets_/accessIcon.png";
+import iconLast from "../../../assets_/icon_last.png";
 import bg from "../../../assets_/landing-bg.jpg";
 import { useScrollAnimation } from "../../../utils/useScrollAnimation";
 
 const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
+  console.log(idx);
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
@@ -24,16 +26,16 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           transitionDelay: `${idx * 150}ms`,
         }}
       >
-        {idx === 0 || idx === 2 ? (
+        {idx === 0 || idx === 2  || idx === 4 ? (
           <div
             className={` gradiented2 rounded-2xl flex relative flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
-              idx === 2
+              (idx === 2 || idx==4)
                 ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] items-start md:py-6 py-4 md:px-[28px] px-4"
                 : ""
-            }`}
+            } ${idx===4 && "text-center"}`}
             style={{
               boxShadow:
-                idx === 2
+                idx === 2 || idx === 4
                   ? "box-shadow: 0px 1px 2px 0px #C8C8C840 inset;"
                   : "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
             }}
@@ -45,14 +47,14 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
                 <div className="rounded-full w-3 h-3 bg-[#C2FF61]" />
               </div>
             )}
-            <img src={item.image} className="size-16" alt="" />
+            <img src={item.image} className={idx===4 ? "w-[60px] h-[60px] md:w-[104px] md:h-[82px] mx-auto" : "size-16"} alt="" />
             <h3
-              className={"text-white text-[18px] md:text-[24px] font-semibold "}
+              className={`text-white text-[18px] md:text-[24px] font-semibold ${idx===4 && "text-center mx-auto" }`}
             >
               {item.extraTitle}
             </h3>
             {item.extraDesc && (
-              <p className="text-white text-[14px] md:text-[16px]">
+              <p className={`text-white text-[14px] md:text-[16px] ${idx===4 && "text-center mx-auto" }`}>
                 {item.extraDesc}
               </p>
             )}
@@ -179,11 +181,12 @@ export default () => {
   );
 };
 
+
 const highlights = [
   {
     title: "Submit your legal matters securely from <br/> anywhere.",
     description:
-      "Submit detailed briefs securely from anywhere, using structured forms designed to capture all the necessary information about your legal matter. Whether civil, corporate, or criminal, your case gets the attention it deserves right from the start.",
+      "Submit your legal matters securely from anywhere. Provide your details on our secured system through the structured forms designed to capture every critical aspect of your case. Whether your matter relates to civil, criminal defence, corporate, commercial transactions, real estate, regulatory compliance, or advisory services, HybridLP ensures your case receives professional attention from the outset.",
     image: documentIcon,
     extraTitle: "Client Briefing & Case Filing",
   },
@@ -208,6 +211,15 @@ const highlights = [
     description:
       "Keep track of court sittings, deadlines, and consultations with an integrated calendar tailored for legal workflows. Get automatic reminders and sync important dates across devices and team members.",
     image: calendarIcon,
-    extraTitle: "Calendar & Reminders",
+    extraTitle: "Legal Diary & Reminders",
   },
+  {
+    title: "Lodge concerns and  witness a flawless resolution process <br/> unfold",
+    description:
+      "HybridLP provides a structured and transparent complaints process, enabling users to lodge concerns, track resolution progress and initiate refund requests where service expectations are not met. This ensures accountability and client satisfaction.",
+    image:  iconLast,
+    extraTitle: "Complaints and Refund",
+    extraDesc: "Resolution system",
+  },
+
 ];

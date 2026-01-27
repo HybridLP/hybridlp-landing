@@ -1,5 +1,6 @@
 import lawyer from "../../../assets_/lawyer.png";
 import lawyerProfile2 from "../../../assets_/lawyer-profile.png";
+import femaleLawyer from "../../../assets_/female-lawyer.png";
 import lawyerImage2 from "../../../assets_/lawyer-profile.png";
 import alhaja from "../../../assets_/alhaja.png";
 import chibugor from "../../../assets_/chibugor.png";
@@ -21,18 +22,18 @@ export const stages: LawyerData[] = [
     experience: "15+",
   },
   {
-    name: "A. Muhammed Esq",
-    profileImage: lawyerProfile2,
-    image: lawyerImage2,
-    expertise: "Corporate | Property Law",
-    experience: "8+",
-  },
-  {
     name: "M. precious Esq",
     profileImage: alhaja,
     image: alhaja,
     expertise: "Corporate | Tax Law",
     experience: "12+",
+  },
+  {
+    name: "A. Muhammed Esq",
+    profileImage: lawyerProfile2,
+    image: lawyerImage2,
+    expertise: "Corporate | Property Law",
+    experience: "8+",
   },
   {
     name: "K. Chibugor Esq",
@@ -45,8 +46,15 @@ export const stages: LawyerData[] = [
     name: "K. Thomas Esq",
     profileImage: thomas,
     image: thomas,
-    expertise: "Corporate | Tax Law",
+    expertise: "Corporate | Cybersecurity Law",
     experience: "10+",
+  },
+  {
+    name: "Y. Mary Esq",
+    profileImage: femaleLawyer,
+    image: femaleLawyer,
+    expertise: "Corporate | Immigration Law",
+    experience: "5+",
   },
 ];
 

@@ -70,7 +70,7 @@ export default () => {
         <div className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-4 relative  w-full   mt-auto  md:pb-8 md:mb-4 md:mt-8 px-4 lg:px-[312px]">
           <div className="flex flex-col  gap-3 md:gap-4 w-full md:w-auto  lg:w-[774px]">
             <img
-              className={`h-[478px] w-full rounded-lg object-cover  object-center transition-all duration-1000 transform ${
+              className={`h-[478px] w-full rounded-lg object-cover  object-center  transition-all duration-1000 transform ${
                 isVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-[50%]"

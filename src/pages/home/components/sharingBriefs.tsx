@@ -20,13 +20,11 @@ export default () => {
       </h6>
       <AnimatedSection>
         <h3 className="font-medium text-white text-2xl md:text-3xl mx-auto text-center lg:text-[40px] inter-font mt-4 mb-4">
-          From Briefs To Action
-        </h3>
+          Instructions to Impact </h3>
       </AnimatedSection>
       <AnimatedSection>
         <p className="text-base md:text-lg lg:text-[20px] text-center text-white w-full md:w-[80%] lg:w-[70%] mx-auto leading-relaxed md:leading-[28px] lg:leading-[32px] lato-regular font-normal mb-8 md:mb-12 lg:mb-16">
-          Don’t let time delay your justice, share your legal matter and let our
-          expert lawyers take swift, strategic action toward a lasting solution.
+          We navigate legal complexities to deliver stronger outcomes. Present your matter, and our expert legal team will act with speed, strategy and precision to secure decisive solutions.
         </p>
       </AnimatedSection>
       {/* Mobile Layout - Stacked Cards */}
