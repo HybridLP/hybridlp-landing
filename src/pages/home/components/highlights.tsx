@@ -201,7 +201,7 @@ const highlights = [
   {
     title: "Nigerian laws, templates, judgments, and <br/> more.",
     description:
-      "Instant access a rich library of Nigerian statutes, case law, precedent templates, and Continuing Professional Development (CPD) resources. Stay informed and empowered with curated legal content at your fingertips.",
+      "Instant access to a rich library of Nigerian statutes, case law, precedent templates, and Continuing Professional Development (CPD) resources. Stay informed and empowered with curated legal content at your fingertips.",
     image: accessIcon,
     extraTitle: "Exclusive Access To",
     extraDesc: "Major Nigerian legal resources",
