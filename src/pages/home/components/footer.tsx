@@ -1,10 +1,10 @@
 import React from "react";
-import {  Languages } from "lucide-react";
+import { Languages } from "lucide-react";
 import logo from "../../../assets_/logo/logo.png";
 import { NavLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {
-  const date = new Date()
+  const date = new Date();
   return (
     <footer className="bg-black text-white">
       {/* Main footer content */}
@@ -107,7 +107,9 @@ export const Footer: React.FC = () => {
 
           {/* Jobs - Desktop */}
           <div className="flex-shrink-0">
-            <h3 className="text-base lg:text-lg font-medium mb-4 inter-font">Jobs</h3>
+            <h3 className="text-base lg:text-lg font-medium mb-4 inter-font">
+              Jobs
+            </h3>
             <p className="text-gray-300 text-sm lato-regular max-w-[180px]">
               Learn about open roles on our team.
             </p>
@@ -121,8 +123,11 @@ export const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm lato-regular max-w-[180px]">
               Need anything? Get in touch so we can help.
             </p>
-            <NavLink to="probono" className="text-gray-300 text-sm lato-regular max-w-[180px]">
-             Apply for pro bono services.
+            <NavLink
+              to="probono"
+              className="text-gray-300 text-sm lato-regular max-w-[180px]"
+            >
+              Apply for pro bono services.
             </NavLink>
           </div>
         </div>
@@ -158,7 +163,6 @@ export const Footer: React.FC = () => {
 
             {/* Social media icons - Mobile */}
             <div className="flex justify-center items-center gap-4">
-              
               <a
                 href="https://x.com/hybridlp_"
                 target="_blank"
@@ -170,7 +174,7 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/hybridlp_"
+                href="mailto:hybridlawpractice@gmail.com"
                 target="_blank"
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Instagram"
@@ -192,11 +196,10 @@ export const Footer: React.FC = () => {
               <a
                 href="https://www.tiktok.com/@hybridlp"
                 target="_blank"
-
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Tiktok"
               >
-                 <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
                 </svg>
               </a>
@@ -210,9 +213,9 @@ export const Footer: React.FC = () => {
               >
                 Privacy Policy
               </a>
-              <span className="lato-regular text-center">Copyright © {
-                date.getFullYear()
-                } Hybrid LP</span>
+              <span className="lato-regular text-center">
+                Copyright © {date.getFullYear()} Hybrid LP
+              </span>
             </div>
           </div>
 
@@ -247,16 +250,14 @@ export const Footer: React.FC = () => {
                 >
                   Privacy Policy
                 </a>
-                <span className="lato-regular">Copyright © {
-                 
-                  date.getFullYear()
-                  } Hybrid LP</span>
+                <span className="lato-regular">
+                  Copyright © {date.getFullYear()} Hybrid LP
+                </span>
               </div>
             </div>
 
             {/* Social media icons - Desktop */}
             <div className="flex items-center gap-3">
-              
               <a
                 href="https://x.com/hybridlp_"
                 target="_blank"
@@ -278,7 +279,7 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-               href="mailto:hybridlawpractice@gmail.com"
+                href="mailto:hybridlawpractice@gmail.com"
                 target="_blank"
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Email"
