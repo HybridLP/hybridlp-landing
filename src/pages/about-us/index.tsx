@@ -1,12 +1,16 @@
 import bgProp from "../../assets_/bg-property.png";
 import aboutUs from "../../assets_/about-us.png";
+import SEO from "../../components/widgets/seo";
+
 export default () => {
   return (
     <>
-      <main
-        className="flex flex-col py-0 relative text-white gradiented"
-        
-      >
+      <SEO
+        title="About Our Digital Law Office"
+        description="HybridLP provides legal services in diverse areas, with experienced lawyers in arbitration, litigation, and more. Learn about our vision."
+        canonical="https://hybridlp.com/about"
+      />
+      <main className="flex flex-col py-0 relative text-white gradiented">
         {/* it should still bw visible for the sake of  */}
         <div className=" lg:block absolute top-[5%] lg:top-[10%] left-[0.5rem] md:left-[8rem]">
           <img src={bgProp} alt="bg-property" />
@@ -15,7 +19,9 @@ export default () => {
           <img src={bgProp} alt="bg-property" />
         </div>
         <div className="mt-[20%] lg:mt-[10%] mx-4 sm:mx-8 md:mx-16 lg:mx-[273px]">
-          <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-8">About Us</h1>
+          <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-8">
+            About Us
+          </h1>
           <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-center mb-8 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
             Hybrid LP provides legal services in diverse areas, with experienced
             lawyers in arbitration, litigation, Human right enforcement,
@@ -37,7 +43,10 @@ export default () => {
             interactive processes, such as;
           </p>
           {contents.map((item, idx) => (
-            <div className={`flex flex-col gap-4 sm:gap-6 ${idx===0 ? "mt-12 sm:mt-16": "mt-6 sm:mt-8"}`} key={idx}>
+            <div
+              className={`flex flex-col gap-4 sm:gap-6 ${idx === 0 ? "mt-12 sm:mt-16" : "mt-6 sm:mt-8"}`}
+              key={idx}
+            >
               <h3 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-semibold w-full lg:w-[623px] lato-regular border-b border-b-white px-[10px] py-[12px] sm:py-[16px]">
                 {item.title}
               </h3>

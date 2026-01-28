@@ -1,7 +1,22 @@
 import { useEffect, useState } from "react";
 import Hero from "./components/hero";
+import SEO from "../../components/widgets/seo";
 
 export default () => {
+  const proBonoSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "HybridLP Pro Bono Legal Services",
+    description:
+      "Providing free legal representation for those in need in Nigeria.",
+    provider: {
+      "@type": "Organization",
+      name: "HybridLP",
+    },
+    areaServed: "Nigeria",
+    serviceType: "Legal Aid",
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,7 +24,7 @@ export default () => {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -32,6 +47,12 @@ export default () => {
   }, []);
   return (
     <div className=" min-h-screen">
+      <SEO
+        title="Pro Bono Legal Services"
+        description="HybridLP provides free legal assistance to handle cases for people in Nigeria who are unable to pay for private legal representation."
+        canonical="https://hybridlp.com/probono"
+        structuredData={proBonoSchema}
+      />
       <Hero />
       <div className="h-screen flex flex-col">
         <div className="flex flex-col flex-1 items-center justify-center py-20  bg-[#323232] ">

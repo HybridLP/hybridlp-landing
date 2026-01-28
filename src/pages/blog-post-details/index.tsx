@@ -1,10 +1,10 @@
-
 import bg from "../../assets_/landing-bg.jpg";
 import { useParams, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { articleService, BlogPost } from "../../services/articleService";
+import SEO from "../../components/widgets/seo";
 
 export default () => {
   const { slug } = useParams(); // URL should be /blogs/:slug
@@ -48,115 +48,153 @@ export default () => {
       </div>
     );
   }
+
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.featuredImage || "https://hybridlp.com/og-image.jpg",
+    author: {
+      "@type": "Person",
+      name: post.publisherName || "HybridLP Team",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "HybridLP",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://hybridlp.com/hybridlp-logo.png",
+      },
+    },
+    datePublished: post.publishDate,
+    url: `https://hybridlp.com/blogs/${slug}`,
+  };
+
   return (
-    <div
-      className="bg-cover bg-center py-10"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <main className="pt-16 px-4 md:px-32">
-        {/* blog details and other blogs */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
-          {/* Main Blog Content - Left Side */}
-          <div className="lg:col-span-2">
-            <article>
-              {/* Blog Header */}
-              <div className="mb-6">
-                <h1 className="text-3xl font-bold text-white mb-6">
-                  {post?.title}
-                </h1>
-              </div>
-
-              {/* Featured Image */}
-              <div className="mb-8">
-                <img
-                  src={post.featuredImage || "/placeholder-image.jpg"}
-                  alt={post.title}
-                  className="w-full h-48 sm:h-64 object-cover rounded-lg"
-                />
-                <div className="flex items-center text-white/80 text-sm my-4">
-                  <span>{post.publisherName || "Unknown"}</span>
-                  <span className="mx-2">•</span>
-                  <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        ogImage={post.featuredImage}
+        canonical={`https://hybridlp.com/blogs/${slug}`}
+        structuredData={blogPostSchema}
+      />
+      <div
+        className="bg-cover bg-center py-10"
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <main className="pt-16 px-4 md:px-32">
+          {/* blog details and other blogs */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
+            {/* Main Blog Content - Left Side */}
+            <div className="lg:col-span-2">
+              <article>
+                {/* Blog Header */}
+                <div className="mb-6">
+                  <h1 className="text-3xl font-bold text-white mb-6">
+                    {post?.title}
+                  </h1>
                 </div>
-              </div>
 
-              {/* Blog Content */}
-              <div className="prose prose-invert max-w-none mb-4">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {post?.content || ""}
-                </ReactMarkdown>
-              </div>
+                {/* Featured Image */}
+                <div className="mb-8">
+                  <img
+                    src={post.featuredImage || "/placeholder-image.jpg"}
+                    alt={post.title}
+                    className="w-full h-48 sm:h-64 object-cover rounded-lg"
+                  />
+                  <div className="flex items-center text-white/80 text-sm my-4">
+                    <span>{post.publisherName || "Unknown"}</span>
+                    <span className="mx-2">•</span>
+                    <span>
+                      {new Date(post.publishDate).toLocaleDateString()}
+                    </span>
+                  </div>
+                </div>
 
-              {/* Blog Category Tag */}
-              <div className="px-4 py-2 rounded-lg w-fit border border-white">
-                <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-medium">
-                  {post.categories?.[0] || "Legal Insights"}
-                </span>
-              </div>
-            </article>
-          </div>
+                {/* Blog Content */}
+                <div className="prose prose-invert max-w-none mb-4">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {post?.content || ""}
+                  </ReactMarkdown>
+                </div>
 
-          {/* Recent Blog Posts - Right Sidebar */}
-          <div className="lg:col-span-1">
-            <div className=" py-6  sticky top-8 ">
-              <h2 className="text-xl font-semibold text-white mb-6">
-                Recent blog posts
-              </h2>
+                {/* Blog Category Tag */}
+                <div className="px-4 py-2 rounded-lg w-fit border border-white">
+                  <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-medium">
+                    {post.categories?.[0] || "Legal Insights"}
+                  </span>
+                </div>
+              </article>
+            </div>
 
-              <div className="space-y-6">
-                {Array.isArray(recentPosts) && recentPosts.length > 0 ? (
-                  recentPosts.map((post, index) => (
-                    <NavLink
-                      to={`/blogs/${post.slug}`} // Using slug
-                      key={index}
-                      className="group cursor-pointer "
-                    >
-                      <div className="flex space-x-4 mb-4">
-                        {/* Post Image */}
-                        <div className="flex-shrink-0">
-                          <img
-                            src={post.featuredImage || "/placeholder-image.jpg"}
-                            alt={post.title}
-                            className="size-25 object-cover rounded-lg group-hover:opacity-80 transition-opacity"
-                          />
-                        </div>
+            {/* Recent Blog Posts - Right Sidebar */}
+            <div className="lg:col-span-1">
+              <div className=" py-6  sticky top-8 ">
+                <h2 className="text-xl font-semibold text-white mb-6">
+                  Recent blog posts
+                </h2>
 
-                        {/* Post Content */}
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center text-white/60 text-xs mb-2">
-                            <span>{post.publisherName}</span>
-                            <span className="mx-1">•</span>
-                            <span>
-                              {new Date(post.publishDate).toLocaleDateString()}
-                            </span>
+                <div className="space-y-6">
+                  {Array.isArray(recentPosts) && recentPosts.length > 0 ? (
+                    recentPosts.map((post, index) => (
+                      <NavLink
+                        to={`/blogs/${post.slug}`} // Using slug
+                        key={index}
+                        className="group cursor-pointer "
+                      >
+                        <div className="flex space-x-4 mb-4">
+                          {/* Post Image */}
+                          <div className="flex-shrink-0">
+                            <img
+                              src={
+                                post.featuredImage || "/placeholder-image.jpg"
+                              }
+                              alt={post.title}
+                              className="size-25 object-cover rounded-lg group-hover:opacity-80 transition-opacity"
+                            />
                           </div>
 
-                          <h3 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-[#B89900] transition-colors">
-                            {post.title}
-                          </h3>
+                          {/* Post Content */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center text-white/60 text-xs mb-2">
+                              <span>{post.publisherName}</span>
+                              <span className="mx-1">•</span>
+                              <span>
+                                {new Date(
+                                  post.publishDate,
+                                ).toLocaleDateString()}
+                              </span>
+                            </div>
 
-                          <p className="text-white/70 text-xs leading-relaxed line-clamp-2">
-                            {post.excerpt}
-                          </p>
+                            <h3 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-[#B89900] transition-colors">
+                              {post.title}
+                            </h3>
+
+                            <p className="text-white/70 text-xs leading-relaxed line-clamp-2">
+                              {post.excerpt}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </NavLink>
-                  ))
-                ) : (
-                  <p className="text-white/40 text-sm italic">
-                    No recent posts available.
-                  </p>
-                )}
+                      </NavLink>
+                    ))
+                  ) : (
+                    <p className="text-white/40 text-sm italic">
+                      No recent posts available.
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 };
 
