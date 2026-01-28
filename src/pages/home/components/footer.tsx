@@ -1,5 +1,5 @@
 import React from "react";
-import {  Languages, Facebook } from "lucide-react";
+import {  Languages } from "lucide-react";
 import logo from "../../../assets_/logo/logo.png";
 import { NavLink } from "react-router-dom";
 
