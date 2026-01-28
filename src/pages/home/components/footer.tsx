@@ -184,6 +184,7 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
+              
                 href="mailto:hybridlawpractice@gmail.com"
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Email"
