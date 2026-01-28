@@ -185,7 +185,6 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href="mailto:hybridlawpractice@gmail.com"
-                target="_blank"
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Email"
               >
@@ -280,7 +279,6 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href="mailto:hybridlawpractice@gmail.com"
-                target="_blank"
                 className="w-8 h-8 flex items-center justify-center hover:bg-gray-800 rounded transition-colors"
                 aria-label="Email"
               >
