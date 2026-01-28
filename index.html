@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Basic Meta Tags -->
@@ -143,19 +143,14 @@
           "addressRegion": "Nigeria"
         },
         "sameAs": [
-          "https://twitter.com/HybridLP",
-          "https://linkedin.com/company/hybridlp",
-          "https://facebook.com/HybridLP"
-        ],
-        "serviceType": "Legal Services",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Nigeria"
-        }
+          "https://x.com/hybridlp_",
+          "https://instagram.com/hybridlp_",
+          "https://linkedin.com/company/hybridlp"
+        ]
       }
     </script>
 
-    <!-- Structured Data - WebSite -->
+    <!-- Structured Data - WebSite and Sitelinks Search Box -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -163,15 +158,52 @@
         "name": "HybridLP",
         "url": "https://hybridlp.com",
         "description": "Your legal powerhouse designed for seamless legal offering/service experience.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "HybridLP"
-        },
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://hybridlp.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      }
+    </script>
+
+    <!-- Structured Data - Sitelinks Navigation -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "HybridLP Key Sections",
+        "itemListElement": [
+          {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Signup to Briefspace",
+            "url": "https://app.hybridlp.com/signup"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "Login to Briefspace",
+            "url": "https://app.hybridlp.com/login"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Join as a Lawyer Member",
+            "url": "https://lawyer.hybridlp.com/signup"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Legal Blogs",
+            "url": "https://hybridlp.com/blogs"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 5,
+            "name": "Legal Judgements",
+            "url": "https://hybridlp.com/judgements"
+          }
+        ]
       }
     </script>
 
