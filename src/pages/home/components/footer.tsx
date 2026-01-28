@@ -4,6 +4,7 @@ import logo from "../../../assets_/logo/logo.png";
 import { NavLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {
+  const date = new Date()
   return (
     <footer className="bg-black text-white">
       {/* Main footer content */}
@@ -209,7 +210,9 @@ export const Footer: React.FC = () => {
               >
                 Privacy Policy
               </a>
-              <span className="lato-regular text-center">Copyright © 2025 Hybrid LP</span>
+              <span className="lato-regular text-center">Copyright © {
+                date.getFullYear()
+                } Hybrid LP</span>
             </div>
           </div>
 
@@ -244,7 +247,10 @@ export const Footer: React.FC = () => {
                 >
                   Privacy Policy
                 </a>
-                <span className="lato-regular">Copyright © 2025 Hybrid LP</span>
+                <span className="lato-regular">Copyright © {
+                 
+                  date.getFullYear()
+                  } Hybrid LP</span>
               </div>
             </div>
 
