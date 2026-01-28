@@ -56,7 +56,9 @@ const SEO: React.FC<SEOProps> = ({
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {Array.isArray(structuredData)
+            ? JSON.stringify(structuredData)
+            : JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>
