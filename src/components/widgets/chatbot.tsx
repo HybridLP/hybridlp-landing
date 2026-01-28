@@ -13,7 +13,6 @@ interface Message {
   timestamp: Date;
 }
 
-
 export default function LegalChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(() => {
@@ -40,13 +39,13 @@ export default function LegalChatbot() {
   const [isBouncing, setIsBouncing] = useState(true);
 
   useEffect(() => {
-  const timer = setTimeout(() => {
-    setIsBouncing(false);
-    setShowTooltip(false)
-  }, 10000); // 10 seconds
+    const timer = setTimeout(() => {
+      setIsBouncing(false);
+      setShowTooltip(false);
+    }, 10000); // 10 seconds
 
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -128,12 +127,14 @@ export default function LegalChatbot() {
 
   return (
     <>
-      <div className={`fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 ${isBouncing?"animate-[bounce_3s_infinite]":""}`}>
+      <div
+        className={`fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-3 ${isBouncing ? "animate-[bounce_3s_infinite]" : ""}`}
+      >
         {/* Dismissable Tooltip */}
 
         {!isOpen && (
           <>
-            {showTooltip&&
+            {showTooltip && (
               <div
                 onClick={() => setIsOpen(true)}
                 className="px-6 py-2 rounded-xl relative  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-1 border-white/20 cursor-pointer"
@@ -143,27 +144,23 @@ export default function LegalChatbot() {
                     "linear-gradient(135deg, #C8A702 0%, #824E00 100%) ",
                 }}
               >
-                 {
-                  isBouncing&&
-              <>
-                <button
-                  onClick={dismissTooltip}
-                  className="absolute -top-3 -left-3 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors z-[102]"
-                  aria-label="Dismiss"
-                >
-                  <X className="w-4 h-4 text-gray-500" />
-                </button>
-               
-                  <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
-                  Ask HybridAI
-                </span>
-              </>
-                   
-                 }
-                
+                {isBouncing && (
+                  <>
+                    <button
+                      onClick={dismissTooltip}
+                      className="absolute -top-3 -left-3 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors z-[102]"
+                      aria-label="Dismiss"
+                    >
+                      <X className="w-4 h-4 text-gray-500" />
+                    </button>
+
+                    <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
+                      Ask HybridAI
+                    </span>
+                  </>
+                )}
               </div>
-            
-            }
+            )}
             {/* Robot Icon Bubble */}
             <div
               onClick={() => setIsOpen(true)}
