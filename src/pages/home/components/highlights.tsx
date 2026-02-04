@@ -26,13 +26,13 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           transitionDelay: `${idx * 150}ms`,
         }}
       >
-        {idx === 0 || idx === 2  || idx === 4 ? (
+        {idx === 0 || idx === 2 || idx === 4 ? (
           <div
-            className={` gradiented2 rounded-2xl flex relative flex-col items-center justify-center bg-gradient-to-b from-[#413F3F] to-[#373737] w-full h-full ${
-              (idx === 2 || idx==4)
-                ? "bg-gradient-to-b from-[#413F3F00] to-[#454444] items-start md:py-6 py-4 md:px-[28px] px-4"
+            className={` gradiented2 rounded-2xl flex relative flex-col items-center justify-center bg-linear-to-b from-[#413F3F] to-[#373737] w-full h-full ${
+              idx === 2 || idx == 4
+                ? "bg-linear-to-b from-[#413F3F00] to-[#454444] items-start md:py-6 py-4 md:px-[28px] px-4"
                 : ""
-            } ${idx===4 && "text-center"}`}
+            } ${idx === 4 && "text-center"}`}
             style={{
               boxShadow:
                 idx === 2 || idx === 4
@@ -47,14 +47,24 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
                 <div className="rounded-full w-3 h-3 bg-[#C2FF61]" />
               </div>
             )}
-            <img src={item.image} className={idx===4 ? "w-[60px] h-[60px] md:w-[104px] md:h-[82px] mx-auto" : "size-16"} alt="" />
+            <img
+              src={item.image}
+              className={
+                idx === 4
+                  ? "w-[60px] h-[60px] md:w-[104px] md:h-[82px] mx-auto"
+                  : "size-16"
+              }
+              alt=""
+            />
             <h3
-              className={`text-white text-[18px] md:text-[24px] font-semibold ${idx===4 && "text-center mx-auto" }`}
+              className={`text-white text-[18px] md:text-[24px] font-semibold ${idx === 4 && "text-center mx-auto"}`}
             >
               {item.extraTitle}
             </h3>
             {item.extraDesc && (
-              <p className={`text-white text-[14px] md:text-[16px] ${idx===4 && "text-center mx-auto" }`}>
+              <p
+                className={`text-white text-[14px] md:text-[16px] ${idx === 4 && "text-center mx-auto"}`}
+              >
                 {item.extraDesc}
               </p>
             )}
@@ -63,7 +73,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           // apply the drop shadow
 
           <div
-            className="flex items-center justify-center rounded-2xl bg-gradient-to-b from-[#413F3F]  w-full h-full overflow-hidden pl-12 md:py-[30px] py-[20px] "
+            className="flex items-center justify-center rounded-2xl bg-linear-to-b from-[#413F3F]  w-full h-full overflow-hidden pl-12 md:py-[30px] py-[20px] "
             style={{
               boxShadow:
                 "0px 4px 2px 0px #00000040, 0px 1px 2px 0px #C8C8C840 inset",
@@ -88,13 +98,13 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
           </div>
         ) : (
           <div
-            className="flex gap-4 rounded-2xl bg-gradient-to-b from-[#413F3F00] to-[#454444] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden"
+            className="flex gap-4 rounded-2xl bg-linear-to-b from-[#413F3F00] to-[#454444] ring-[rgba(65,62,62,0.5)] w-full h-full overflow-hidden"
             style={{
               boxShadow:
                 "0px 4px 4px 0px #00000040, 0px 1px 10px 0px #C8C8C840 inset",
             }}
           >
-            <div className="flex items-center justify-center bg-gradient-to-bl from-[#8A8A8A] from-[12%] to-[#333333] w-[100px] md:w-[128px]">
+            <div className="flex items-center justify-center bg-linear-to-bl from-[#8A8A8A] from-[12%] to-[#333333] w-[100px] md:w-[128px]">
               <img src={item.image} className="w-[60px] md:w-[91px]" alt="" />
             </div>
             <div className="flex flex-col  gap-2 md:gap-11 justify-center md:justify-end md:py-4 text-left ">
@@ -181,7 +191,6 @@ export default () => {
   );
 };
 
-
 const highlights = [
   {
     title: "Submit your legal matters securely from <br/> anywhere.",
@@ -214,12 +223,12 @@ const highlights = [
     extraTitle: "Legal Diary & Reminders",
   },
   {
-    title: "Lodge concerns and  witness a flawless resolution process <br/> unfold",
+    title:
+      "Lodge concerns and  witness a flawless resolution process <br/> unfold",
     description:
       "HybridLP provides a structured and transparent complaints process, enabling users to lodge concerns, track resolution progress and initiate refund requests where service expectations are not met. This ensures accountability and client satisfaction.",
-    image:  iconLast,
+    image: iconLast,
     extraTitle: "Complaints and Refund",
     extraDesc: "Resolution system",
   },
-
 ];

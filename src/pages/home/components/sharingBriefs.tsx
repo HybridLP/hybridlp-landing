@@ -20,18 +20,21 @@ export default () => {
       </h6>
       <AnimatedSection>
         <h3 className="font-medium text-white text-2xl md:text-3xl mx-auto text-center lg:text-[40px] inter-font mt-4 mb-4">
-          Instructions to Impact </h3>
+          Instructions to Impact{" "}
+        </h3>
       </AnimatedSection>
       <AnimatedSection>
         <p className="text-base md:text-lg lg:text-[20px] text-center text-white w-full md:w-[80%] lg:w-[70%] mx-auto leading-relaxed md:leading-[28px] lg:leading-[32px] lato-regular font-normal mb-8 md:mb-12 lg:mb-16">
-          We navigate legal complexities to deliver stronger outcomes. Present your matter, and our expert legal team will act with speed, strategy and precision to secure decisive solutions.
+          We navigate legal complexities to deliver stronger outcomes. Present
+          your matter, and our expert legal team will act with speed, strategy
+          and precision to secure decisive solutions.
         </p>
       </AnimatedSection>
       {/* Mobile Layout - Stacked Cards */}
       <div className="block lg:hidden w-full space-y-6 mt-8">
         {/* Submit Your Brief - Mobile */}
         <AnimatedSection delay={0}>
-          <div className="relative bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-6 min-h-[200px]">
+          <div className="relative bg-linear-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-6 min-h-[200px]">
             <h3 className="text-2xl font-semibold inter-font mb-4">
               Submit Your Brief
             </h3>
@@ -69,7 +72,7 @@ export default () => {
 
         {/* We Assign Experts - Mobile */}
         <AnimatedSection delay={200}>
-          <div className="bg-gradient-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl p-6 relative">
+          <div className="bg-linear-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl p-6 relative">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-2xl font-semibold inter-font flex-1">
                 We assign to you the most experienced team
@@ -87,7 +90,7 @@ export default () => {
         {/* Private Workspace - Mobile */}
         <AnimatedSection delay={300}>
           <div
-            className="w-full h-64 flex flex-col justify-end rounded-xl overflow-hidden relative bg-gradient-to-b from-[rgba(255,255,255,0.3)] to-[#000] bg-blend-darken"
+            className="w-full h-64 flex flex-col justify-end rounded-xl overflow-hidden relative bg-linear-to-b from-[rgba(255,255,255,0.3)] to-[#000] bg-blend-darken"
             style={{
               backgroundImage: `url(${workspace})`,
               backgroundSize: "cover",
@@ -107,7 +110,7 @@ export default () => {
         <AnimatedSection delay={400}>
           <Link
             to="#"
-            className="relative px-6 py-4 text-white flex items-center justify-between bg-gradient-to-b from-[#DED08A] to-[#FFFFFF70] backdrop-blur-[15px] w-full shadow-lg rounded-2xl"
+            className="relative px-6 py-4 text-white flex items-center justify-between bg-linear-to-b from-[#DED08A] to-[#FFFFFF70] backdrop-blur-[15px] w-full shadow-lg rounded-2xl"
           >
             <div className="text-white text-xl inter-font">Get to Work</div>
             <div className="flex items-center gap-2">
@@ -125,7 +128,7 @@ export default () => {
           {/* Submit Your Brief */}
           <AnimatedSection className="h-[50%] " delay={0}>
             <div className="flex gap-4 h-full">
-              <div className="flex flex-col relative justify-between bg-gradient-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
+              <div className="flex flex-col relative justify-between bg-linear-to-bl from-[#C6EEE5] to-[#FFF5C2] rounded-xl p-8 lg:p-12 gap-6 w-1/2 h-full">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
                   Submit
                   <br />
@@ -178,11 +181,11 @@ export default () => {
 
           {/*We assign to you the most experienced team */}
           <AnimatedSection delay={150} className="h-[50%] ">
-            <div className="flex relative flex-col bg-gradient-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl  h-full p-8 lg:p-12">
+            <div className="flex relative flex-col bg-linear-to-bl from-[#FFF5C2] to-[#C6EEE5] rounded-xl  h-full p-8 lg:p-12">
               <div className="flex justify-between items-center">
                 <h3 className="text-2xl lg:text-[40px] font-semibold inter-font">
-                We assign
-                  to <br />you the most experienced team
+                  We assign to <br />
+                  you the most experienced team
                 </h3>
                 <img src={expertAss} alt="icon" className="size-20" />
               </div>
@@ -208,7 +211,7 @@ export default () => {
         {/* Right Column - Get to Work */}
         <div className="flex flex-col gap-4 items-center justify-center rounded-xl flex-1 h-full">
           <div
-            className="w-full flex-1 flex flex-col justify-end rounded-xl overflow-hidden relative bg-gradient-to-b from-[rgba(255,255,255,0.5)] to-[#000] bg-blend-darken"
+            className="w-full flex-1 flex flex-col justify-end rounded-xl overflow-hidden relative bg-linear-to-b from-[rgba(255,255,255,0.5)] to-[#000] bg-blend-darken"
             style={{
               backgroundImage: `url(${bg})`,
               backgroundSize: "cover",
@@ -224,7 +227,7 @@ export default () => {
           </div>
           <Link
             to="#"
-            className="relative px-12 lg:px-20 text-xl text-white flex items-center bg-gradient-to-b from-[#DED08A] to-[#FFFFFF70] backdrop-blur-[15px] w-full h-[97px] shadow-lg p-3 rounded-2xl"
+            className="relative px-12 lg:px-20 text-xl text-white flex items-center bg-linear-to-b from-[#DED08A] to-[#FFFFFF70] backdrop-blur-[15px] w-full h-[97px] shadow-lg p-3 rounded-2xl"
           >
             <div className="text-white text-xl lg:text-[32px] inter-font w-[70%]">
               Get to Work

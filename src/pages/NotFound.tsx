@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Search,  FileQuestion } from "lucide-react";
+import { Home, Search, FileQuestion } from "lucide-react";
 import Header from "../components/widgets/header";
 import { Footer } from "./home/components/footer";
 import bg from "../assets_/bg.jpg";
@@ -26,11 +26,11 @@ export default () => {
               className="w-32 h-32 text-[#DA9932] animate-bounce"
               strokeWidth={1.5}
             />
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#C8A702] via-[#A97D00] to-[#824E00] opacity-20 blur-xl rounded-full animate-pulse"></div>
+            <div className="absolute -inset-4 bg-linear-to-r from-[#C8A702] via-[#A97D00] to-[#824E00] opacity-20 blur-xl rounded-full animate-pulse"></div>
           </div>
 
           {/* Error Code */}
-          <h1 className="text-white text-8xl md:text-9xl inter-font font-bold bg-gradient-to-r from-[#C8A702] via-[#DA9932] to-[#824E00] bg-clip-text text-transparent">
+          <h1 className="text-white text-8xl md:text-9xl inter-font font-bold bg-linear-to-r from-[#C8A702] via-[#DA9932] to-[#824E00] bg-clip-text text-transparent">
             404
           </h1>
 
@@ -48,7 +48,7 @@ export default () => {
           <div className="flex flex-col md:flex-row gap-4 mt-8 w-full md:w-auto">
             <Link
               to="/"
-              className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#CAA500] to-[#825900] text-white px-8 py-4 text-lg rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#DA9932]/30 lato-regular"
+              className="flex items-center justify-center gap-2 bg-linear-to-b from-[#CAA500] to-[#825900] text-white px-8 py-4 text-lg rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#DA9932]/30 lato-regular"
             >
               <Home className="w-5 h-5" />
               <span className="text-white">Back to Home</span>

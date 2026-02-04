@@ -54,7 +54,7 @@ export default () => {
           Providing Tailored Legal Counsel and Solutions
         </p>
         <a
-          className="bg-gradient-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[16px] rounded-full text-center py-3 px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+          className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[16px] rounded-full text-center py-3 px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
           href={currentCta.to}
         >
           <span

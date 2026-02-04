@@ -183,11 +183,11 @@ export default function LegalChatbot() {
       {/* Chatbot Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeUp">
-          <div className="bg-gradient-to-b from-gray-900 to-black w-full max-w-2xl h-[600px] rounded-2xl shadow-2xl flex flex-col border border-[#C8A702]/30 animate-fadeUp">
+          <div className="bg-linear-to-b from-gray-900 to-black w-full max-w-2xl h-[600px] rounded-2xl shadow-2xl flex flex-col border border-[#C8A702]/30 animate-fadeUp">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-gradient-to-r from-[#C8A702]/20 to-[#824E00]/20">
+            <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-linear-to-r from-[#C8A702]/20 to-[#824E00]/20">
               <div className="flex items-center gap-3">
-                <div className="bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] p-2 rounded-full">
+                <div className="bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] p-2 rounded-full">
                   <img
                     src={logo}
                     className="w-6 h-6 text-white object-contain"
@@ -223,7 +223,7 @@ export default function LegalChatbot() {
                   <div
                     className={`max-w-[85%] rounded-2xl px-4 py-3 ${
                       message.sender === "user"
-                        ? "bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white"
+                        ? "bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white"
                         : "bg-gray-800/80 text-gray-100 border border-gray-700/50 backdrop-blur-sm"
                     }`}
                   >
@@ -329,7 +329,7 @@ export default function LegalChatbot() {
                 <button
                   onClick={handleSendMessage}
                   disabled={inputMessage.trim() === "" || isLoading}
-                  className="bg-gradient-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3.5 rounded-full hover:shadow-[0_0_15px_rgba(200,167,2,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+                  className="bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3.5 rounded-full hover:shadow-[0_0_15px_rgba(200,167,2,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
                   aria-label="Send message"
                 >
                   <Send className="w-5 h-5" />

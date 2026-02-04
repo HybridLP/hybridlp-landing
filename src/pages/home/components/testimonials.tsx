@@ -5,11 +5,14 @@ export default () => {
         <h6 className="text-black mx-auto h-10 bg-gray-100 w-[40%] flex items-center lg:w-[10%] justify-center rounded-md  text-center text-[16px] font-bold lato-regular">
           Testimonials
         </h6>
-        
+
         <Carousel slides={testimonialData} autoPlayInterval={5000} />
-        <p className="text-white italic mx-[5%] md:mx-0 text-center md:text-start font-normal my-8 " style={{}}>
+        <p
+          className="text-white italic mx-[5%] md:mx-0 text-center md:text-start font-normal my-8 "
+          style={{}}
+        >
           Join thousands of individuals and companies who are using Hybrid Law
-          Practice to get their legal matters sorted! 
+          Practice to get their legal matters sorted!
         </p>
       </div>
     </>
@@ -35,15 +38,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div
-      className="bg-gradient-to-b from-[#1D1D1D] to-[#303030] text-white border-l-4 border-[#DED08A] rounded-md flex flex-col w-full p-4 md:p-6 flex-shrink-0"
+      className="bg-linear-to-b from-[#1D1D1D] to-[#303030] text-white border-l-4 border-[#DED08A] rounded-md flex flex-col w-full p-4 md:p-6 flex-shrink-0"
       style={{
         boxShadow: "inset 0 2px 8px 3px #00000040, inset 0 0 10px #FFFFFF40",
       }}
     >
-      <p className="text-sm md:text-[24px] font-normal font-sans">
-       
-        {text}
-      </p>
+      <p className="text-sm md:text-[24px] font-normal font-sans">{text}</p>
       <div className="flex items-center gap-4 my-4">
         <img
           src={imageUrl}
