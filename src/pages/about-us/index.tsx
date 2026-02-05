@@ -23,15 +23,7 @@ export default () => {
             About Us
           </h1>
           <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-center mb-8 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
-            Hybrid LP provides legal services in diverse areas, with experienced
-            lawyers in arbitration, litigation, Human right enforcement,
-            commercial disputes, labour/employment related matters, election
-            petition, immigration matters, trans-boarder or international
-            disputes, Real estate, Family and personal law practice,
-            intellectual property, Technology and IT law compliance, Cyber
-            Security and Data protection, sports law, mining and natural
-            resources law compliance and related matters, legal drafting, legal
-            advisory, company registration and corporate matters
+          Hybrid LP offers legal Technology that facilitate access to legal services in diverse areas, with verified and experienced lawyers in Arbitration, Litigation, Human Right Enforcement, Commercial Disputes, Labour/Employment related matters, Election Petition, Immigration matters, Trans-boarder or International disputes, Real Estate, Family and Personal law practice, Intellectual Property, Technology and IT law compliance, Cyber Security and Data protection, Sports law, Mining and Natural Resources law compliance and related matters, Legal Drafting, Legal Advisory, Company Registration and Corporate matters
           </p>
           <img
             src={aboutUs}
@@ -65,7 +57,7 @@ const contents = [
   {
     title: "Self-service",
     content:
-      "A dedicated client dashboard for seamless interaction with case file, track work progress and get timely updates from assigned legal team. Allowing clients to independently review documents, schedule appointments, initiate query and demand refund subject to Hybridlp’s review and refund policy. Gain insights from unlimited access to Nigerian statutes, case laws, precedents,  templates and other resources to make crucial contributions to their legal matters",
+      "A dedicated client dashboard for seamless interaction with case file, track work progress and timely updates from assigned legal team. Allowing clients to independently review documents, schedule appointments, initiate query and demand refund, subject to Hybridlp’s review and refund policy. Gain insights from unlimited access to Nigerian statutes, case laws, precedents,  templates and other resources to make crucial contributions to their legal matters",
   },
   {
     title: "Collaborate",
@@ -75,7 +67,7 @@ const contents = [
   {
     title: "Quality Service Regulation",
     content:
-      "To enhance transparency, professionalism, accountability and consistent service quality by effectively supervising activities of the team of lawyers assigned to each task. These ensure that every task is handled under structured oversight through secure digital tools, performance tracking systems and standardised workflow. HybribLP guarantees that clients receive reliable and quality services, while lawyers operate within ethical, procedural and professional standards.",
+      "To enhance transparency, professionalism, accountability and consistent service quality by effectively supervising activities of the team of lawyers assigned to each task. These ensure that every task is handled under structured oversight through secure digital tools, performance tracking systems and standardised workflow. HybribLP ensures that clients receive reliable and quality services, while lawyers operate within ethical, procedural and professional standards.",
   },
   {
     title: "Pro Bono Legal Services",
@@ -85,7 +77,7 @@ const contents = [
   {
     title: "Mentorship, Pupillage, and Career Guidance",
     content:
-      "Offering structured mentorship and pupillage programs designed to support the next generation legal lawyers. Aspiring lawyers can gain hands-on experience, guidance, and practical insights from seasoned practitioners, helping them develop essential skills for legal practice through a one-on-one mentorship, collaborative projects, and career advisory sessions. Participants receive personalized support in navigating legal training, building professional networks and understanding best practices. Accessible to paralegals, students, law aspirants preparing for bar examinations, post law school and/or graduates seeking pupillage, or looking for strategic career guidance. Our dedicated programs ensure meaningful professional growth and practical exposure to law practice.",
+      "Offering structured mentorship and pupillage programs designed to support the next generation of lawyers. Aspiring lawyers can gain hands-on experience, guidance, and practical insights from seasoned practitioners, helping them develop essential skills for legal practice through a one-on-one mentorship, collaborative projects, and career advisory sessions. Participants receive personalized support in navigating legal training, building professional networks and understanding best practices. Accessible to paralegals, students, law aspirants preparing for bar examinations, post law school and/or graduates seeking pupillage, or looking for strategic career guidance. Our dedicated programs ensure meaningful professional growth and practical exposure to law practice.",
   },
   {
     title: "Licensed Bondsman Services",

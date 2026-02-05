@@ -50,12 +50,12 @@ const WhySection = () => {
           Why Choose HybridLP
         </h1>
         <p className="text-sm md:text-[20px] lato-regular">
-          Transform your legal experience through a comprehensive, intelligent
-          platform designed for an improved delivery of legal services for
-          clients and legal professionals. Providing access to verified lawyers,
-          secure collaboration and transparent case management through a digital
-          office solution. Experience the innovation, efficiency, trust and
-          legal services redefined with HybridLP.
+          We transform your legal experience through a comprehensive and
+          intelligent platform designed for an improved legal services delivery
+          for clients and legal professionals. Providing access to verified
+          lawyers, secured collaboration and transparent case management through
+          a digital office solution. Experience the innovation, efficiency,
+          trust and legal services redefined with HybridLP
         </p>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
