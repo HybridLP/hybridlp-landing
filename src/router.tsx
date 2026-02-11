@@ -8,11 +8,22 @@ import proBono from "./pages/pro-bono";
 import SignupLogin from "./pages/signup-login";
 import AboutUs from "./pages/about-us";
 import judgements from "./pages/judgements";
+import PrivacyPolicy from "./pages/privacy-policy";
+import TermsOfUse from "./pages/terms-of-use";
+
 const routes = createBrowserRouter([
   {
     path: "/",
     Component: Home,
     children: [
+      {
+        path: "terms-of-use",
+        Component: TermsOfUse,
+      },
+      {
+        path: "privacy-policy",
+        Component: PrivacyPolicy,
+      },
       {
         path: "about",
         Component: AboutUs,

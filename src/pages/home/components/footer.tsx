@@ -206,12 +206,20 @@ export const Footer: React.FC = () => {
 
             {/* Legal links - Mobile */}
             <div className="flex flex-col items-center gap-2 text-sm text-gray-300">
-              <a
-                href="#"
-                className="text-white lato-regular hover:text-gray-300 transition-colors"
-              >
-                Privacy Policy
-              </a>
+              <div className="flex gap-4">
+                <NavLink
+                  to="/terms-of-use"
+                  className="text-white lato-regular hover:text-gray-300 transition-colors"
+                >
+                  Terms of Use
+                </NavLink>
+                <NavLink
+                  to="/privacy-policy"
+                  className="text-white lato-regular hover:text-gray-300 transition-colors"
+                >
+                  Privacy Policy
+                </NavLink>
+              </div>
               <span className="lato-regular text-center">
                 Copyright © {date.getFullYear()} Hybrid LP
               </span>
@@ -243,12 +251,20 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-4 lg:gap-6 text-sm text-gray-300">
-                <a
-                  href="#"
-                  className="text-white lato-regular hover:text-gray-300 transition-colors"
-                >
-                  Privacy Policy
-                </a>
+                <div className="flex gap-4 lg:gap-6">
+                  <NavLink
+                    to="/terms-of-use"
+                    className="text-white lato-regular hover:text-gray-300 transition-colors"
+                  >
+                    Terms of Use
+                  </NavLink>
+                  <NavLink
+                    to="/privacy-policy"
+                    className="text-white lato-regular hover:text-gray-300 transition-colors"
+                  >
+                    Privacy Policy
+                  </NavLink>
+                </div>
                 <span className="lato-regular">
                   Copyright © {date.getFullYear()} Hybrid LP
                 </span>
