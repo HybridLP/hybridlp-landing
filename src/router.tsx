@@ -10,12 +10,17 @@ import AboutUs from "./pages/about-us";
 import judgements from "./pages/judgements";
 import PrivacyPolicy from "./pages/privacy-policy";
 import TermsOfUse from "./pages/terms-of-use";
+import Remuneration from "./pages/remuneration";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     Component: Home,
     children: [
+      {
+        path: "remuneration",
+        Component: Remuneration,
+      },
       {
         path: "terms-of-use",
         Component: TermsOfUse,

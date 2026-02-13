@@ -253,6 +253,12 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-4 lg:gap-6 text-sm text-gray-300">
                 <div className="flex gap-4 lg:gap-6">
                   <NavLink
+                    to="/remuneration"
+                    className="text-white lato-regular hover:text-gray-300 transition-colors"
+                  >
+                    Remuneration
+                  </NavLink>
+                  <NavLink
                     to="/terms-of-use"
                     className="text-white lato-regular hover:text-gray-300 transition-colors"
                   >
