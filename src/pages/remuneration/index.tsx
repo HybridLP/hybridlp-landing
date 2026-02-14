@@ -137,7 +137,7 @@ const Remuneration = () => {
                 <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 overflow-hidden shadow-2xl hover:shadow-[0_0_50px_rgba(184,153,0,0.3)] transition-all duration-500">
                   <div className="bg-gradient-to-r from-[#B89900]/30 via-[#B89900]/20 to-transparent px-8 py-6 border-b border-white/10">
                     <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#B89900] to-yellow-600 rounded-2xl flex items-center justify-center shadow-xl">
+                      <div className="md:w-16 md:h-16 w-10 h-10 md:rounded-2xl rounded-lg bg-gradient-to-br from-[#B89900] to-yellow-600 md:rounded-2xl rounded-lg flex items-center justify-center shadow-xl">
                         <span className="text-black font-bold text-2xl">1</span>
                       </div>
                       <div>
@@ -215,7 +215,7 @@ const Remuneration = () => {
               <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 overflow-hidden shadow-2xl hover:shadow-[0_0_50px_rgba(184,153,0,0.3)] transition-all duration-500">
                 <div className="bg-gradient-to-r from-purple-900/30 via-purple-800/20 to-transparent px-8 py-6 border-b border-white/10">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center shadow-xl">
+                    <div className="md:w-16 md:h-16 w-10 h-10 md:rounded-2xl rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center shadow-xl">
                       <span className="text-white font-bold text-2xl">2</span>
                     </div>
                     <div>
@@ -630,7 +630,7 @@ const Remuneration = () => {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#B89900]/20 rounded-full blur-3xl"></div>
                 <div className="relative bg-gradient-to-r from-[#B89900]/30 via-[#B89900]/20 to-transparent px-8 py-6 border-b border-[#B89900]/20">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#B89900] to-yellow-600 rounded-2xl flex items-center justify-center shadow-xl">
+                    <div className="md:w-16 md:h-16 w-10 h-10 md:rounded-2xl rounded-lg bg-gradient-to-br from-[#B89900] to-yellow-600 flex items-center justify-center shadow-xl">
                       <span className="text-black font-bold text-2xl">5</span>
                     </div>
                     <div>
