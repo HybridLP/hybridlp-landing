@@ -25,9 +25,10 @@ export default () => {
       </AnimatedSection>
       <AnimatedSection>
         <p className="text-base md:text-lg lg:text-[20px] text-center text-white w-full md:w-[80%] lg:w-[70%] mx-auto leading-relaxed md:leading-[28px] lg:leading-[32px] lato-regular font-normal mb-8 md:mb-12 lg:mb-16">
-          We navigate legal complexities to deliver stronger outcomes. Present
-          your matter, and our expert legal team will act with speed, strategy
-          and precision to secure decisive solutions.
+          We help you navigate legal complexities to deliver stronger outcomes.
+          Present your matter and the Verified Legal Practitioner and/or a legal
+          team will act with speed, strategy and precision to secure decisive
+          solutions.
         </p>
       </AnimatedSection>
       {/* Mobile Layout - Stacked Cards */}

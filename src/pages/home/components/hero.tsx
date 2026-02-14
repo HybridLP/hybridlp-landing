@@ -51,7 +51,7 @@ export default () => {
         </div>
 
         <p className="text-white text-center font-regular text-[16px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
-          Providing Tailored Legal Counsel and Solutions
+          Experience Digital Legal Service Delivery
         </p>
         <a
           className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[16px] rounded-full text-center py-3 px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
