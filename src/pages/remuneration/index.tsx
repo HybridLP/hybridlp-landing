@@ -53,7 +53,7 @@ const Remuneration = () => {
                     2023 for detailed guidelines and context.
                   </p>
                 </div>
-                {/* <a
+                <a
                   href="https://blog.nigerianbar.org.ng/wp-content/uploads/2025/03/Legal-Practitioners-Renumeration-Order-2023.pdf"
                   target="_blank"
                   rel="noreferrer"
@@ -73,7 +73,7 @@ const Remuneration = () => {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                </a> */}
+                </a>
               </div>
             </div>
           </div>
