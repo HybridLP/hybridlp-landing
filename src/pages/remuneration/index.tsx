@@ -57,7 +57,7 @@ const Remuneration = () => {
                   href="https://blog.nigerianbar.org.ng/wp-content/uploads/2025/03/Legal-Practitioners-Renumeration-Order-2023.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-8 py-4 bg-gradient-to-r from-[#B89900] to-yellow-600 text-black font-bold rounded-full hover:scale-105 hover:shadow-[0_0_30px_rgba(184,153,0,0.5)] transition-all duration-300 text-sm whitespace-nowrap flex items-center gap-2 group-hover:gap-4"
+                  className="px-8 py-4 bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-black font-bold rounded-full hover:scale-105 hover:shadow-[0_0_30px_rgba(184,153,0,0.5)] transition-all duration-300 text-sm whitespace-nowrap flex items-center gap-2 group-hover:gap-4"
                 >
                   <span>View Full Document</span>
                   <svg

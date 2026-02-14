@@ -163,10 +163,8 @@ export default () => {
             </h1>
           </div>
           <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
-            Hybrid LP provides legal services in diverse areas, with experienced
-            lawyers in arbitration, litigation, Human right enforcement,
-            commercial disputes, labour/employment related matters, election
-            petition, immigration.{" "}
+            Hybrid LP offers Technology that facilitates access to legal
+            services in diverse areas, with verified and experienced lawyers in Arbitration, Litigation, Human Right Enforcement, Commercial Disputes, Labour/Employment related matters, Election Petition, Immmigration matters,.....{" "}
             <NavLink to="/about" className="text-[#DED08A] cursor-pointer">
               Read more
             </NavLink>
