@@ -4,6 +4,7 @@ import Header from "../../components/widgets/header";
 import { Footer } from "./components/footer";
 import HassleFreeCTA from "./components/hasslefcta";
 import LegalChatbot from "../../components/widgets/chatbot";
+import ScrollToTop from "../../components/widgets/ScrollToTop";
 import SEO from "../../components/widgets/seo";
 
 export default function Home() {
@@ -87,6 +88,7 @@ export default function Home() {
       <HassleFreeCTA />
       <Footer />
       <LegalChatbot />
+      <ScrollToTop />
     </div>
   );
 }
