@@ -1,7 +1,8 @@
-import { BookOpen, Scale, Shield } from "lucide-react";
+import { ArrowRight, BookOpen, Scale, Shield } from "lucide-react";
 import UserRadianceIcon from "./user-radiance-icon";
 import TrackingIcon from "./tracking-icon";
 import AssuranceIcon from "./assurance-icon";
+import { Link } from "react-router-dom";
 
 const whySectionData = [
   {
@@ -37,8 +38,7 @@ const whySectionData = [
   {
     icon: <AssuranceIcon color="#B89900" />,
     title: "Quality Assurance",
-    content:
-      "Compare proposals from multiple lawyers with clear, upfront pricing and no hidden fees.",
+    content: "Secured collaboration and transparent case management process.",
   },
 ];
 
@@ -63,7 +63,8 @@ const WhySection = () => {
           return (
             <div
               key={idx}
-              className=" h-fit md:h-[316px] flex flex-col  px-5 md:px-8 py-8 md:py-[58px] rounded-xl border border-gray-800"
+              className={`relative h-fit md:h-[316px] flex flex-col  px-5 md:px-8 py-8 md:py-[58px] rounded-xl border border-gray-800 ${idx == 2 && "hover:border-gray-500 cursor-pointer"}`}
+              onClick={() => (window.location.pathname = "/remuneration")}
             >
               {/* resizabe icon */}
               <div className="w-full px-2 md:px-8 py-2 md:py-5 rounded-lg bg-[#715E00]/20 border border-[#825900e7] text-[#B89900] flex  [&_svg]:w-5 [&_svg]:h-5 md:[&_svg]:w-8 md:[&_svg]:h-8">
@@ -75,6 +76,15 @@ const WhySection = () => {
               <p className="lato-regular text-xs md:text-[18px] font-regular text-gray-500">
                 {item.content}
               </p>
+              {idx === 2 && (
+                <Link
+                  to={"/remuneration"}
+                  className="ml-auto mr-2 rounded-lg text-xs font-semibold text-black w-fit py-2 px-3 bg-[#B89900] flex items-center gap-4"
+                >
+                  <span>View Pricing</span>
+                  <ArrowRight size={20} />
+                </Link>
+              )}
             </div>
           );
         })}
