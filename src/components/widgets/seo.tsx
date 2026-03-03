@@ -21,7 +21,7 @@ const SEO: React.FC<SEOProps> = ({
   structuredData,
 }) => {
   const siteTitle =
-    "HybridLP - Your Legal Powerhouse | Digital Law Office Platform";
+    "HybridLP - Your Legal Network | Digital Law Office Platform";
   const defaultDescription =
     "Access expert legal support without delays. Manage & monitor case progress, collaborate with seasoned professionals in one secure, intelligent digital law office.";
 
