@@ -159,12 +159,15 @@ export default () => {
               About HybridLP
             </h6>
             <h1 className="text-2xl md:text-3xl lg:text-[40px] text-white font-bold inter leading-tight">
-              Your Legal Powerhouse
+              Your Legal Network
             </h1>
           </div>
           <p className="text-white text-base md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
             Hybrid LP offers Technology that facilitates access to legal
-            services in diverse areas, with verified and experienced lawyers in Arbitration, Litigation, Human Right Enforcement, Commercial Disputes, Labour/Employment related matters, Election Petition, Immmigration matters,.....{" "}
+            services in diverse areas, with verified and experienced lawyers in
+            Arbitration, Litigation, Human Right Enforcement, Commercial
+            Disputes, Labour/Employment related matters, Election Petition,
+            Immmigration matters,.....{" "}
             <NavLink to="/about" className="text-[#DED08A] cursor-pointer">
               Read more
             </NavLink>
