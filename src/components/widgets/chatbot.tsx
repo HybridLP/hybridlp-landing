@@ -33,6 +33,7 @@ export default function LegalChatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isBouncing, setIsBouncing] = useState(true);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,6 +43,7 @@ export default function LegalChatbot() {
 
     return () => clearTimeout(timer);
   }, []);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -49,6 +51,18 @@ export default function LegalChatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isLoading]);
+
+  const adjustTextareaHeight = () => {
+    const textarea = textareaRef.current;
+    if (textarea) {
+      textarea.style.height = "auto";
+      textarea.style.height = `${Math.min(textarea.scrollHeight, 150)}px`;
+    }
+  };
+
+  useEffect(() => {
+    adjustTextareaHeight();
+  }, [inputMessage]);
 
   const handleSendMessage = async () => {
     if (inputMessage.trim() === "" || isLoading) return;
@@ -64,6 +78,9 @@ export default function LegalChatbot() {
 
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+    }
     setIsLoading(true);
 
     try {
@@ -115,8 +132,9 @@ export default function LegalChatbot() {
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
       handleSendMessage();
     }
   };
@@ -130,23 +148,6 @@ export default function LegalChatbot() {
           {/* Dismissable Tooltip */}
           {!isOpen && (
             <>
-              {showTooltip && (
-                <div
-                  onClick={() => setIsOpen(true)}
-                  className="px-6 py-2 rounded-xl relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 border-1 border-white/20 cursor-pointer"
-                  style={{
-                    borderRadius: "0.7rem 0.7rem 0.7rem 0rem",
-                    background:
-                      "linear-gradient(135deg, #C8A702 0%, #824E00 100%) ",
-                  }}
-                >
-                  {isBouncing && (
-                    <span className="text-white font-bold text-sm lato-bold whitespace-nowrap">
-                      Ask HybridAI
-                    </span>
-                  )}
-                </div>
-              )}
               {/* Robot Icon Bubble */}
               <div className="relative group/trigger">
                 <div
@@ -227,7 +228,7 @@ export default function LegalChatbot() {
                         : "bg-gray-800/80 text-gray-100 border border-gray-700/50 backdrop-blur-sm"
                     }`}
                   >
-                    <div className="text-sm lato-regular leading-relaxed chatbot-markdown">
+                    <div className="text-sm lato-regular leading-relaxed chatbot-markdown whitespace-pre-wrap">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
@@ -316,20 +317,21 @@ export default function LegalChatbot() {
 
             {/* Input Area */}
             <div className="p-4 border-t border-gray-800 bg-gray-900/50">
-              <div className="flex items-center gap-2">
-                <input
-                  type="text"
+              <div className="flex items-end gap-2">
+                <textarea
+                  ref={textareaRef}
+                  rows={1}
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
-                  onKeyPress={handleKeyPress}
+                  onKeyDown={handleKeyDown}
                   disabled={isLoading}
                   placeholder="Ask me about our services or legal help..."
-                  className="flex-1 bg-gray-800/80 text-white px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C8A702] lato-regular text-sm border border-gray-700/50 placeholder:text-gray-500 disabled:opacity-50"
+                  className="flex-1 bg-gray-800/80 text-white px-5 py-3 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C8A702] lato-regular text-sm border border-gray-700/50 placeholder:text-gray-500 disabled:opacity-50 resize-none min-h-[48px] overflow-y-auto"
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={inputMessage.trim() === "" || isLoading}
-                  className="bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3.5 rounded-full hover:shadow-[0_0_15px_rgba(200,167,2,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+                  className="bg-linear-to-br from-[#C8A702] via-[#A97D00] to-[#824E00] text-white p-3.5 rounded-full hover:shadow-[0_0_15px_rgba(200,167,2,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95 shrink-0"
                   aria-label="Send message"
                 >
                   <Send className="w-5 h-5" />
