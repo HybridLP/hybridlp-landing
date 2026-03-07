@@ -101,9 +101,13 @@ export default function LegalChatbot() {
         { timeout: 60000 },
       );
 
+      const rawMsg = response.data.message;
       const aiMessage: Message = {
         id: Date.now() + Math.random(),
-        text: response.data.message,
+        text:
+          typeof rawMsg === "object"
+            ? rawMsg.text || JSON.stringify(rawMsg)
+            : rawMsg,
         sender: "ai",
         timestamp: new Date(),
       };
