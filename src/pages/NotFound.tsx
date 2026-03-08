@@ -30,7 +30,7 @@ export default () => {
           </div>
 
           {/* Error Code */}
-          <h1 className="text-white text-8xl md:text-9xl inter-font font-bold bg-linear-to-r from-[#C8A702] via-[#DA9932] to-[#824E00] bg-clip-text text-transparent">
+          <h1 className="text-white text-8xl md:text-9xl inter-font font-bold bg-linear-to-r from-[#C8A702] via-[#DA9932] to-[#824E00] bg-clip-text">
             404
           </h1>
 
