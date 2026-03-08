@@ -15,7 +15,7 @@ interface Message {
 
 export default function LegalChatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(() => {
+  const [_showTooltip, setShowTooltip] = useState(() => {
     const dismissed = localStorage.getItem("chatbot-tooltip-dismissed");
     return dismissed !== "true";
   });
