@@ -3,6 +3,7 @@ import UserRadianceIcon from "./user-radiance-icon";
 import TrackingIcon from "./tracking-icon";
 import AssuranceIcon from "./assurance-icon";
 import { Link } from "react-router-dom";
+import OurServicesSection from "./our-services-section";
 
 const whySectionData = [
   {
@@ -45,6 +46,7 @@ const whySectionData = [
 const WhySection = () => {
   return (
     <section className="px-6 lg:px-[153px] mt-[25%] md:mt-[40%] pb-8 md:pb-16">
+        <OurServicesSection />
       <div className="flex flex-col items-center gap-4 md:gap-6 mb-12 md:my-16 md:w-[712px] mx-auto text-center">
         <h1 className="text-white text-2xl md:text-[40px] inter-font font-semibold">
           Why Choose HybridLP
