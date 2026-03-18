@@ -29,10 +29,10 @@ export default () => {
           <h4 className="w-fit bg-[#C6AD33] py-2 px-4 text-base md:text-lg rounded-lg text-white">
             Our services
           </h4>
-          <h3 className="text-white text-xl md:text-[32px] font-semibold inter-font leading-tight">
+          <h3 className="text-white text-lg md:text-xl md:text-[32px] font-semibold inter-font leading-tight">
             {currentService.title}
           </h3>
-          <p className="text-[#B0B0B0] text-base md:text-[20px] font-regular lato-regular leading-relaxed">
+          <p className="text-[#B0B0B0] text-sm md:text-[20px] font-regular lato-regular leading-relaxed">
             {currentService.content}
           </p>
         </div>
@@ -65,25 +65,25 @@ const servicesContents = [
   {
     title: "Legal Advice & Consultation",
     content:
-      "More- Corporate matters (e.g., company registration, intellectual property, commercial disputes, mergers & acquisitions), Tax Planning & Compliance, Labour/Employment Law, Family Law (e.g., divorce, child custody, estate planning), Immigration Law, Cyber Security & Data Protection, Real Estate, Environmental Law, Admiralty & Maritime Law, Energy & Natural Resources Law, Sports Law.",
+      " Corporate matters (e.g., company registration, intellectual property, commercial disputes, mergers & acquisitions), Tax Planning & Compliance, Labour/Employment Law, Family Law (e.g., divorce, child custody, estate planning), Immigration Law, Cyber Security & Data Protection, Real Estate, Environmental Law, Admiralty & Maritime Law, Energy & Natural Resources Law, Sports Law.",
     img: consultationImg,
   },
   {
     title: "Legal Drafting & Documentation",
     content:
-      "More- Letters, Legal Opinions, Document Review, Petitions, Notices, Contracts (e.g., commercial contracts, service agreements, non-disclosure agreements), Wills & Trusts, Pleadings & Court Filings, Regulatory Submissions, Policy Development.",
+      " Letters, Legal Opinions, Document Review, Petitions, Notices, Contracts (e.g., commercial contracts, service agreements, non-disclosure agreements), Wills & Trusts, Pleadings & Court Filings, Regulatory Submissions, Policy Development.",
     img: documentationImg,
   },
   {
-    title: "Dispute & Dispute Resolution",
+    title: "Dispute Resolution and Litigation",
     content:
-      "More- Arbitration, Conciliation, Mediation, Litigation (Civil, Criminal, Commercial matters, Enforcement of Fundamental Rights & Election Petition)",
+      " Arbitration, Conciliation, Mediation, Litigation (Civil, Criminal, Commercial matters, Enforcement of Fundamental Rights & Election Petition)",
     img: disputeImg,
   },
   {
     title: "Legal Research & Analysis",
     content:
-      "More- Case Law Research, Statutory Analysis, Legal Opinions, Legal Memos, Policy Research.",
+      " Case Law Research, Statutory Analysis, Legal Opinions, Legal Memos, Policy Research.",
     img: researchImg,
   },
   {
@@ -95,7 +95,7 @@ const servicesContents = [
   {
     title: "Pro Bono Services",
     content:
-      "More- General Legal Aid, Human Rights Advocacy, Community Legal Support, Legal Representation for Indigent Clients, Public Interest Litigation.",
+      " General Legal Aid, Human Rights Advocacy, Community Legal Support, Legal Representation for Indigent Clients, Public Interest Litigation.",
     img: proBonoImg,
   },
 ];
