@@ -8,10 +8,10 @@ import thomas from "../../../assets_/thomas.png";
 export default () => {
   return (
     <section
-      className={`min-h-screen   md:min-h-[130dvh] relative  pt- md:pt-[5%] pb-8 md:pb-0  items-center   overflow-hidden- `}
+      className={`min-h-screen flex flex-col   md:min-h-[130dvh] relative  pt- md:pt-[5%]  items-center overflow-hidden- `}
     >
-      <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" />
-      <div className="flex flex-col items-center text-center h-fit  bg-white md:mx-[181px] md:rounded-t-2xl pt-[20%]  md:pt-[10%]">
+      {/* <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" /> */}
+      <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit  bg-white  md:rounded-t-2xl pt-[20%]  md:pt-[10%]">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit text-[#6A7586] py-2 px-10 font-semibold border-solid border-[1.5px] border-[#6A7586] rounded-full">
           Hybrid Law Practice
         </h3>
@@ -67,7 +67,7 @@ export default () => {
           <p className="text-black text-center font-regular lato-regular text-[16px] md:text-[18px] lg:text-[22px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
             5,123+ People trust Hybridlp
           </p>
-          <div className="flex flexx-row items-center text-md text-[#CAA500]">
+          <div className="flex flex-row items-center text-md text-[#CAA500]">
             {[1, 2, 3, 4, 5].map((i) => (
               <svg
                 fill="#CAA500"
@@ -83,7 +83,7 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-[75%] md:top-[65%] z-10 w-full   mt-auto  md:pb-8 md:mb-4 md:mt-8 px-4 lg:px-[90px]">
+      <div className=" hidden md:flex w-full mb-0 pb-0 md:pb-8 md:mb-4 px-4 lg:px-[90px]">
         <img src={board} alt="" />
       </div>
     </section>
