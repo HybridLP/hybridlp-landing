@@ -175,7 +175,7 @@ export default () => {
       </h2>
 
       {/* Description */}
-      <p className="text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4 text-gray-400">
+      <p className="text-sm sm:text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4 text-gray-400">
         Customize the way you streamline your legal work-flow with integrations,{" "}
         <span className="hidden md:inline">
           <br />
