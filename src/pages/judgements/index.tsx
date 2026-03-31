@@ -122,7 +122,7 @@ export default () => {
               </div>
 
               {/* Case Description */}
-              <p className="text-[#E8E8E8] text-sm sm:text-base md:text-[16px] text-justify leading-relaxed lato-regular line-clamp-4">
+              <p className="text-[#E8E8E8] text-sm sm:text-base md:text-[16px]  leading-relaxed lato-regular line-clamp-4">
                 {stripHtml(case_.judgement)}
               </p>
             </div>
