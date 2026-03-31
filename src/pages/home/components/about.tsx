@@ -87,7 +87,7 @@ export default () => {
                   <h3 className="text-lg md:text-2xl inter-font mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 font-normal text-sm md:text-base lato-regular leading-relaxed">
+                  <p className="text-gray-500 font-normal text-xs md:text-base lato-regular leading-relaxed">
                     {item.content}
                   </p>
                 </div>
@@ -117,13 +117,14 @@ export default () => {
                   }}
                 >
                   <h3 className="text-[24px] inter-font">{item.title}</h3>
-                  <p className="text-gray-500 font-normal text-[14px] md:text-[18px] lato-regular">
+                  <p className="text-gray-500 font-normal text-xs md:text-[18px] lato-regular">
                     {item.content}
                   </p>
                 </div>
               );
             })}
           </AnimatedSection>
+          
 
           <SlideInSection
             trigger={clicked}
