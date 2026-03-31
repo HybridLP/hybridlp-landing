@@ -142,7 +142,7 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
               </span>
             ))}
         </h3>
-        <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed text-justify">
+        <p className="text-base md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed ">
           {item.description}
         </p>
       </div>
