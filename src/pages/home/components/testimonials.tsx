@@ -8,7 +8,7 @@ export default () => {
 
         <Carousel slides={testimonialData} autoPlayInterval={5000} />
         <p
-          className="text-white italic mx-[5%] md:mx-0 text-center md:text-start font-normal my-8 "
+          className="text-white italic mx-[5%] md:mx-0 text-center md:text-start font-normal my-8 text-sm md:text-base"
           style={{}}
         >
           Join thousands of individuals and companies who are using Hybrid Law
