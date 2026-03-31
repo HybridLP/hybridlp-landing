@@ -61,7 +61,7 @@ export default () => {
       {/* MOBILE VIEW */}
       <div className="md:hidden  w-full pb-12 flex flex-col items-center">
         {/* Mobile Badge */}
-        <div className="bg-[#E8E8E8] px-8 py-2.5 rounded-lg mb-10 shadow-sm">
+        <div className="bg-[#E8E8E8] px-6 py-2 rounded-lg mt-4 mb-10 shadow-sm">
           <span className="text-[#0A0F1E] text-sm font-medium tracking-wide lato-regular">
             Our Services
           </span>
@@ -69,7 +69,7 @@ export default () => {
 
         {/* Mobile Card */}
         <div
-          className="w-full bg-[#15233F] overflow-hidden shadow-2xl mb-12 relative"
+          className="w-full bg-[#15233F] overflow-hidden shadow-2xl shadow-[#15233F]/50 mb-12 relative rounded-t-xl "
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
