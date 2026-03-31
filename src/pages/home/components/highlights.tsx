@@ -148,6 +148,8 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
       </div>
     </div>
   );
+
+  
 };
 
 export default () => {
