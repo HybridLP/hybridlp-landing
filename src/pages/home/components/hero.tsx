@@ -11,7 +11,7 @@ export default () => {
       className={`min-h-fit md:min-h-[130dvh] flex flex-col relative pt-0 md:pt-[5%] pb-4 md:pb-0 items-center overflow-hidden`}
     >
       {/* <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" /> */}
-      <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-[10%]">
+      <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-[10%] md:rounded-b- rounded-b-xl">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit text-[#6A7586] py-2 px-10 font-semibold border-solid border-[1.5px] border-[#6A7586] rounded-full">
           Hybrid Law Practice
         </h3>
