@@ -11,25 +11,25 @@ export default () => {
       className={`min-h-fit md:min-h-[130dvh] flex flex-col relative pt-0 md:pt-[5%] pb-4 md:pb-0 items-center overflow-hidden`}
     >
       {/* <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" /> */}
-      <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-[10%] rounded-b-xl md:rounded-b-none ">
+      <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-[10%] pb-4 md:pb-0 rounded-b-xl md:rounded-b-none ">
         <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit text-[#6A7586] py-2 px-10 font-semibold border-solid border-[1.5px] border-[#6A7586] rounded-full">
           Hybrid Law Practice
         </h3>
         <div className="mt-2 md:mt-4">
-          <h1 className="text-[#333333] inter-font text-center text-3xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+          <h1 className="text-[#333333] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Connect with
           </h1>
-          <h1 className="text-[#B89900] inter-font text-center text-3xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+          <h1 className="text-[#B89900] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Legal Experts
           </h1>
         </div>
 
-        <p className="text-[#8A8A8A] text-center font-regular text-[16px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
+        <p className="text-[#8A8A8A] text-center font-regular text-[14px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
           Providing Tailored Legal Counsel and Solutions
         </p>
         <div className="flex items-center gap-4">
           <a
-            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[14px] md:text-[16px] rounded-lg text-center py-3 px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[14px] md:text-[16px] rounded-lg text-center py-2 sm:py-3 px-4 sm:px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
             href="https://app.hybridlp.com"
           >
             Get a lawyer
