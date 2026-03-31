@@ -27,7 +27,7 @@ export default function HassleFreeCTA() {
             Explore Smart and Secured Legal Service Delivery
           </h2>
 
-          <p className="text-black/90 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-3xl mx-auto text-center lato-regular">
+          <p className="text-black/90 text-sm md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-3xl mx-auto text-center lato-regular">
             Gain access to legal services, manage and monitor case progress
             remotely, collaborate with seasoned professionals leveraging
             technology for efficient service delivery, access probono services
