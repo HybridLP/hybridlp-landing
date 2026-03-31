@@ -375,7 +375,7 @@ const Remuneration = () => {
                     },
                     {
                       type: "Misdemeanors",
-                      icon: "⚠️",
+                      icon: "",
                       fees: ["₦200k - ₦300k", "₦300k - ₦500k", "₦1M - ₦2M"],
                     },
                     {
