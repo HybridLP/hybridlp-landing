@@ -178,7 +178,7 @@ const servicesContents = [
   {
     title: "Legal Advice & Consultation",
     content:
-      " Corporate matters (e.g., company registration, intellectual property, commercial disputes, mergers & acquisitions), Tax Planning & Compliance, Labour/Employment Law, Family Law (e.g., divorce, child custody, estate planning), Immigration Law, Cyber Security & Data Protection, Real Estate, Environmental Law, Admiralty & Maritime Law, Energy & Natural Resources Law, Sports Law.",
+      " Corporate matters (e.g., company registration, intellectual property, commercial disputes, mergers & acquisitions), Tax Planning & Compliance, Labour/Employment Law, Family Law (e.g., divorce, child custody, estate planning), and more",
     img: consultationImg,
   },
   {
