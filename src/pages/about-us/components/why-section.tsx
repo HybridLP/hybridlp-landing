@@ -51,7 +51,7 @@ const WhySection = () => {
         <h1 className="text-white text-2xl md:text-[40px] inter-font font-semibold">
           Why Choose HybridLP
         </h1>
-        <p className="text-sm md:text-[20px] lato-regular">
+        <p className="text-sm md:text-[20px] lato-regular text-gray-400">
           We transform your legal experience through a comprehensive and
           intelligent platform designed for an improved legal services delivery.
            {/* for clients and legal professionals. Providing access to verified

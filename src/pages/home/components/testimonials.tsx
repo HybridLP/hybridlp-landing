@@ -20,6 +20,10 @@ export default () => {
 };
 
 import React, { useState, useEffect } from "react";
+import client1Img from "../../../assets_/client_1.png";
+import client2Img from "../../../assets_/client_2.png";
+import client3Img from "../../../assets_/client_3.png";
+import client4Img from "../../../assets_/client_4.png";
 
 // Placeholder image for the testimonial
 const PLACEHOLDER_IMG = "https://placehold.co/48x48/A78B00/FFFFFF?text=CL";
@@ -43,7 +47,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         boxShadow: "inset 0 2px 8px 3px #00000040, inset 0 0 10px #FFFFFF40",
       }}
     >
-      <p className="text-sm md:text-[24px] font-normal font-sans">{text}</p>
+      <p className="text-sm md:text-[24px] font-[400] font-sans">{text}</p>
       <div className="flex items-center gap-4 my-4">
         <img
           src={imageUrl}
@@ -105,22 +109,22 @@ const Carousel: React.FC<CarouselProps> = ({
 const testimonialData = [
   {
     text: "Hybrid LP completely changed the way we handle legal matters. We submitted a brief, got connected to a commercial law expert within minutes, and had our contracts reviewed faster than ever — all without stepping into an office!",
-    clientName: "Client A",
-    imageUrl: PLACEHOLDER_IMG,
+    clientName: "Adeola Olanrewaju",
+    imageUrl: client1Img,
   },
   {
     text: "The efficiency and expertise provided by Hybrid LP are unmatched. Our legal team can now focus on strategy while routine reviews are handled seamlessly. A truly innovative solution!",
-    clientName: "Client B",
-    imageUrl: PLACEHOLDER_IMG,
+    clientName: "Ngozi Chukwuma",
+    imageUrl: client2Img,
   },
   {
     text: "Navigating legal complexities used to be a headache. With Hybrid LP, it's a breeze. The platform is intuitive, and the legal professionals are incredibly responsive. Highly recommended!",
-    clientName: "Client C",
-    imageUrl: PLACEHOLDER_IMG,
+    clientName: "Chinedu Okafor",
+    imageUrl: client3Img,
   },
   {
     text: "We needed quick, reliable legal advice for a new venture, and Hybrid LP delivered beyond our expectations. The process was transparent, and the quality of service was exceptional.",
-    clientName: "Client D",
-    imageUrl: PLACEHOLDER_IMG,
+    clientName: "Fatima Aliyu",
+    imageUrl: client4Img,
   },
 ];

@@ -28,7 +28,7 @@ export default () => {
   return (
     <>
       <div className="flex py-8 md:py-12 lg:pt-16 flex-col gap-6 md:gap-8 lg:gap-10  text-white px-4 md:px-8 lg:px-32 xl:px-32 lg:min-h-screen">
-        <h1 className="inter-font text-white mb-4 md:mb-8 mt-4 md:mt-12 text-[24px] font-semibold text-center md:text-[40px]">
+        <h1 className="inter-font text-white mb-4 mt-4 md:mt-12 text-[24px] font-semibold text-center md:text-[40px]">
           How It Works
         </h1>
         {/* Mobile Layout - Stacked */}
@@ -124,7 +124,7 @@ export default () => {
               );
             })}
           </AnimatedSection>
-          
+
 
           <SlideInSection
             trigger={clicked}

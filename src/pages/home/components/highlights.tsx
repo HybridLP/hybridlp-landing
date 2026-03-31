@@ -142,14 +142,14 @@ const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {
               </span>
             ))}
         </h3>
-        <p className="text-sm md:text-[18px] lato-regular font-normal text-white/90 leading-relaxed ">
+        <p className="text-sm md:text-[18px] lato-regular font-normal text-white/70 leading-relaxed ">
           {item.description}
         </p>
       </div>
     </div>
   );
 
-  
+
 };
 
 export default () => {
@@ -175,7 +175,7 @@ export default () => {
       </h2>
 
       {/* Description */}
-      <p className="text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4">
+      <p className="text-base md:text-lg lg:text-[20px] text-center mx-auto leading-relaxed md:leading-[30px] max-w-4xl px-4 text-gray-400">
         Customize the way you streamline your legal work-flow with integrations,{" "}
         <span className="hidden md:inline">
           <br />
