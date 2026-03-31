@@ -1,11 +1,11 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import consultationImg from "../../../assets_/service-consultation-v2.png";
-import documentationImg from "../../../assets_/service-documentation-v2.png";
-import disputeImg from "../../../assets_/service-dispute-v2.png";
-import researchImg from "../../../assets_/service-research-v2.png";
-import advocacyImg from "../../../assets_/service-advocacy-v2.png";
-import proBonoImg from "../../../assets_/service-pro-bono-v2.png";
+import consultationImg from "../../../assets_/service-consultation.png";
+import documentationImg from "../../../assets_/service-documentation.png";
+import disputeImg from "../../../assets_/service-dispute.png";
+import researchImg from "../../../assets_/service-research.png";
+import advocacyImg from "../../../assets_/service-advocacy.png";
+import proBonoImg from "../../../assets_/service-pro-bono.png";
 
 export default () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,39 +23,94 @@ export default () => {
   const currentService = servicesContents[currentSlide];
 
   return (
-    <div className="bg-[#15233F] p-6 md:p-16 relative rounded-xl overflow-hidden min-h-[448px] flex flex-col justify-center">
-      <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-[50px] items-center md:items-start">
-        <div className="flex flex-col flex-1 gap-4 md:gap-6 order-2 md:order-1">
-          <h4 className="w-fit bg-[#C6AD33] py-2 px-4 text-base md:text-lg rounded-lg text-white">
-            Our services
-          </h4>
-          <h3 className="text-white text-lg md:text-xl md:text-[32px] font-semibold inter-font leading-tight">
-            {currentService.title}
-          </h3>
-          <p className="text-[#B0B0B0] text-sm md:text-[20px] font-regular lato-regular leading-relaxed">
-            {currentService.content}
-          </p>
+    <div className="relative w-full overflow-hidden md:min-h-[500px]">
+      
+  
+      {/* MOBILE VIEW */}
+      <div className="md:hidden  w-full pb-12 flex flex-col items-center">
+        {/* Mobile Badge */}
+        <div className="bg-[#E8E8E8] px-8 py-2.5 rounded-lg mb-10 shadow-sm">
+          <span className="text-[#0A0F1E] text-sm font-medium tracking-wide lato-regular">
+            Our Services
+          </span>
         </div>
-        <img
-          className="w-full md:w-[300px] aspect-[4/3] md:h-[320px] bg-[#AFAFAF] rounded-lg object-cover object-center order-1 md:order-2"
-          src={currentService.img}
-          loading="lazy"
-          alt={currentService.title}
-        />
+
+        {/* Mobile Card */}
+        <div className="w-full bg-[#15233F]  overflow-hidden shadow-2xl mb-12">
+          {/* Mobile Image */}
+          <div className="w-full aspect-[4/3]">
+            <img
+              className="w-full h-full object-cover"
+              src={currentService.img}
+              loading="lazy"
+              alt={currentService.title}
+            />
+          </div>
+          
+          {/* Mobile Content */}
+          <div className="p-6 pb-10 flex flex-col items-center">
+            <h3 className="text-white text-xl font-bold mb-6 text-center leading-tight interf-font">
+              {currentService.title}
+            </h3>
+            <p className="text-[#94A3B8] text-[15px] lato-regular font-normal leading-relaxed text-center px-2">
+              {currentService.content}
+            </p>
+          </div>
+        </div>
+
+        {/* Mobile Pagination Dots */}
+        <div className="flex justify-center items-center gap-2.5">
+          {servicesContents.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
+                currentSlide === index 
+                  ? "w-8 h-[3px] bg-white" 
+                  : "w-2 h-2 bg-[#1E293B]"
+              }`}
+            />
+          ))}
+        </div>
       </div>
-      <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 flex items-center justify-between px-2 md:px-16 pointer-events-none">
-        <button
-          className="outline-none p-2 bg-white/10 md:bg-transparent rounded-full md:rounded-none cursor-pointer text-white pointer-events-auto transition-colors hover:bg-white/20"
-          onClick={prevSlide}
-        >
-          <ChevronLeft />
-        </button>
-        <button
-          className="outline-none p-2 bg-white/10 md:bg-transparent rounded-full md:rounded-none cursor-pointer text-white pointer-events-auto transition-colors hover:bg-white/20"
-          onClick={nextSlide}
-        >
-          <ChevronRight />
-        </button>
+
+
+      {/* DESKTOP VIEW - MAINTAINED STRICTLY */}
+      <div className="hidden md:flex bg-[#15233F] group p-16 relative rounded-xl overflow-hidden min-h-[448px] flex-col justify-center">
+        <div className="flex flex-row justify-between gap-[50px] items-start">
+          <div className="flex flex-col flex-1 gap-6 order-2 md:order-1">
+            <h4 className="w-fit bg-[#C6AD33] py-2 px-4 text-lg rounded-lg text-white">
+              Our services
+            </h4>
+            <h3 className="text-white text-[32px] font-semibold inter-font leading-tight">
+              {currentService.title}
+            </h3>
+            <p className="text-[#B0B0B0] text-[20px] font-regular lato-regular leading-relaxed">
+              {currentService.content}
+            </p>
+          </div>
+          <img
+            className="w-[300px] h-[320px] aspect-[4/3] bg-[#AFAFAF] rounded-lg object-cover object-center order-2"
+            src={currentService.img}
+            loading="lazy"
+            alt={currentService.title}
+          />
+        </div>
+
+        <div className="absolute group-hover:flex hidden top-1/2 left-0 w-full -translate-y-1/2 items-center justify-between px-16 pointer-events-none">
+          <button
+            className="outline-none p-2 bg-transparent rounded-md cursor-pointer text-white pointer-events-auto transition-colors hover:bg-white/20"
+            onClick={prevSlide}
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            className="outline-none p-2 bg-transparent rounded-md cursor-pointer text-white pointer-events-auto transition-colors hover:bg-white/20"
+            onClick={nextSlide}
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </div>
     </div>
   );
