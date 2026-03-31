@@ -47,7 +47,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         boxShadow: "inset 0 2px 8px 3px #00000040, inset 0 0 10px #FFFFFF40",
       }}
     >
-      <p className="text-sm md:text-[24px] font-[400] font-sans">{text}</p>
+      <p className="text-xs sm:text-sm md:text-[24px] font-[400] font-sans text-gray-400">{text}</p>
       <div className="flex items-center gap-4 my-4">
         <img
           src={imageUrl}

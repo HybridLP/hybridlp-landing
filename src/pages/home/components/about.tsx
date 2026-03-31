@@ -163,7 +163,7 @@ export default () => {
               Your Legal Network
             </h1>
           </div>
-          <p className="text-white text-sm md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
+          <p className="text-gray-400 text-sm md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
             Hybrid LP offers Technology that facilitates access to legal
             services in diverse areas, with verified and experienced lawyers in
             Arbitration, Litigation, Human Right Enforcement, Commercial

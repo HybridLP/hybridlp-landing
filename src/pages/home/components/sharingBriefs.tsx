@@ -20,7 +20,7 @@ export default () => {
       </h6>
       <AnimatedSection>
         <h3 className="font-medium text-white text-2xl md:text-3xl mx-auto text-center lg:text-[40px] inter-font mt-4 mb-4">
-          Instructions to Impact{" "}
+          Instructions to Impact
         </h3>
       </AnimatedSection>
       <AnimatedSection>
