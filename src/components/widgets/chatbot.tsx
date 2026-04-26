@@ -187,7 +187,7 @@ export default function LegalChatbot() {
 
       {/* Chatbot Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeUp">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeUp">
           <div className="bg-linear-to-b from-gray-900 to-black w-full max-w-2xl h-[600px] rounded-2xl shadow-2xl flex flex-col border border-[#C8A702]/30 animate-fadeUp">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-linear-to-r from-[#C8A702]/20 to-[#824E00]/20">
