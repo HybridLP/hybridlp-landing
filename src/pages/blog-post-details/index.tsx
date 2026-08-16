@@ -1,4 +1,4 @@
-import bg from "../../assets_/landing-bg.jpg";
+import bg from "../../assets/landing-bg.jpg";
 import { useParams, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";

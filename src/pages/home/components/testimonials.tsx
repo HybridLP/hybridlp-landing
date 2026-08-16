@@ -20,10 +20,10 @@ export default () => {
 };
 
 import React, { useState, useEffect } from "react";
-import client1Img from "../../../assets_/client_1.png";
-import client2Img from "../../../assets_/client_2.png";
-import client3Img from "../../../assets_/client_3.png";
-import client4Img from "../../../assets_/client_4.png";
+import client1Img from "../../../assets/client_1.png";
+import client2Img from "../../../assets/client_2.png";
+import client3Img from "../../../assets/client_3.png";
+import client4Img from "../../../assets/client_4.png";
 
 // Placeholder image for the testimonial
 const PLACEHOLDER_IMG = "https://placehold.co/48x48/A78B00/FFFFFF?text=CL";

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Home, Search, FileQuestion } from "lucide-react";
 import Header from "../components/widgets/header";
 import { Footer } from "./home/components/footer";
-import bg from "../assets_/bg.jpg";
+import bg from "../assets/bg.jpg";
 
 export default () => {
   return (

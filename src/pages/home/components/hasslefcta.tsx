@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import bg from "../../../assets_/testifooter-bg.jpg";
+import bg from "../../../assets/testifooter-bg.jpg";
 import { NavLink, useLocation } from "react-router-dom";
 
 export default function HassleFreeCTA() {

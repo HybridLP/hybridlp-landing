@@ -1,11 +1,11 @@
-import bg from "../../../assets_/brief-submission.jpg";
-import workspace from "../../../assets_/workspace.jpg";
-import alarm from "../../../assets_/alarm-clock.png";
-import arrowUpRight from "../../../assets_/maki_arrow.png";
-import arrowright from "../../../assets_/guidance_.png";
-import arrowDown from "../../../assets_/down-arrow.png";
-import expertAss from "../../../assets_/expert_assignment.png";
-import lineImg from "../../../assets_/line.png";
+import bg from "../../../assets/brief-submission.jpg";
+import workspace from "../../../assets/workspace.jpg";
+import alarm from "../../../assets/alarm-clock.png";
+import arrowUpRight from "../../../assets/maki_arrow.png";
+import arrowright from "../../../assets/guidance_.png";
+import arrowDown from "../../../assets/down-arrow.png";
+import expertAss from "../../../assets/expert_assignment.png";
+import lineImg from "../../../assets/line.png";
 import { Link } from "react-router-dom";
 
 import AnimatedSection from "../../../components/widgets/animated-section";

@@ -1,5 +1,5 @@
 import Hero from "./components/hero";
-import bg from "../../assets_/landing-bg.jpg";
+import bg from "../../assets/landing-bg.jpg";
 import Blogs from "./components/blogs";
 import SEO from "../../components/widgets/seo";
 

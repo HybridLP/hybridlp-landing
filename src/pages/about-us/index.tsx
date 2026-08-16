@@ -1,5 +1,5 @@
-import bgProp from "../../assets_/bg-property.png";
-import aboutUs from "../../assets_/about-us.png";
+import bgProp from "../../assets/bg-property.png";
+import aboutUs from "../../assets/about-us.png";
 import SEO from "../../components/widgets/seo";
 
 export default () => {

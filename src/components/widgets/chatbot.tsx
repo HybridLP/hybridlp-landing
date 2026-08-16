@@ -3,8 +3,8 @@ import { X, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
-import logo from "../../assets_/logo/favIcon.png";
-import robot from "../../assets_/robot.png";
+import logo from "../../assets/logo/favIcon.png";
+import robot from "../../assets/robot.png";
 
 interface Message {
   id: number;

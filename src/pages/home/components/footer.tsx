@@ -1,6 +1,6 @@
 import React from "react";
 import { Languages } from "lucide-react";
-import logo from "../../../assets_/logo/logo.png";
+import logo from "../../../assets/logo/logo.png";
 import { NavLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {

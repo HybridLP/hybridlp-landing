@@ -1,11 +1,11 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, TouchEvent } from "react";
-import consultationImg from "../../../assets_/service-consultation.png";
-import documentationImg from "../../../assets_/service-documentation.png";
-import disputeImg from "../../../assets_/service-dispute.png";
-import researchImg from "../../../assets_/service-research.png";
-import advocacyImg from "../../../assets_/service-advocacy.png";
-import proBonoImg from "../../../assets_/service-pro-bono.png";
+import consultationImg from "../../../assets/service-consultation.png";
+import documentationImg from "../../../assets/service-documentation.png";
+import disputeImg from "../../../assets/service-dispute.png";
+import researchImg from "../../../assets/service-research.png";
+import advocacyImg from "../../../assets/service-advocacy.png";
+import proBonoImg from "../../../assets/service-pro-bono.png";
 
 export default () => {
   const [currentSlide, setCurrentSlide] = useState(0);

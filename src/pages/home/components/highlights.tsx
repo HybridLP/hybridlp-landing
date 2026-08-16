@@ -1,9 +1,9 @@
-import documentIcon from "../../../assets_/famicons_documents.png";
-import calendarIcon from "../../../assets_/calendar.png";
-import meetingIcon from "../../../assets_/microphone-icon.png";
-import accessIcon from "../../../assets_/accessIcon.png";
-import iconLast from "../../../assets_/icon_last.png";
-import bg from "../../../assets_/landing-bg.jpg";
+import documentIcon from "../../../assets/famicons_documents.png";
+import calendarIcon from "../../../assets/calendar.png";
+import meetingIcon from "../../../assets/microphone-icon.png";
+import accessIcon from "../../../assets/accessIcon.png";
+import iconLast from "../../../assets/icon_last.png";
+import bg from "../../../assets/landing-bg.jpg";
 import { useScrollAnimation } from "../../../utils/useScrollAnimation";
 
 const HighlightItem = ({ item, idx }: { item: any; idx: number }) => {

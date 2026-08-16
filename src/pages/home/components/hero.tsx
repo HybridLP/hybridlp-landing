@@ -1,9 +1,9 @@
-import board from "../../../assets_/board.png";
+import board from "../../../assets/board.png";
 
-import lawyerImage2 from "../../../assets_/lawyer-profile.png";
-import alhaja from "../../../assets_/alhaja.png";
-import chibugor from "../../../assets_/chibugor.png";
-import thomas from "../../../assets_/thomas.png";
+import lawyerImage2 from "../../../assets/lawyer-profile.png";
+import alhaja from "../../../assets/alhaja.png";
+import chibugor from "../../../assets/chibugor.png";
+import thomas from "../../../assets/thomas.png";
 
 export default () => {
   return (

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets_/logo/favIcon.png";
-import authBg from "../../assets_/auth-bg.png";
-import authBg2 from "../../assets_/auth-bg2.png";
+import logo from "../../assets/logo/favIcon.png";
+import authBg from "../../assets/auth-bg.png";
+import authBg2 from "../../assets/auth-bg2.png";
 
 export default () => {
   return (

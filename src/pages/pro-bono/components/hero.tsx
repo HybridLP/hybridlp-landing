@@ -1,5 +1,5 @@
 
-import bg from "../../../assets_/probono-bg.jpg";
+import bg from "../../../assets/probono-bg.jpg";
 
 export default () => {
   return (

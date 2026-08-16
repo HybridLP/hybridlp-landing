@@ -1,4 +1,4 @@
-import bgProp from "../../assets_/bg-property.png";
+import bgProp from "../../assets/bg-property.png";
 import SEO from "../../components/widgets/seo";
 
 const PrivacyPolicy = () => {

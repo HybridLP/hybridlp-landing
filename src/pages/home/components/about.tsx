@@ -1,7 +1,7 @@
 import { useState } from "react";
-import briefs from "../../../assets_/briefs.png";
-import collaborate from "../../../assets_/collaborate.jpg";
-import shareBriefs from "../../../assets_/sharing briefs.png";
+import briefs from "../../../assets/briefs.png";
+import collaborate from "../../../assets/collaborate.jpg";
+import shareBriefs from "../../../assets/sharing briefs.png";
 import AnimatedSection from "../../../components/widgets/animated-section";
 import SlideInSection from "../../../components/widgets/slide-in-section";
 import { NavLink } from "react-router-dom";
