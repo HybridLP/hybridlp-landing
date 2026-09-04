@@ -154,7 +154,7 @@ export default () => {
             </div>
           </SlideInSection>
         </div>
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 lg:gap-0 mt-6">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-8 mt-6">
           <div className=" flex flex-col space-y-4 items-center lg:items-start ">
             <h6 className="text-black h-12 md:h-14 bg-gray-100 w-fit px-4 md:px-6 flex items-center justify-center rounded-md text-center text-sm md:text-base lato-regular">
               About HybridLP
@@ -163,16 +163,20 @@ export default () => {
               Your Legal Network
             </h1>
           </div>
-          <p className="text-gray-400 text-sm md:text-lg lg:text-[20px] lato-regular font-normal lg:w-[50%] leading-relaxed text-center lg:text-start">
-            Hybrid LP offers Technology that facilitates access to legal
-            services in diverse areas, with verified and experienced lawyers in
-            Arbitration, Litigation, Human Right Enforcement, Commercial
-            Disputes, Labour/Employment related matters, Election Petition,
-            Immmigration matters,.....{" "}
-            <NavLink to="/about" className="text-[#DED08A] cursor-pointer">
-              Read more
-            </NavLink>
-          </p>
+          <div className="flex flex-col gap-3 text-gray-400 text-sm md:text-base lg:text-[18px] lato-regular font-normal lg:w-[55%] leading-relaxed text-center lg:text-start">
+            <h3 className="text-white text-lg md:text-xl font-semibold inter-font">
+              Law Is About People, not just Paperwork
+            </h3>
+            <p>
+              We understand that behind every legal matter is a person, a family, a business or an important decision.
+            </p>
+            <p>
+              Hybrid Lp offers legal Technology in diverse areas, with verified and experienced lawyers in Arbitration, Dispute Resolution, Real Estate, Human Right Enforcement, Labour/Employment related matters, Election Petition, Immigration matters, Trans-boarder or International disputes, Family and Personal law practice, Intellectual Property, Technology and IT law compliance, Cyber Security and Data protection, Sports law, Mining and Natural Resources law compliance, Legal Drafting, Legal Advisory, Business Registration & Corporate matters.{" "}
+              <NavLink to="/about" className="text-[#DED08A] cursor-pointer font-semibold whitespace-nowrap">
+                Read more
+              </NavLink>
+            </p>
+          </div>
         </div>
       </div>
     </>

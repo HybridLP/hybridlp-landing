@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import board from "../../../assets/board.png";
 
 import lawyerImage2 from "../../../assets/lawyer-profile.png";
@@ -12,9 +13,6 @@ export default () => {
     >
       {/* <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" /> */}
       <div className="flex flex-col w-full md:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-[10%] pb-4 md:pb-0 rounded-b-xl md:rounded-b-none ">
-        <h3 className="uppercase text-[14px] md:text-[16px] lato-regular w-fit text-[#6A7586] py-2 px-10 font-semibold border-solid border-[1.5px] border-[#6A7586] rounded-full">
-          Hybrid Law Practice
-        </h3>
         <div className="mt-2 md:mt-4">
           <h1 className="text-[#333333] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Connect with
@@ -25,22 +23,33 @@ export default () => {
         </div>
 
         <p className="text-[#8A8A8A] text-center font-regular text-[14px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
-          Providing Tailored Legal Counsel and Solutions
+          Let’s find a Legal solutions together
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 md:mb-6">
           <a
-            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[14px] md:text-[16px] rounded-lg text-center py-2 sm:py-3 px-4 sm:px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] text-[14px] md:text-[16px] rounded-lg text-center py-2 sm:py-3 px-4 sm:px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
             href="https://app.hybridlp.com"
           >
             Get a lawyer
           </a>
+          <Link
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] whitespace-nowrap text-[14px] md:text-[16px] rounded-lg text-center py-3 px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            to="/register-business"
+          >
+            Register your Business
+          </Link>
+        </div>
+
+        {/* Join Our Lawyers column just above the images */}
+        <div className="mb-4">
           <a
-            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-full max-w-[280px] md:max-w-[320px] lg:w-[268px] whitespace-nowrap text-[14px] md:text-[16px] rounded-lg text-center py-3 px-6 md:p-4 mb-6 md:mb-8 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
-            href={"https://lawyer.hybridlp.com"}
+            className="text-[#B89900] hover:text-[#825900] font-semibold text-sm md:text-base border-b border-[#B89900] pb-0.5 transition-colors lato-regular"
+            href="https://lawyer.hybridlp.com"
           >
             Join our Lawyers
           </a>
         </div>
+
         <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center mb-4">
           <div className="inline-flex relative ">
             <img
@@ -64,8 +73,10 @@ export default () => {
               alt=""
             />
           </div>
-          <p className="text-black text-center font-regular lato-regular text-[16px] md:text-[18px] lg:text-[22px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
-            5,123+ People trust Hybridlp
+          <p className="text-black text-center font-regular lato-regular text-[16px] md:text-[18px] lg:text-[20px] italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
+            “Ubi jus, ibi remedium”
+            <br />
+            Where there is a right, there is a remedy.
           </p>
           <div className="flex flex-row items-center text-md text-[#CAA500]">
             {[1, 2, 3, 4, 5].map((i) => (

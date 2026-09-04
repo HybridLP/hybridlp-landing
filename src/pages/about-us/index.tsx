@@ -19,12 +19,20 @@ export default () => {
           <img src={bgProp} alt="bg-property" />
         </div>
         <div className="mt-[20%] lg:mt-[10%] mx-4 sm:mx-8 md:mx-16 lg:mx-[273px]">
-          <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-8">
+          <h1 className="inter-font text-center text-[28px] sm:text-[32px] lg:text-[40px] mb-4">
             About Us
           </h1>
-          <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-center mb-8 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
-          Hybrid LP offers legal Technology that facilitate access to legal services in diverse areas, with verified and experienced lawyers in Arbitration, Litigation, Human Right Enforcement, Commercial Disputes, Labour/Employment related matters, Election Petition, Immigration matters, Trans-boarder or International disputes, Real Estate, Family and Personal law practice, Intellectual Property, Technology and IT law compliance, Cyber Security and Data protection, Sports law, Mining and Natural Resources law compliance and related matters, Legal Drafting, Legal Advisory, Company Registration and Corporate matters
-          </p>
+          <div className="flex flex-col gap-4 text-center mb-8">
+            <h2 className="text-white text-[18px] sm:text-[22px] lg:text-[26px] font-semibold inter-font">
+              Law Is About People, not just Paperwork
+            </h2>
+            <p className="text-[15px] sm:text-[17px] lg:text-[19px] lato-regular text-gray-300 leading-relaxed">
+              We understand that behind every legal matter is a person, a family, a business or an important decision.
+            </p>
+            <p className="text-[14px] sm:text-[16px] lg:text-[18px] lato-regular text-gray-300 leading-[24px] sm:leading-[28px] lg:leading-[32px]">
+              Hybrid Lp offers legal Technology in diverse areas, with verified and experienced lawyers in Arbitration, Dispute Resolution, Real Estate, Human Right Enforcement, Labour/Employment related matters, Election Petition, Immigration matters, Trans-boarder or International disputes, Family and Personal law practice, Intellectual Property, Technology and IT law compliance, Cyber Security and Data protection, Sports law, Mining and Natural Resources law compliance, Legal Drafting, Legal Advisory, Business Registration & Corporate matters
+            </p>
+          </div>
           <img
             src={aboutUs}
             alt=""

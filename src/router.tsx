@@ -11,12 +11,17 @@ import judgements from "./pages/judgements";
 import PrivacyPolicy from "./pages/privacy-policy";
 import TermsOfUse from "./pages/terms-of-use";
 import Remuneration from "./pages/remuneration";
+import RegisterBusiness from "./pages/register-business";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     Component: Home,
     children: [
+      {
+        path: "register-business",
+        Component: RegisterBusiness,
+      },
       {
         path: "remuneration",
         Component: Remuneration,
