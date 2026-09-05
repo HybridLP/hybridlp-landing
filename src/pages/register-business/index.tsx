@@ -1,3 +1,4 @@
+import cacFormPdf from "../../assets/CAC FORM.pdf";
 import { useEffect } from "react";
 import SEO from "../../components/widgets/seo";
 import { Building2, Shield, Users, FileText, Scale, Landmark, UserCheck, HeartHandshake } from "lucide-react";
@@ -127,8 +128,9 @@ export default function RegisterBusiness() {
             Register your Business
           </a>
           <a
-            href="https://app.hybridlp.com"
-            className="w-full sm:w-auto bg-transparent border-2 border-[#CAA500] text-[#CAA500] px-8 py-4 rounded-lg font-semibold text-base hover:bg-[#CAA500]/10 transition-all active:scale-95"
+            href={cacFormPdf}
+            download="CAC_FORM.pdf"
+            className="w-full sm:w-auto bg-transparent border-2 border-[#CAA500] text-[#CAA500] px-8 py-4 rounded-lg font-semibold text-base hover:bg-[#CAA500]/10 transition-all active:scale-95 text-center"
           >
             Get a Lawyer to do it for you
           </a>
