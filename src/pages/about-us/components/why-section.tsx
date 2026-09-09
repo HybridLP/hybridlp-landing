@@ -66,7 +66,7 @@ const WhySection = () => {
         </h1>
         <p className="text-sm md:text-[20px] lato-regular text-gray-400">
           We transform your legal experience through a comprehensive and
-          intelligent platform designed for an improved legal services delivery.
+          intelligent platform designed for an improved legal service delivery.
         </p>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
