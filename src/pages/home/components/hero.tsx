@@ -20,13 +20,13 @@ export default () => {
           <h1 className="text-[#B89900] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Legal Experts
           </h1> */}
-          <h1 className="text-[#B89900] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+          <h1 className="text-[#B89900] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Gigs
           </h1>
-          <h1 className="text-[#333333] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+          <h1 className="text-[#333333] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             x
           </h1>
-          <h1 className="text-[#B89900] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+          <h1 className="text-[#B89900] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
             Geeks
           </h1>
         </div>
