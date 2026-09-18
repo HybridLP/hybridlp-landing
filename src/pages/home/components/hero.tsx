@@ -32,7 +32,7 @@ export default () => {
         </div>
 
         <p className="text-[#8A8A8A] text-center font-regular text-[14px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
-          Let’s find a Legal solutions
+          Let’s find Legal solutions
         </p>
         {/* auth links */}
         <div className="flex flex-row  items-center gap-6 mb-4 md:mb-6">
