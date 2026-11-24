@@ -1,0 +1,111 @@
+import { Link } from "react-router-dom";
+import board from "../../../assets/board.png";
+
+import lawyerImage2 from "../../../assets/lawyer-profile.png";
+import alhaja from "../../../assets/alhaja.png";
+import chibugor from "../../../assets/chibugor.png";
+import thomas from "../../../assets/thomas.png";
+
+export default () => {
+  return (
+    <section
+      className={`min-h-fit lg:min-h-[130dvh] flex flex-col relative pt-0 md:pt-24 lg:pt-[5%] pb-4 md:pb-8 lg:pb-0 items-center overflow-hidden`}
+    >
+      {/* <div className="absolute  top-0 left-0 right-0 inset-0 z-50 pointer-events-none" /> */}
+      <div className="flex flex-col w-full md:w-[86%] lg:w-[calc(100%-240px)] xl:w-[calc(100%-362px)] items-center text-center h-fit bg-white md:rounded-t-2xl pt-[25%] md:pt-12 lg:pt-[10%] pb-6 md:pb-8 lg:pb-0 rounded-b-xl md:rounded-b-none px-4 md:px-8 ">
+        <div className="mt-2 md:mt-4 flex  space-x-2">
+          {/* <h1 className="text-[#333333] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Connect with
+          </h1>
+          <h1 className="text-[#B89900] inter-font text-center text-2xl md:text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Legal Experts
+          </h1> */}
+          <h1 className="text-[#B89900] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Gigs
+          </h1>
+          <h1 className="text-[#333333] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            x
+          </h1>
+          <h1 className="text-[#B89900] inter-font text-center text-4xl lg:text-[56px] whitespace-wrap font-bold leading-tight">
+            Geeks
+          </h1>
+        </div>
+
+        <p className="text-[#8A8A8A] text-center font-regular text-[14px] md:text-[18px] lg:text-[24px] lator-regular italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
+          Let’s find Legal solutions
+        </p>
+        {/* auth links */}
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 mb-4 md:mb-6">
+          <a
+            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-auto sm:w-[200px] md:w-[220px] lg:w-[268px] text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden whitespace-nowrap"
+            href="https://app.hybridlp.com"
+          >
+            Get a lawyer
+          </a>
+          <Link
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-auto sm:w-[200px] md:w-[220px] lg:w-[268px] whitespace-nowrap text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            to="/register-business"
+          >
+            Register a Business
+          </Link>
+        
+        </div>
+        <div className="mb-4">
+            <a
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-full max-w-[280px] sm:w-[220px] lg:w-[268px] whitespace-nowrap text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+
+            href="https://lawyer.hybridlp.com"
+          >
+            Join our Lawyers
+          </a>
+        </div>
+        <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center mb-4">
+          <div className="inline-flex relative ">
+            <img
+              src={alhaja}
+              className="size-11 rounded-full object-center object-cover  -ml-0"
+              alt=""
+            />
+            <img
+              src={lawyerImage2}
+              className="size-11 rounded-full object-center object-cover  -ml-4"
+              alt=""
+            />
+            <img
+              src={chibugor}
+              className="size-11 rounded-full object-center object-cover  -ml-4"
+              alt=""
+            />
+            <img
+              src={thomas}
+              className="size-11 rounded-full object-center object-cover  -ml-4"
+              alt=""
+            />
+          </div>
+          <p className="text-black text-center font-regular lato-regular text-[16px] md:text-[18px] lg:text-[20px] italic w-fit my-4 md:my-6 lg:my-8 px-4 md:px-0">
+            {/* “Ubi jus, ibi remedium”
+            <br /> */}
+            Where there is a right, there is a remedy.
+          </p>
+          <div className="flex flex-row items-center text-md text-[#CAA500]">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <svg
+                fill="#CAA500"
+                key={i}
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M16.926 20.2a1 1 0 0 1-.466-.115l-4.471-2.352-4.471 2.348a1 1 0 0 1-1.451-1.054l.854-4.98L3.3 10.521a1 1 0 0 1 .555-1.706l5-.727 2.237-4.531A1 1 0 0 1 11.989 3a1 1 0 0 1 .9.558l2.236 4.53 5 .727a1 1 0 0 1 .555 1.706l-3.618 3.527.854 4.98a1 1 0 0 1-.99 1.172z" />
+              </svg>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className=" hidden md:flex w-full mb-0 pb-0 md:pb-8 md:mb-4 px-8 lg:px-[90px] justify-center">
+        <img src={board} alt="" className="w-full max-w-full h-auto" />
+      </div>
+    </section>
+  );
+};
