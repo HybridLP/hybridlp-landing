@@ -1,12 +1,16 @@
 import {
   Building2,
-  Shield,
-  Users,
-  FileText,
-  Scale,
+  Briefcase,
   Landmark,
-  UserCheck,
   HeartHandshake,
+  Scale,
+  Users,
+  UserCheck,
+  Shield,
+  Layers,
+  Network,
+  Handshake,
+  Globe,
 } from "lucide-react";
 import React from "react";
 
@@ -14,6 +18,7 @@ export interface StructureItem {
   id: string;
   title: string;
   shortName: string;
+  category: "Enterprise" | "Companies" | "Partnerships" | "Non-Profit" | "Corporate Groups";
   icon: React.ReactNode;
   description: string;
 }
@@ -23,64 +28,96 @@ export const STRUCTURES: StructureItem[] = [
     id: "enterprise",
     title: "1. Enterprise / Business Name",
     shortName: "Enterprise / Business Name",
-    icon: <Building2 className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "Ideal for individuals or small businesses operating under a registered business name. Simple, affordable and suitable for sole proprietorships and partnerships.",
+    category: "Enterprise",
+    icon: <Building2 className="w-7 h-7 text-[#CAA500]" />,
+    description: "Sole proprietorships & partnerships under Part E of CAMA. Fast, affordable trade registration.",
   },
   {
     id: "ltd",
-    title: "2. Limited Liability Company (Ltd.)",
-    shortName: "Limited Liability Company (Ltd.)",
-    icon: <Shield className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "A popular structure for businesses owned by shareholders. Legal personality is separate from owners, and liability is limited to share capital.",
-  },
-  {
-    id: "unlimited",
-    title: "3. Unlimited Liability Company (Ltd./Unlimited)",
-    shortName: "Unlimited Liability Company",
-    icon: <Scale className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "A company where members may have unlimited liability for company debts, suitable where owners assume greater personal responsibility.",
-  },
-  {
-    id: "guarantee",
-    title: "4. Limited by Guarantee",
-    shortName: "Limited by Guarantee",
-    icon: <HeartHandshake className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "A non-profit company established to pursue charitable, educational, religious or social objectives with no share capital.",
+    title: "2. Private Company Limited by Shares (LTD)",
+    shortName: "Private Company (LTD)",
+    category: "Companies",
+    icon: <Briefcase className="w-7 h-7 text-[#CAA500]" />,
+    description: "Nigeria's standard corporate vehicle. Share capital, limited liability, separate legal personality.",
   },
   {
     id: "plc",
-    title: "5. Public Limited Company (PLC)",
-    shortName: "Public Limited Company (PLC)",
-    icon: <Landmark className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "Designed for larger businesses with the capacity to raise capital from the public and operate on a broader corporate scale.",
+    title: "3. Public Company Limited by Shares (PLC)",
+    shortName: "Public Company (PLC)",
+    category: "Companies",
+    icon: <Landmark className="w-7 h-7 text-[#CAA500]" />,
+    description: "For corporate entities capable of offering shares to the public and large-scale operations.",
+  },
+  {
+    id: "guarantee",
+    title: "4. Company Limited by Guarantee (LTD/GTE)",
+    shortName: "Limited by Guarantee (LTD/GTE)",
+    category: "Companies",
+    icon: <HeartHandshake className="w-7 h-7 text-[#CAA500]" />,
+    description: "Non-profit company promoting commerce, art, science, education or charity with members as guarantors.",
+  },
+  {
+    id: "unlimited",
+    title: "5. Unlimited Company (ULTD)",
+    shortName: "Unlimited Company (ULTD)",
+    category: "Companies",
+    icon: <Scale className="w-7 h-7 text-[#CAA500]" />,
+    description: "Corporate entity where shareholders hold unlimited legal liability for company obligations.",
   },
   {
     id: "lp",
     title: "6. Limited Partnership (LP)",
     shortName: "Limited Partnership (LP)",
-    icon: <Users className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "A partnership comprising at least one general partner with unlimited liability and limited partners with liability capped to contribution.",
+    category: "Partnerships",
+    icon: <Users className="w-7 h-7 text-[#CAA500]" />,
+    description: "Partnership with at least one general partner (unlimited) and limited partners with capped liability.",
   },
   {
     id: "llp",
     title: "7. Limited Liability Partnership (LLP)",
     shortName: "Limited Liability Partnership (LLP)",
-    icon: <UserCheck className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "A flexible partnership structure combining partnership benefits with limited liability protection for all partners.",
+    category: "Partnerships",
+    icon: <UserCheck className="w-7 h-7 text-[#CAA500]" />,
+    description: "Separate legal corporate body combining partnership flexibility with limited liability for all partners.",
   },
   {
-    id: "ngo",
-    title: "8. NGO / Association / Club",
-    shortName: "NGO / Association / Club",
-    icon: <FileText className="w-8 h-8 text-[#CAA500]" />,
-    description:
-      "Suitable for charitable, religious, cultural, and community organizations to operate and hold property in their registered name.",
+    id: "it",
+    title: "8. Incorporated Trustees (IT)",
+    shortName: "Incorporated Trustees (NGO/Church)",
+    category: "Non-Profit",
+    icon: <Shield className="w-7 h-7 text-[#CAA500]" />,
+    description: "NGOs, foundations, churches, mosques, clubs, and charitable bodies registered under Part F of CAMA.",
+  },
+  {
+    id: "group",
+    title: "9. Group of Companies",
+    shortName: "Group of Companies",
+    category: "Corporate Groups",
+    icon: <Network className="w-7 h-7 text-[#CAA500]" />,
+    description: "Multi-corporate umbrella formed by 3 or more associated companies with common ownership.",
+  },
+  {
+    id: "holding",
+    title: "10. Holding Company",
+    shortName: "Holding Company",
+    category: "Corporate Groups",
+    icon: <Layers className="w-7 h-7 text-[#CAA500]" />,
+    description: "Parent company holding controlling interests across operating subsidiary corporate entities.",
+  },
+  {
+    id: "consortium",
+    title: "11. Consortium Company",
+    shortName: "Consortium Company",
+    category: "Corporate Groups",
+    icon: <Handshake className="w-7 h-7 text-[#CAA500]" />,
+    description: "Joint venture corporate company formed by participating firms for specialized contracts or projects.",
+  },
+  {
+    id: "foreign",
+    title: "12. Company with Foreign Participation",
+    shortName: "Foreign Participation Company",
+    category: "Companies",
+    icon: <Globe className="w-7 h-7 text-[#CAA500]" />,
+    description: "Corporate entity with foreign individual or corporate shareholders, compliant with NIPC & NOTAP.",
   },
 ];

@@ -35,20 +35,25 @@ export default () => {
           Let’s find Legal solutions
         </p>
         {/* auth links */}
-        <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 mb-4 md:mb-6">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-5 mb-4 md:mb-6">
           <a
-            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-auto sm:w-[200px] md:w-[220px] lg:w-[268px] text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden whitespace-nowrap"
+            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-auto sm:w-[190px] md:w-[210px] text-xs sm:text-[14px] md:text-[15px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-3 transition-all duration-300 active:scale-95 h-[50px] md:h-[54px] flex items-center justify-center overflow-hidden whitespace-nowrap shadow-md"
             href="https://app.hybridlp.com"
           >
             Get a lawyer
           </a>
           <Link
-            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-auto sm:w-[200px] md:w-[220px] lg:w-[268px] whitespace-nowrap text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] hover:bg-[#CAA500]/10 w-auto sm:w-[190px] md:w-[210px] whitespace-nowrap text-xs sm:text-[14px] md:text-[15px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-3 transition-all duration-300 active:scale-95 h-[50px] md:h-[54px] flex items-center justify-center overflow-hidden"
             to="/register-business"
           >
             Register a Business
           </Link>
-        
+          <Link
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] hover:bg-[#CAA500]/10 w-auto sm:w-[190px] md:w-[210px] whitespace-nowrap text-xs sm:text-[14px] md:text-[15px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-3 transition-all duration-300 active:scale-95 h-[50px] md:h-[54px] flex items-center justify-center overflow-hidden"
+            to="/request-legal-drafting"
+          >
+            Request Legal Drafting
+          </Link>
         </div>
         <div className="mb-4">
             <a

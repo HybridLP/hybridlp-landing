@@ -5,8 +5,7 @@ import { STRUCTURES, StructureItem } from "./data/structures";
 import StructuresGrid from "./components/StructuresGrid";
 import BottomBanner from "./components/BottomBanner";
 import FormSuccess from "./components/FormSuccess";
-import EnterpriseForm from "./components/EnterpriseForm";
-import GeneralStructureForm from "./components/GeneralStructureForm";
+import RegistrationFormSwitcher from "./components/RegistrationFormSwitcher";
 
 export default function RegisterBusiness() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -117,11 +116,7 @@ export default function RegisterBusiness() {
           />
         ) : (
           <div className="bg-[#15233F] border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl">
-            {selectedStructure.id === "enterprise" ? (
-              <EnterpriseForm onSuccess={handleSuccess} />
-            ) : (
-              <GeneralStructureForm structure={selectedStructure} onSuccess={handleSuccess} />
-            )}
+            <RegistrationFormSwitcher structure={selectedStructure} onSuccess={handleSuccess} />
           </div>
         )}
       </div>
