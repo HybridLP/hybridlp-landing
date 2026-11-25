@@ -52,7 +52,7 @@ export default function RegisterBusiness() {
       />
 
       {/* Header Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-12 mt-6 md:mb-16">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-font mb-6 leading-tight">
           Choose the Structure That Fits Your Business.
         </h1>

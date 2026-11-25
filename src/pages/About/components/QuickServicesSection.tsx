@@ -7,7 +7,7 @@ const SERVICES = [
     description:
       "Full CAC corporate registration for Enterprises, Ltd Companies, Partnerships, NGOs, Holding & Foreign companies.",
     href: "/register-business",
-    badge: "CAC Accredited",
+    
     icon: <Building2 className="w-6 h-6 text-[#CAA500]" />,
     buttonText: "Register Business",
   },
@@ -16,7 +16,7 @@ const SERVICES = [
     description:
       "Custom agreements, NDA, employment contracts, terms, deed of assignment, and corporate resolutions crafted by seasoned lawyers.",
     href: "/request-legal-drafting",
-    badge: "Direct Legal Filing",
+    
     icon: <FileText className="w-6 h-6 text-[#CAA500]" />,
     buttonText: "Request Drafting",
   },
@@ -25,7 +25,7 @@ const SERVICES = [
     description:
       "Schedule a dedicated virtual or in-person advisory session with verified legal practitioners in your practice area.",
     href: "/book-consultation",
-    badge: "Expert Advisory",
+    
     icon: <CalendarCheck className="w-6 h-6 text-[#CAA500]" />,
     buttonText: "Book Session",
   },
@@ -36,9 +36,7 @@ export default function QuickServicesSection() {
     <section className="px-4 md:px-8 lg:px-16 xl:px-32 my-10 md:my-16">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12">
-          <span className="text-[#CAA500] text-xs md:text-sm font-semibold tracking-wider uppercase bg-[#CAA500]/10 px-3 py-1 rounded-full border border-[#CAA500]/20">
-            Self-Service Legal Portal
-          </span>
+        
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mt-3 inter-font">
             Already Know What You Need?
           </h2>
@@ -58,9 +56,7 @@ export default function QuickServicesSection() {
                   <div className="w-12 h-12 rounded-xl bg-[#15233F] border border-gray-700/60 flex items-center justify-center group-hover:scale-105 transition-transform">
                     {item.icon}
                   </div>
-                  <span className="text-[11px] font-semibold text-[#CAA500] bg-[#CAA500]/10 border border-[#CAA500]/30 px-2.5 py-0.5 rounded-full">
-                    {item.badge}
-                  </span>
+                 
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-2 inter-font group-hover:text-[#CAA500] transition-colors">
                   {item.title}

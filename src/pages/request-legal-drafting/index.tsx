@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FileText, AlertCircle, ArrowLeft, Clock, ShieldCheck, Send } from "lucide-react";
+import {  AlertCircle, ArrowLeft, Clock, ShieldCheck, Send } from "lucide-react";
 import SEO from "../../components/widgets/seo";
 import { serviceRequestService } from "../../services/serviceRequestService";
 import CustomSelect from "../../components/ui/select";
@@ -85,16 +85,10 @@ export default function RequestLegalDrafting() {
         canonical="https://hybridlp.com/request-legal-drafting"
       />
       <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#CAA500] transition-colors lato-regular">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
-        </div>
+        
 
-        <div className="text-center mb-10 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15233F] border border-gray-800 text-[#CAA500] text-xs md:text-sm font-semibold mb-4">
-            <FileText className="w-4 h-4" /> Legal Drafting Services
-          </div>
+        <div className="text-center mb-10 mt-6 md:mb-12">
+          
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-font mb-4 text-white leading-tight">
             Request Expert Legal Drafting
           </h1>
