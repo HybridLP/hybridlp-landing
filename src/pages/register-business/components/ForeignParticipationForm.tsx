@@ -88,7 +88,7 @@ export default function ForeignParticipationForm({ structure, onSuccess }: Props
     <form onSubmit={handleSubmit} className="space-y-6 lato-regular">
       {error && (
         <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-400 text-sm">
-          <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+          <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
           <span>{error}</span>
         </div>
       )}

@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
         {/* Tablet & Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-4 lg:flex items-start justify-between gap-8">
           {/* Logo and tagline - Tablet & Desktop */}
-          <div className="md:col-span-4 lg:col-span-1 flex-shrink-0 w-full lg:w-[32%] xl:w-[35%]">
+          <div className="md:col-span-4 lg:col-span-1 shrink-0 w-full lg:w-[32%] xl:w-[35%]">
             <div className="flex items-center gap-2 mb-4 lg:mb-6">
               <img src={logo} className="w-32 lg:w-40" alt="Hybrid LP" />
             </div>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* About Hybrid LP */}
-          <div className="min-w-0 lg:flex-shrink-0">
+          <div className="min-w-0 lg:shrink-0">
             <h3 className="text-base lg:text-lg font-medium mb-3 lg:mb-4 inter-font">
               About Hybrid LP
             </h3>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Features */}
-          <div className="min-w-0 lg:flex-shrink-0">
+          <div className="min-w-0 lg:shrink-0">
             <h3 className="text-base lg:text-lg font-medium mb-3 lg:mb-4 inter-font">
               Features
             </h3>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Jobs */}
-          <div className="min-w-0 lg:flex-shrink-0">
+          <div className="min-w-0 lg:shrink-0">
             <h3 className="text-base lg:text-lg font-medium mb-3 lg:mb-4 inter-font">
               Jobs
             </h3>
@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Contact Us */}
-          <div className="min-w-0 lg:flex-shrink-0">
+          <div className="min-w-0 lg:shrink-0">
             <h3 className="text-base lg:text-lg font-medium mb-3 lg:mb-4 inter-font">
               Contact Us
             </h3>

@@ -150,7 +150,7 @@ export default () => {
                       >
                         <div className="flex space-x-4 mb-4">
                           {/* Post Image */}
-                          <div className="flex-shrink-0">
+                          <div className="shrink-0">
                             <img
                               src={
                                 post.featuredImage || "/placeholder-image.jpg"

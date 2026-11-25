@@ -92,7 +92,7 @@ const AnimatedCard = () => {
             {/* Dot & Label Container - Fixed Width */}
             <div className="flex items-center gap-2 w-[120px]  shrink-0">
               <div
-                className={` md:w-3 md:h-3 w-2.5 h-2.5 rounded-full flex-shrink-0 ${stage.color} `}
+                className={` md:w-3 md:h-3 w-2.5 h-2.5 rounded-full shrink-0 ${stage.color} `}
               />
 
               {/* Label */}

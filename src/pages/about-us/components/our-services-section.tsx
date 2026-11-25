@@ -79,9 +79,9 @@ export default () => {
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {servicesContents.map((service, index) => (
-              <div 
-                key={index} 
-                className={`w-full flex-shrink-0 flex flex-col transition-opacity duration-[600ms] ${currentSlide === index ? "opacity-100" : "opacity-30"}`}
+              <div
+                key={index}
+                className={`w-full shrink-0 flex flex-col transition-opacity duration-[600ms] ${currentSlide === index ? "opacity-100" : "opacity-30"}`}
               >
                 {/* Mobile Image */}
                 <div className="w-full aspect-[4/3]">
@@ -113,11 +113,10 @@ export default () => {
             <div
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                currentSlide === index
+              className={`transition-all duration-300 rounded-full cursor-pointer ${currentSlide === index
                   ? "w-8 h-[3px] bg-white"
                   : "w-2 h-2 bg-[#1E293B]"
-              }`}
+                }`}
             />
           ))}
         </div>
@@ -125,14 +124,14 @@ export default () => {
 
       {/* DESKTOP & TABLET VIEW */}
       <div className="hidden md:flex bg-[#15233F] group relative rounded-xl overflow-hidden md:min-h-[360px] lg:min-h-[448px] flex-col justify-center">
-        <div 
+        <div
           className="flex transition-transform duration-[600ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {servicesContents.map((service, index) => (
-            <div 
-              key={index} 
-              className={`w-full flex-shrink-0 flex flex-row justify-between md:gap-6 lg:gap-[50px] md:items-center lg:items-start md:p-10 lg:p-16 transition-opacity duration-[600ms] ${currentSlide === index ? "opacity-100" : "opacity-30"}`}
+            <div
+              key={index}
+              className={`w-full shrink-0 flex flex-row justify-between md:gap-6 lg:gap-[50px] md:items-center lg:items-start md:p-10 lg:p-16 transition-opacity duration-[600ms] ${currentSlide === index ? "opacity-100" : "opacity-30"}`}
             >
               <div className="flex flex-col flex-1 md:gap-4 lg:gap-6 order-2 md:order-1 min-w-0">
                 <h4 className="w-fit bg-[#C6AD33] md:py-1.5 md:px-3 lg:py-2 lg:px-4 md:text-sm lg:text-lg rounded-lg text-white">

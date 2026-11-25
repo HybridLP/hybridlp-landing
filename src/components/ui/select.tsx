@@ -95,21 +95,19 @@ export default function CustomSelect({
           onClick={() => !disabled && setIsOpen((prev) => !prev)}
           aria-haspopup="listbox"
           aria-expanded={isOpen}
-          className={`w-full bg-[#0B132B] border ${
-            error
+          className={`w-full bg-[#0B132B] border ${error
               ? "border-red-500 ring-1 ring-red-500/30"
               : isOpen
-              ? "border-[#CAA500] ring-2 ring-[#CAA500]/20"
-              : "border-gray-700 hover:border-gray-600"
-          } rounded-lg px-4 py-3 text-left flex items-center justify-between text-white text-sm md:text-base transition-all duration-200 outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
+                ? "border-[#CAA500] ring-2 ring-[#CAA500]/20"
+                : "border-gray-700 hover:border-gray-600"
+            } rounded-lg px-4 py-3 text-left flex items-center justify-between text-white text-sm md:text-base transition-all duration-200 outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
         >
           <span className={`truncate ${!selectedOption ? "text-gray-500" : "text-white"}`}>
             {selectedOption ? selectedOption.label : placeholder}
           </span>
           <ChevronDown
-            className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200 ml-2 ${
-              isOpen ? "rotate-180 text-[#CAA500]" : ""
-            }`}
+            className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ml-2 ${isOpen ? "rotate-180 text-[#CAA500]" : ""
+              }`}
           />
         </button>
 
@@ -131,11 +129,10 @@ export default function CustomSelect({
                     role="option"
                     aria-selected={isSelected}
                     onClick={() => handleSelect(option.value)}
-                    className={`px-4 py-3 flex items-center justify-between text-sm md:text-base cursor-pointer transition-colors duration-150 ${
-                      isSelected
+                    className={`px-4 py-3 flex items-center justify-between text-sm md:text-base cursor-pointer transition-colors duration-150 ${isSelected
                         ? "bg-[#CAA500]/15 text-[#CAA500] font-semibold"
                         : "text-gray-200 hover:bg-[#0B132B] hover:text-[#CAA500]"
-                    }`}
+                      }`}
                   >
                     <div className="flex flex-col">
                       <span>{option.label}</span>
@@ -146,7 +143,7 @@ export default function CustomSelect({
                       )}
                     </div>
                     {isSelected && (
-                      <Check className="w-4 h-4 text-[#CAA500] flex-shrink-0 ml-2" />
+                      <Check className="w-4 h-4 text-[#CAA500] shrink-0 ml-2" />
                     )}
                   </div>
                 );

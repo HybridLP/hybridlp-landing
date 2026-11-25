@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {  AlertCircle, ArrowLeft, Clock, ShieldCheck, Send } from "lucide-react";
+import { AlertCircle, ArrowLeft, Clock, ShieldCheck, Send } from "lucide-react";
 import SEO from "../../components/widgets/seo";
 import { serviceRequestService } from "../../services/serviceRequestService";
 import CustomSelect from "../../components/ui/select";
@@ -85,10 +85,10 @@ export default function RequestLegalDrafting() {
         canonical="https://hybridlp.com/request-legal-drafting"
       />
       <div className="max-w-4xl mx-auto">
-        
+
 
         <div className="text-center mb-10 mt-6 md:mb-12">
-          
+
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-font mb-4 text-white leading-tight">
             Request Expert Legal Drafting
           </h1>
@@ -103,7 +103,7 @@ export default function RequestLegalDrafting() {
           <div className="bg-[#15233F] border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl">
             {error && (
               <div className="mb-6 p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-400 text-sm">
-                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
                 <span>{error}</span>
               </div>
             )}

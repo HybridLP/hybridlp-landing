@@ -42,7 +42,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div
-      className="bg-linear-to-b from-[#1D1D1D] to-[#303030] text-white border-l-4 border-[#DED08A] rounded-md flex flex-col w-full p-4 md:p-6 flex-shrink-0"
+      className="bg-linear-to-b from-[#1D1D1D] to-[#303030] text-white border-l-4 border-[#DED08A] rounded-md flex flex-col w-full p-4 md:p-6 shrink-0"
       style={{
         boxShadow: "inset 0 2px 8px 3px #00000040, inset 0 0 10px #FFFFFF40",
       }}
@@ -97,7 +97,7 @@ const Carousel: React.FC<CarouselProps> = ({
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+          <div key={index} className="w-full shrink-0">
             <TestimonialCard {...slide} />
           </div>
         ))}
