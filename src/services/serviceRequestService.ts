@@ -1,7 +1,7 @@
 import api from "../utils/api";
 
 export interface ServiceRequestPayload {
-  type: "legal_drafting" | "business_registration" | "consultation";
+  type: "legal_drafting" | "business_registration" | "consultation" | "quick_service";
   fullName: string;
   email: string;
   phone: string;

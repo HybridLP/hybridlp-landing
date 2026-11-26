@@ -75,7 +75,7 @@ const WhySection = () => {
           return (
             <div
               key={idx}
-              className="relative h-fit md:h-full md:min-h-62.5 lg:min-h-70 flex flex-col px-5 md:px-6 lg:px-8 py-8 md:py-7 lg:py-[40px] rounded-xl border border-gray-800"
+              className="relative h-fit md:h-full md:min-h-62.5 lg:min-h-70 flex flex-col px-5 md:px-6 lg:px-8 py-8 md:py-7 lg:py-10 rounded-xl border border-gray-800"
             >
               {/* resizabe icon */}
               <div className="w-full px-2 md:px-6 lg:px-8 py-2 md:py-4 lg:py-5 rounded-lg bg-[#715E00]/20 border border-[#825900e7] text-[#B89900] flex [&_svg]:w-5 [&_svg]:h-5 md:[&_svg]:w-7 md:[&_svg]:h-7 lg:[&_svg]:w-8 lg:[&_svg]:h-8">

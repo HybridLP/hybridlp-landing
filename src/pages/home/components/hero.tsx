@@ -36,14 +36,14 @@ export default () => {
         {/* auth links */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-5 mb-4 md:mb-6">
           <a
-            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-auto sm:w-[190px] md:w-[210px] text-xs sm:text-[14px] md:text-[15px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-3 transition-all duration-300 active:scale-95 h-[50px] md:h-[54px] flex items-center justify-center overflow-hidden whitespace-nowrap shadow-md"
+            className="bg-linear-to-b from-[#CAA500] to-[#825900] text-white w-full sm:w-47.5 md:w-52.5 text-xs sm:text-[14px] md:text-[15px] rounded-lg text-center py-2 px-5 sm:px-6 md:p-3 transition-all duration-300 active:scale-95 h-12.5 md:h-13.5 flex items-center justify-center overflow-hidden whitespace-nowrap shadow-md"
             href="https://app.hybridlp.com"
           >
             Get a lawyer
           </a>
 
           <a
-            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-full max-w-[280px] sm:w-[220px] lg:w-[268px] whitespace-nowrap text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-6 md:p-4 transition-all duration-300 active:scale-95 h-[52px] md:h-[60px] flex items-center justify-center overflow-hidden"
+            className="bg-linear-to-b border-[#CAA500] border-[1.5px] border-solid text-[#CAA500] w-full max-w-70 sm:w-55 lg:w-67 whitespace-nowrap text-xs sm:text-[14px] md:text-[16px] rounded-lg text-center py-2 px-6 md:p-4 transition-all duration-300 active:scale-95 h-13 md:h-15 flex items-center justify-center overflow-hidden"
 
             href="https://lawyer.hybridlp.com"
           >
@@ -54,7 +54,7 @@ export default () => {
           <div className="inline-flex relative ">
             <img
               src={alhaja}
-              className="size-11 rounded-full object-center object-cover  -ml-0"
+              className="size-11 rounded-full object-center object-cover  ml-0"
               alt=""
             />
             <img
@@ -94,7 +94,7 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex w-full mb-0 pb-0 md:pb-8 md:mb-4 px-8 lg:px-[90px] justify-center">
+      <div className=" hidden md:flex w-full mb-0 pb-0 md:pb-8 md:mb-4 px-8 lg:px-22.5 justify-center">
         <img src={board} alt="" className="w-full max-w-full h-auto" />
       </div>
     </section>

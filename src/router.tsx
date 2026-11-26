@@ -14,6 +14,7 @@ import Remuneration from "./pages/remuneration";
 import RegisterBusiness from "./pages/register-business";
 import RequestLegalDrafting from "./pages/request-legal-drafting";
 import BookConsultation from "./pages/book-consultation";
+import QuickServicePage from "./pages/quick-service";
 
 const routes = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const routes = createBrowserRouter([
   {
     path: "/auth",
     Component: SignupLogin,
+  },
+  {
+    path: "/quick-service",
+    Component: QuickServicePage,
   },
   {
     path: "*",

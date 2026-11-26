@@ -116,7 +116,7 @@ export default () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="px-[7%] lg:px-[165px] py-16">
+      <section className="px-[7%] lg:px-41.25 py-16">
         <div className="   p-8">
           <h2 className="text-white text-2xl lg:text-[48px] font-bold mb-4   pb-6 inter-font">
             What We Do

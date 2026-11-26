@@ -48,7 +48,7 @@ export default () => {
             className="bg-[#E6E6E6] w-full max-w-md lg:w-[470px] h-[200px] lg:h-[320px] rounded-2xl flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 hover:transform hover:scale-[1.02] transition-all duration-300"
           >
             <h4 className="text-[#333] text-md lg:text-xl font-medium text-center">
-                                        Sign Up / Sign in as
+              Sign Up / Sign in as
 
 
             </h4>
