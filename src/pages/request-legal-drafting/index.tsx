@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { AlertCircle, ArrowLeft, Clock, ShieldCheck, Send } from "lucide-react";
+import { AlertCircle,  Clock, ShieldCheck, Send } from "lucide-react";
 import SEO from "../../components/widgets/seo";
 import { serviceRequestService } from "../../services/serviceRequestService";
 import CustomSelect from "../../components/ui/select";

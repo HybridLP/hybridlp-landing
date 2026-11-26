@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import board from "../../../assets/board.png";
 
 import lawyerImage2 from "../../../assets/lawyer-profile.png";
