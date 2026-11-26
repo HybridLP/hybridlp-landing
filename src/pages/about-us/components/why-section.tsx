@@ -44,7 +44,7 @@ const whySectionData = [
 
 const WhySection = () => {
   return (
-    <section className="px-6 md:px-8 lg:px-20 xl:px-[153px] pb-8 md:pb-16">
+    <section className="px-6 md:px-8 lg:px-20 xl:px-38.25 pb-8 md:pb-16">
       <OurServicesSection />
 
       {/* Not Sure What Legal Help You Need? Section */}
@@ -61,7 +61,7 @@ const WhySection = () => {
         </a>
       </div>
 
-      <div className="flex flex-col items-center gap-4 md:gap-6 mb-12 md:my-16 w-full md:max-w-[712px] mx-auto text-center">
+      <div className="flex flex-col items-center gap-4 md:gap-6 mb-12 md:my-16 w-full md:max-w-178 mx-auto text-center">
         <h1 className="text-white text-2xl md:text-[40px] inter-font font-semibold">
           Why Choose Hybrid LP
         </h1>
@@ -75,7 +75,7 @@ const WhySection = () => {
           return (
             <div
               key={idx}
-              className="relative h-fit md:h-full md:min-h-[250px] lg:min-h-[280px] flex flex-col px-5 md:px-6 lg:px-8 py-8 md:py-7 lg:py-[40px] rounded-xl border border-gray-800"
+              className="relative h-fit md:h-full md:min-h-62.5 lg:min-h-70 flex flex-col px-5 md:px-6 lg:px-8 py-8 md:py-7 lg:py-[40px] rounded-xl border border-gray-800"
             >
               {/* resizabe icon */}
               <div className="w-full px-2 md:px-6 lg:px-8 py-2 md:py-4 lg:py-5 rounded-lg bg-[#715E00]/20 border border-[#825900e7] text-[#B89900] flex [&_svg]:w-5 [&_svg]:h-5 md:[&_svg]:w-7 md:[&_svg]:h-7 lg:[&_svg]:w-8 lg:[&_svg]:h-8">
